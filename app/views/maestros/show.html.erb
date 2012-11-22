@@ -1,36 +1,128 @@
 <% provide(:title, @maestro.nombre) %>
-<div class="show center part clearfix">
-	<header class="title">
-		<h2 class="fleft">Maestro</h2>
-	</header>
-	<div class="columnthird content ">
-		<%= render 'layouts/menumaestro' %>
-		<article id="infomaestro" class="detail">
+<div class="row">
+		<!--Informacion Personal del Profesor-->
+	<div class="three columns">
+		<a href="" class="th sombra-1"><%= image_tag @maestro.avatar_url.to_s%></a>
+		<br />
+		<!--Panel de Datos de maestro-->
+		<div class="row " >
+			<div class="eleven columns centered panel radius">
+			<h5>ID de Maestro:</h5>
+			<span class="glyph enclosed" style="font-size: 18px; line-height: 18px"> m </span><%= @maestro.idmaestro %> 
+			<hr />
+			<h5>Correo Electrónico:</h5>
+			<span class="glyph enclosed" style="font-size: 18px; line-height: 18px"> h </span><%= @maestro.email %>
 			
-			
-			<ul>
-				<li>
-				<%= image_tag @maestro.avatar_url.to_s%>
-				
-				</li>
-				<li>
-						
-					<br />
-					<br />
-					<h4>ID Maestro:</h4>
-					<%= @maestro.idmaestro %>
-				</li>
-				<br />
-				<li>
-					<h4>Nombre:</h4>
-					<%= @maestro.nombre %>
-				</li>
-				<br />
-				<li>
-					<h4>Email:</h4>
-					<%= @maestro.email %>
-				</li>
-			</ul>
-		</article>
+		
+			</div>
+		</div>
+		<!--Termina Panel de Datos de maestro-->
 	</div>
+	<!--Termina Informacion Personal del maestro-->
+	<!--Panel derecho Informacion del maestro en SODMI-->
+	<div class="nine columns">
+		<!--Nombre y Boton par editar Perfil-->
+		<div class="row panel">
+			<div class="nine columns">
+				<h3><%= @maestro.nombre %></h3>
+			</div>
+			<div class="three columns">
+				<%= link_to("Editar Perfil",edit_maestro_path(@maestro),:class=> "big button right")%>
+			</div>
+		</div>
+		<!--TErmina Nombre y Boton par editar Perfil-->
+		<!---Panel de Avances en Lecciones-->
+		<div class="row">
+			<br />
+			<div class="twelve columns panel callout ">
+				<h5 class="subheader color-blanco"> Menú de Opciones</h5>
+		
+			
+			<div class="twelve columns">
+				<!---Acordion que contiene la informacion de los avances del maestro-->
+				<ul class="accordion">
+					<!---Leccion 1-->
+					<li class="active">
+						<div class="title">
+							<h5>Abrir un Grupo</h5>
+						</div>
+						<div class="content">
+						
+						
+						
+							<p class="color-negro">
+								Datos del nuevo Grupo a abrir
+							</p>
+							
+						</div>
+					</li><!---Termina Lección 1-->
+					<li>
+						<div class="title">
+							<h5>Modificar Grupo</h5>
+						</div>
+						<div class="content">
+						
+							<h4> Elementos del Lenguaje</h4>
+						
+							<p class="color-negro">
+								Esta leccion trata sobre temas: Palabras Reservadas, Datos, Entrada de Datos y Salida de Datos
+							</p>
+							
+						</div>
+					</li>
+					<li>
+						<div class="title">
+							<h5>Registrar Preguntas y Respuestas</h5>
+						</div>
+						<div class="content">
+						
+							<h4> Componentes Basicos</h4>
+						
+							<p class="color-negro">
+								Esta leccion trata sobre temas: Objetos, Atributos, Metodos, Clases, Creacion del Objeto y Estrructura de un Programa
+							</p>
+							
+							
+							
+						</div>
+					</li>
+					<li>
+						<div class="title">
+							<h5>Registrar Ejercicios Dirigídos</h5>
+						</div>
+						<div class="content">
+							
+							<h4> Control de Flujo</h4>
+						
+							<p class="color-negro">
+								Esta leccion trata sobre temas: Estructuras Secuenciales, Selectivas e Iterativas
+							</p>
+							
+						</div>
+					</li>
+					<li>
+						<div class="title">
+							<h5>Registrar Nuevo Módulo</h5>
+						</div>
+						<div class="content">
+						
+							<h4> Conseptos Avanzados</h4>
+						
+							<p class="color-negro">
+								Esta leccion trata sobre temas: Típos de Clases, Heréncia, Típos de Métodos, Sobrecarga, Polimorfísmo y Paquetes
+							</p>
+							
+												
+						</div>
+					</li>
+				</ul>
+			
+			
+				</div>
+			
+		
+			</div>
+			
+		</div><!--Termina Panel de Acordion de Avance en Lecciones-->
+	</div><!--Termina Panel Derecho de Informacion del maestro en SODMI-->
 </div>

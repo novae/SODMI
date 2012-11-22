@@ -254,6 +254,12 @@
 .color-blanco{
   color:#FFF;
 }
+.color-negro{
+  color:#000;
+}
+.color-azul{
+  color:#47b7db;
+}
 .sombra-1{
 -webkit-box-shadow: -3px 3px 5px 2px rgba(0, 0, 0, .5);
 box-shadow: -3px 3px 5px 2px rgba(0, 0, 0, .5);
@@ -265,4 +271,7 @@ box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, .3);
 .sombra-3{
    -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .5);
 box-shadow: 0px px 5px 2px rgba(0, 0, 0, .5);
+}
+.resaltado{
+  z-index:10;
 }

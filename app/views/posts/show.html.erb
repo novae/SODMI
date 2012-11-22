@@ -1,50 +1,69 @@
 <div class=" row">
-<h2 class="post-title">
-	<%= @post.titulo %>
-</h2>
-	<p align="justify"> <%= @post.texto%></p>
-	<br />
-	
-	<br />
-	<br />
-	<br />
-	<p class="number"> Publicado por: <strong><%=@post.usuario%> </strong> Fecha: <strong><%= @post.created_at%></strong></p>
-	<h4>Comentarios</h4>
-	<% @post.comentarios. each do | comentario|%>
-	<div class="services">	
-		<p ><strong><%= comentario.texto%></p></strong>
-		<p class="number"> Publicado hace: <%= time_ago_in_words comentario.created_at%> por: <strong> <%=comentario.usuario%></strong></p>
-		<%if current_alumno.nombre==comentario.usuario%>
-		<p class="number"> <%= link_to "Eliminar Comentario",[@post,comentario], :method=> :delete, :confirm =>"¿Estas Seguro?" %></p>
-		<%end%>
-	<br />
-	</div>
-	<% end %>
-	
-	
-	<br />
-	<br /><br />
-	<p><strong> Nuevo Comentario</p></strong>
-	<%= form_for [@post, @post.comentarios.build] do  |f|%>
-		<p> <%= f.text_area :texto, :size=> '25x10'%></p>
-		
-  	
- 		 <%= f.hidden_field :usuario, :value => current_alumno.nombre %>
- 
-		<br />
-		 <%=f.submit "Publicar", :class =>"button fleft", :id=>"boton"%>
-	<%end%>
-	<br />
-	<br />
-	<br />
-	
-<p>	
-<%= link_to "Atras", posts_path%>
-<% if current_alumno.nombre==@post.usuario%>
-|
-<%= link_to "Editar", edit_post_path(@post)%>
-|
-<%= link_to "Eliminar", @post, :method => :delete, :confirm => "¿Estas seguro de eliminarlo?"%>
-<%end%>
-</p>
-</div>
+	<div class="nine columns" role="content">
+		<article class="panel twelve columns">
+			<div class="eleven columns">
+			<h2 class="post-title"> <%= @post.titulo %> </h2>
+			<hr />
+			<h6>Escrito por: <a href="#"><%= @post.usuario%></a> Publicado <%= time_ago_in_words  @post.created_at%> atrás</h6>
+			<p align="justify">
+				<%= @post.texto%>
+			</p>
+			</div>
+			<div class="four columns">
+				<p>
+				<%= link_to "Atras", posts_path%>
+				<% if current_alumno.nombre==@post.usuario%>
+				|
+				<%= link_to "Editar", edit_post_path(@post)%>
+				|
+				<%= link_to "Eliminar", @post, :method => :delete, :confirm => "¿Estas seguro de eliminarlo?"%>
+				<%end%>
+			</p>
+			</div>
+			<div class="eleven columns">
+			<br />
+			<br />
+			<h4 class="subheader">Comentarios</h4>
+			<% @post.comentarios. each do | comentario|%>
+			<blockquote>
+			<p >
+				<strong><%= comentario.texto%>
+			</p></strong>
+			
+				<cite> <strong> <%= comentario.usuario%></strong></cite>
+			<p class="subheader">
+				Publicado hace: <%= time_ago_in_words comentario.created_at%></p>
+			</blockquote>
+			<%if current_alumno.nombre==comentario.usuario%>
+			<p >
+				<%= link_to "Eliminar Comentario",[@post,comentario], :method=> :delete, :confirm =>"¿Estas Seguro?" %>
+			</p>
+			<%end%>
+			<hr />
+			
+			<br />
+			<% end %>
+			</div>
+			<div class="twelve columns">
+			<p>
+				<strong> Nuevo Comentario
+			</p></strong>
+			<%= form_for [@post, @post.comentarios.build] do  |f|%>
+			<p>
+				<%= f.text_area :texto, :size=> '50x7',:required=>true%>
+			</p>
+			<%= f.hidden_field :usuario, :value => current_alumno.nombre %>
+			<br />
+			<%= f.submit "Publicar", :class =>"button fleft", :id=>"boton"%>
+			<%end%>
+			<br />
+			<br />
+			<br />
+			
+			</div>
+			
+			</article>
+			
+			</div>
+			<%= render 'layouts/aside-blog'%>
+			</div> 

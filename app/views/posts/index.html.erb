@@ -1,23 +1,34 @@
 <% provide(:title, 'Blog') %>
 <div class=" row">
 	<header>
-		<div class="column1in  fright">
-		<h4><%= link_to 'Nueva Entrada', new_post_path %></h4>
-	</div>
-		<h2 >Blog SODMI</h2>
 		
+		<div class="nine columns">
+			<h1>Blog <small>El mejor espacio para expresar tus dudas!.</small></h1>
+			<hr />
+		</div>
+		
+		<div class="three columns">
+			<h4><%= link_to 'Nueva Entrada', new_post_path,:class=>"button large"%></h4>
+		</div>
 	</header>
-	
-	<% @posts.each do |post| %>
-	<div class="services">
-		<h3 class="post-title"> <%= link_to post.titulo, post %></h3>
-		<p>
-			<%= truncate post.texto%>
-		</p>
-		<p>
-			Publicado <%= time_ago_in_words  post.created_at%> atrás
-		</p>
-	</div>
-	<% end %>
-	<br />
 </div>
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+	<!-- Main Blog Content -->
+	<div class="nine columns" role="content">
+		<% @posts.each do |post| %>
+		<article class="panel">
+			<h3 class="post-title color-azul">  <%=post.titulo%></h3>
+			<h6>Escrito por: <a href="#"><%= post.usuario%></a> Publicado <%= time_ago_in_words  post.created_at%> atrás</h6>
+			<p>
+				<%= truncate post.texto%>
+			</p>
+			<%= link_to "Seguir leyendo",post ,:class=>"button  success small"%>
+		</article>
+		<hr />
+		<% end %>
+	</div>
+	<%= render 'layouts/aside-blog'%>
+</div>
+
+<br />

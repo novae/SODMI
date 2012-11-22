@@ -1,11 +1,21 @@
-
 <div class="row ">
-<h2>Nueva Entrada</h2>
-<div>
-<%= render 'form' %>
-</div>
-<br /><br /><br /><br />
-<p>
-<%= link_to '<< Atras', posts_path %>
-</p>
+	<div class="nine columns panel" role="content">
+		<div class="ten columns ">
+			<h2 class="subheader">Nueva Entrada</h2>
+		</div>
+		<div class="two columns">
+			<%= image_tag("icono.png", alt:"SODMI")%>
+		</div>
+		
+		<div class="twelve columns">
+			<%= render 'form' %>
+		</div>
+		<br />
+		<div class="twelve columns">
+		<p>
+			<%= link_to 'Atras', posts_path %>
+		</p>
+		</div>
+	</div>
+	<%= render 'layouts/aside-blog'%>
 </div>

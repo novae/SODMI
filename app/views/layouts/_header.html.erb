@@ -70,10 +70,15 @@
 				</li>
 				<% end %> 
 				<% if signed_in_alumno? %>
-			<div class="one columns ">
-				<a href="#" class="th">
-				<%= image_tag current_alumno.avatar_url.to_s %></a>
+			
+				<div class="one columns ">
+				<%= image_tag current_alumno.avatar_url.to_s %>
 			</div>
+			<% elsif signed_in?%>
+			<div class="one columns ">
+				<%= image_tag current_maestro.avatar_url.to_s %>
+			</div>
+			
 			<%end%>
       </ul>
     </div>

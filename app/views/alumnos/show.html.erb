@@ -1,78 +1,412 @@
 <% provide(:title, @alumno.nombre) %>
 <div class="row">
-	
-	  
-	
-	<div class="four columns">
-		<a href="" class="th"><%= image_tag @alumno.avatar_url.to_s,:class=>"sombra-1"%></a>
+	<!--Informacion Personal del Alumno-->
+	<div class="three columns">
+		<a href="" class="th sombra-1"><%= image_tag @alumno.avatar_url.to_s%></a>
 		<br />
-		<br />
-		<div class="row panel radius" >
-					<h4>Nc:</h4>
-					<%= @alumno.nc %>
-					<h4>Email:</h4>
-					<%= @alumno.email %>
-		</div>
-		</div>
-		<div class="eight columns">
-			
-		<div class="row">
-			
-			<div class="eight columns">
-				<h2><%= @alumno.nombre %></h2>
-			</div>
-			<div class="four columns">
-				<%= link_to("Editar Perfil",edit_alumno_path(@alumno),:class=> "big button")%>
-			</div>
-		</div>
-		<div class="row">
-			<h4 class="subheader"> Avance en las lecciones</h4>
-			<div class="twelve columns">
-			
-
-
-
-<ul class="accordion">
-  <li class="active">
-    <div class="title">
-      <h5>Accordion Panel 1</h5>
-    </div>
-    <div class="content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </li>
-  <li>
-    <div class="title">
-      <h5>Accordion Panel 2</h5>
-    </div>
-    <div class="content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </li>
-  <li>
-    <div class="title">
-      <h5>Accordion Panel 3</h5>
-    </div>
-    <div class="content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </li>
-</ul>
-  
-
-
-
-			</div>
-
-			
-			
-		</div>
+		<!--Panel de Datos de Alumno-->
+		<div class="row " >
+			<div class="eleven columns centered panel radius">
+			<h5>Numero de Control:</h5>
+			<span class="glyph enclosed" style="font-size: 18px; line-height: 18px"> m </span><%= @alumno.nc %> 
+			<hr />
+			<h5>Correo Electrónico:</h5>
+			<span class="glyph enclosed" style="font-size: 18px; line-height: 18px"> h </span><%= @alumno.email %>
+			<hr />
+			<h5>Grupo</h5>
+			<span class="glyph enclosed" style="font-size: 18px; line-height: 18px"> o </span>1
 		
+			</div>
 		</div>
-		
-
+		<!--Termina Panel de Datos de Alumno-->
 	</div>
-	<br /><br /><br />				
+	<!--Termina Informacion Personal del Alumno-->
+	<!--Panel derecho Informacion del Alumno en SODMI-->
+	<div class="nine columns">
+		<!--Nombre y Boton par editar Perfil-->
+		<div class="row panel">
+			<div class="nine columns">
+				<h3><%= @alumno.nombre %></h3>
+			</div>
+			<div class="three columns">
+				<%= link_to("Editar Perfil",edit_alumno_path(@alumno),:class=> "medium button right")%>
+			</div>
+		</div>
+		<!--TErmina Nombre y Boton par editar Perfil-->
+		<!---Panel de Avances en Lecciones-->
+		<div class="row">
+			<br />
+			<div class="twelve columns panel callout ">
+				<h5 class="subheader color-blanco"> Avance en las lecciones</h5>
+		
+			
+			<div class="twelve columns">
+				<!---Acordion que contiene la informacion de los avances del alumno-->
+				<ul class="accordion">
+					<!---Leccion 1-->
+					<li class="active">
+						<div class="title">
+							<h5>Lección 1</h5>
+						</div>
+						<div class="content">
+						
+							<h4> Conseptos Basicos</h4>
+						
+							<p class="color-negro">
+								Esta leccion trata sobre temas: Algoritmo, PseudoCodigo y Programa
+							</p>
+							</span>
+							
+							<!--Tabla de Resultados-->
+							<hr />
+							<h5 class="subheader">Resultados de Evaluaciones</h5>
+							<div class="row">
+								
+									<table class="twelve">
+										<thead>
+											<tr>
+												<th></th>
+												<th>Preguntas/Lineas</th>
+												<th>Aciertos</th>
+												<th>Resultado</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Evaluacion Inicial</td>
+												<td>10</td>
+												<td>8</td>
+												<td>80</td>
+											</tr>
+											<tr>
+												<td>Ejercicio 1</td>
+												<td>12</td>
+												<td>12</td>
+												<td>100</td>
+											</tr>
+											<tr>
+												<td>Ejercicio 2</td>
+												<td>15</td>
+												<td>7</td>
+												<td>48</td>
+											</tr>
+											<tr>
+												<td>Evaluacion Final</td>
+												<td>20</td>
+												<td>18</td>
+												<td>90</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!---Termina Tabla de Resultados-->
+								<!--Barra de Progreso en la leccion-->
+								<hr />
+								<h5 class="subheader">Progreso en esta Lección</h5>
+							<div class=" row">
+								<div class="ten columns ">
+							<div class="nice success progress round "><span class="meter" style=" width: 100%"></span></div>
+							</div>
+							<div class="two columns ">
+							<h5> 100%</h5>
+							</div>
+							</div>
+							<!--Termina Barra de Progreso en la leccion-->
+						</div>
+					</li><!---Termina Lección 1-->
+					<li>
+						<div class="title">
+							<h5>Lección 2</h5>
+						</div>
+						<div class="content">
+						
+							<h4> Elementos del Lenguaje</h4>
+						
+							<p class="color-negro">
+								Esta leccion trata sobre temas: Palabras Reservadas, Datos, Entrada de Datos y Salida de Datos
+							</p>
+							
+							
+							<!--Tabla de Resultados-->
+							<hr />
+							<h5 class="subheader">Resultados de Evaluaciones</h5>
+							<div class="row">
+								
+									<table class="twelve">
+										<thead>
+											<tr>
+												<th></th>
+												<th>Preguntas/Lineas</th>
+												<th>Aciertos</th>
+												<th>Resultado</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Evaluacion Inicial</td>
+												<td>10</td>
+												<td>7</td>
+												<td>70</td>
+											</tr>
+											<tr>
+												<td>Ejercicio 1</td>
+												<td>15</td>
+												<td>12</td>
+												<td>80</td>
+											</tr>
+											<tr>
+												<td>Ejercicio 2</td>
+												<td>15</td>
+												<td>12</td>
+												<td>85</td>
+											</tr>
+											<tr>
+												<td>Evaluacion Final</td>
+												<td>20</td>
+												<td>17</td>
+												<td>85</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!---Termina Tabla de Resultados-->
+								<!--Barra de Progreso en la leccion-->
+								<hr />
+								<h5 class="subheader">Progreso en esta Lección</h5>
+							<div class=" row">
+								<div class="ten columns ">
+							<div class="nice success progress round "><span class="meter" style=" width: 80%"></span></div>
+							</div>
+							<div class="two columns ">
+							<h5> 80%</h5>
+							</div>
+							</div>
+							<!--Termina Barra de Progreso en la leccion-->
+							
+						</div>
+					</li>
+					<li>
+						<div class="title">
+							<h5>Lección 3</h5>
+						</div>
+						<div class="content">
+						
+							<h4> Componentes Basicos</h4>
+						
+							<p class="color-negro">
+								Esta leccion trata sobre temas: Objetos, Atributos, Metodos, Clases, Creacion del Objeto y Estrructura de un Programa
+							</p>
+							
+							
+							<!--Tabla de Resultados-->
+							<hr />
+							<h5 class="subheader">Resultados de Evaluaciones</h5>
+							<div class="row">
+								
+									<table class="twelve">
+										<thead>
+											<tr>
+												<th></th>
+												<th>Preguntas/Lineas</th>
+												<th>Aciertos</th>
+												<th>Resultado</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Evaluacion Inicial</td>
+												<td>10</td>
+												<td>8</td>
+												<td>80</td>
+											</tr>
+											<tr>
+												<td>Ejercicio 1</td>
+												<td>12</td>
+												<td>12</td>
+												<td>100</td>
+											</tr>
+											<tr>
+												<td>Ejercicio 2</td>
+												<td>15</td>
+												<td>7</td>
+												<td>48</td>
+											</tr>
+											<tr>
+												<td>Evaluacion Final</td>
+												<td>20</td>
+												<td>18</td>
+												<td>90</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!---Termina Tabla de Resultados-->
+								<!--Barra de Progreso en la leccion-->
+								<hr />
+								<h5 class="subheader">Progreso en esta Lección</h5>
+							<div class=" row">
+								<div class="ten columns ">
+							<div class="nice success progress round "><span class="meter" style=" width: 40%"></span></div>
+							</div>
+							<div class="two columns ">
+							<h5> 40%</h5>
+							</div>
+							</div>
+							<!--Termina Barra de Progreso en la leccion-->
+						</div>
+					</li>
+					<li>
+						<div class="title">
+							<h5>Lección 4</h5>
+						</div>
+						<div class="content">
+							
+							<h4> Control de Flujo</h4>
+						
+							<p class="color-negro">
+								Esta leccion trata sobre temas: Estructuras Secuenciales, Selectivas e Iterativas
+							</p>
+							
+							
+							<!--Tabla de Resultados-->
+							<hr />
+							<h5 class="subheader">Resultados de Evaluaciones</h5>
+							<div class="row">
+								
+									<table class="twelve">
+										<thead>
+											<tr>
+												<th></th>
+												<th>Preguntas/Lineas</th>
+												<th>Aciertos</th>
+												<th>Resultado</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Evaluacion Inicial</td>
+												<td>10</td>
+												<td>8</td>
+												<td>80</td>
+											</tr>
+											<tr>
+												<td>Ejercicio 1</td>
+												<td>12</td>
+												<td>12</td>
+												<td>100</td>
+											</tr>
+											<tr>
+												<td>Ejercicio 2</td>
+												<td>15</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>Evaluacion Final</td>
+												<td>20</td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!---Termina Tabla de Resultados-->
+								<!--Barra de Progreso en la leccion-->
+								<hr />
+								<h5 class="subheader">Progreso en esta Lección</h5>
+							<div class=" row">
+								<div class="ten columns ">
+							<div class="nice success progress round "><span class="meter" style=" width: 20%"></span></div>
+							</div>
+							<div class="two columns ">
+							<h5> 20%</h5>
+							</div>
+							</div>
+							<!--Termina Barra de Progreso en la leccion-->
+						</div>
+					</li>
+					<li>
+						<div class="title">
+							<h5>Lección 5</h5>
+						</div>
+						<div class="content">
+						
+							<h4> Conseptos Avanzados</h4>
+						
+							<p class="color-negro">
+								Esta leccion trata sobre temas: Típos de Clases, Heréncia, Típos de Métodos, Sobrecarga, Polimorfísmo y Paquetes
+							</p>
+							
+							
+							<!--Tabla de Resultados--><hr />
+							<h5 class="subheader">Resultados de Evaluaciones</h5>
+							<div class="row">
+								
+									<table class="twelve">
+										<thead>
+											<tr>
+												<th></th>
+												<th>Preguntas/Lineas</th>
+												<th>Aciertos</th>
+												<th>Resultado</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Evaluacion Inicial</td>
+												<td>10</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>Ejercicio 1</td>
+												<td>12</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>Ejercicio 2</td>
+												<td>15</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>Evaluacion Final</td>
+												<td>20</td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!---Termina Tabla de Resultados-->
+								<!--Barra de Progreso en la leccion-->
+								<hr />
+								<h5 class="subheader">Progreso en esta Lección</h5>
+							<div class=" row">
+								<div class="ten columns ">
+							<div class="nice success progress round "><span class="meter" style=" width: 0%"></span></div>
+							</div>
+							<div class="two columns ">
+							<h5> 0%</h5>
+							</div>
+							</div>
+							<!--Termina Barra de Progreso en la leccion-->							
+						</div>
+					</li>
+				</ul>
+			
+			
+				</div>
+			
+		
+			</div>
+			
+		</div><!--Termina Panel de Acordion de Avance en Lecciones-->
+	</div><!--Termina Panel Derecho de Informacion del Alumno en SODMI-->
+	
+</div><!---Termina Div Principal Div Principal-->
+<br />
+<br />
+<br />
+			
