@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8 " />
+        <title>Objetos</title>
+		<link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/style_objetos.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Volkhov:400italic,700' rel='stylesheet' type='text/css' />
+	</head>
+	<body>
+		<div class="contenido">
+			<div class="encabezado">
+				<a><span>&laquo; Leccion 3: </span>Componentes Básicos</a>
+				<span class="right_ab"><a><strong>Programación Orientada a Objetos</strong></a></span>
+			</div>
+			
+			<h1>Objetos <span>... Todo lo que nos rodea ...</span></h1>
+			
+			<div class="linea"></div>
+			
+			<div id="sb-slider" class="sb-slider">
+				<img src="images/objetos6.jpg" title="Objetos: Todo lo que nos rodea ..."/>
+				<img src="images/objetos7.jpg" title="Objetos: Entidades que realizan las tareas dentro de un programa."/>
+				<img src="images/objetos14.jpg"  title="Características: propiedades  &  Comportamientos: Acciones."/>
+				<img src="images/objetos8.jpg" title="Objeto: Compuesto por características y comportamientos."/>
+				<img src="images/objetos9.jpg" title="Objeto: Compuesto por características y comportamientos."/>
+				<img src="images/objetos10.jpg" title="Objeto: Compuesto por características y comportamientos."/>
+				<img src="images/objetos12.jpg" title="Los objetos están limitados por su imaginación"/>
+				<img src="images/objetos11.jpg" title="Categorías de objetos"/>
+				<img src="images/objetos13.jpg"  title="Objeto: Se compone por estados y comportamientos."/>
+				
+				<a id="e1" href="http://www.gogle.com/">Ejercicios</a>
+			</div>
+			
+		</div>    <!-- fin container -->
+		<script type="text/javascript" src="js/modernizr.custom.13303.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.slicebox.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				
+
+   				$('#e1').hide();
+				$('#sb-slider').slicebox({
+					slicesCount			: 7,
+					disperseFactor		: 50,
+					sequentialRotation	: true,
+					sequentialFactor	: 100
+					
+				});
+				
+	
+				if( !Modernizr.csstransforms3d ) {
+					
+					$('#sb-note').show();
+					
+					$('#sb-examples > li:gt(2)').remove();
+					
+					
+					$('body').append(
+						$('script').attr( 'type', 'text/javascript' ).attr( 'src', 'js/jquery.easing.1.3.js' )
+					
+					);
+					
+				}
+			});
+			
+		
+		</script>
+	</body>
+</html>	

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>leccion4EstructurasSelectivas</title>
+		<meta name="description" content="" />
+		<meta name="author" content="TEC" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+		
+		<style>
+			.soyArrastrable {background:transparent; padding:0.5em;}
+			.soyDrop {background:transparent; padding:0.5em;}
+			
+			#SentenciaSlots div, #SentenciaPila div{
+			  width: 96px;
+			  height: 23px;
+			  padding:2px;
+			  margin:10px;
+			  border: 2px solid #333;
+			  
+			  -moz-border-radius: 10px;
+			  -webkit-border-radius: 10px;
+			  
+			  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			   box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			   
+			  border-radius: 10px;
+			  background: #fff;
+			}
+			
+			#SlotSI{
+				width: 96px;
+			  height: 23px;
+			  padding:2px;
+			  margin:10px;
+			  border: 2px solid #333;
+			  -moz-border-radius: 10px;
+			  -webkit-border-radius: 10px;
+			  
+			  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			   box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			   
+			  border-radius: 10px;
+			  background: #fff;
+			  border-style: dashed;
+			  position: absolute;
+			  top: 30px;
+			  left:10px;
+			}
+			#SlotCondicion{
+				width: 96px;
+			  height: 23px;
+			  padding:2px;
+			  margin:10px;
+			  border: 2px solid #333;
+			  -moz-border-radius: 10px;
+			  -webkit-border-radius: 10px;
+			  
+			  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			   box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			   
+			  border-radius: 10px;
+			  background: #fff;
+			  border-style: dashed;
+			  position: absolute;
+			  top:30px;
+			  left:126px;
+			}
+			#SlotEntonces{
+				width: 96px;
+			  height: 23px;
+			  padding:2px;
+			  margin:10px;
+			  border: 2px solid #333;
+			  -moz-border-radius: 10px;
+			  -webkit-border-radius: 10px;
+			  
+			  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			   box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			   
+			  border-radius: 10px;
+			  background: #fff;
+			  border-style: dashed;
+			  position: absolute;
+			  top:30px;
+			  left:240px;
+			}
+			#SlotSentencia{
+				width: 96px;
+			  height: 23px;
+			  padding:2px;
+			  margin:10px;
+			  border: 2px solid #333;
+			  -moz-border-radius: 10px;
+			  -webkit-border-radius: 10px;
+			  
+			  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			   box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			   
+			  border-radius: 10px;
+			  background: #fff;
+			  border-style: dashed;
+			  position:absolute;
+			  top:80px;
+			  left:126px;
+			}
+			#SlotFinSi{
+			  width: 96px;
+			  height: 23px;
+			  padding:2px;
+			  margin:10px;
+			  border: 2px solid #333;
+			  -moz-border-radius: 10px;
+			  -webkit-border-radius: 10px;
+			  
+			  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			   box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  			   
+			  border-radius: 10px;
+			  background: #fff;
+			  border-style: dashed;
+			  position: absolute;
+			  top:110px;
+			  left:10px;
+			}
+
+		</style>
+		
+		<script type="text/javascript">
+
+		$( init );
+ 
+function init() {
+  $('.soyArrastrable').draggable({
+  	containment:'.zona',
+  	cursor:'move',
+  	snap:'.content'
+  });
+  
+  $('.soyDrop').droppable({
+ 	drop:handleDropEvent 	
+  });
+ 
+ }
+ 
+function handleDropEvent(event,ui){
+	var draggable=ui.draggable;
+	alert( 'el objeto con el ID "' + draggable.attr('id') + '" cae en mi!' );
+} 
+		
+</script>
+  	</head>
+	<body>
+		<div>
+			
+			<div id="main">
+				<section>
+					
+					<div class="zona">
+						<div class="soyDrop" id="SlotSI"></div>
+						<div class="soyDrop" id="SlotCondicion"></div>
+						<div class="soyDrop" id="SlotEntonces"></div>
+						<div class="soyDrop" id="SlotSentencia"></div>
+						<div class="soyDrop" id="SlotFinSi"></div>
+					</div>
+					
+					<div class="content" id="SentenciaPila" >
+						<div  class="soyArrastrable">Condicion</div>
+						<div id="Finsi" class="soyArrastrable">Fin_si</div>
+						<div id="Entonces" class="soyArrastrable">Entonces</div>
+						<div id="Sentencias" class="soyArrastrable">Sentencias</div>
+						<div id="Si" class="soyArrastrable">si</div>
+					</div>
+				
+				</section>
+				<section>
+					<h2>Algo mas</h2>
+				</section>
+				
+			</div>
+			<script src="js/slideshow.js"></script>
+			
+		</div>
+	</body>
+</html>

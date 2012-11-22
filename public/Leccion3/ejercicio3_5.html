@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8 " />
+		
+        <title>Ejercicio 3.5</title>
+        
+        <!-- ARCHIVOS EXTERNOS -->
+        <link rel="stylesheet" type="text/css" href="css/style_objetos.css" />
+		<link rel="stylesheet" type="text/css" href="css/style_ejercicio3_5.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="css/jquery.ui.all.css">
+		<script src="js/jquery-1.2.3.pack.js"></script><!-- LIBRERIA -->
+		<script src="js/runonload.js"></script>
+		<script src="js/ejercicio3_5.js"></script>
+		
+		
+
+		
+		<!-- LIBRERIAS -->
+		<link href='http://fonts.googleapis.com/css?family=Volkhov:400italic,700' rel='stylesheet' type='text/css' />
+		<script src="js/jquery-1.7.2.js"></script>
+		<script src="js/jquery.bgiframe-2.1.2.js"></script>
+		<script src="js/jquery.ui.core.js"></script>
+		<script src="js/jquery.ui.widget.js"></script>
+		<script src="js/jquery.ui.mouse.js"></script>
+		<script src="js/jquery.ui.draggable.js"></script>
+		<script src="js/jquery.ui.position.js"></script>
+		<script src="js/jquery.ui.resizable.js"></script>
+		<script src="js/jquery.ui.dialog.js"></script>
+		<script src="js/jquery.effects.core.js"></script>
+		<script src="js/jquery.effects.blind.js"></script>
+		<script src="js/jquery.effects.explode.js"></script>
+	    <script type="text/javascript">google.load("jquery", "1.6");</script>
+	    
+		<script type="text/javascript">
+			
+		$(document).ready(function(){
+			$("#validar").hide();
+			$("#tarea").hide();
+			$.fx.speeds._default = 1000;
+			$(function(){
+			$( "#dialog" ).dialog({
+			autoOpen: true,
+			show: "blind",
+			hide: "explode"
+				});
+		});
+		
+		$.fx.speeds._default = 1000;
+			$(function(){
+			$( "#dialog2" ).dialog({
+			autoOpen: false,
+			show: "blind",
+			hide: "explode"
+				});
+		});
+			
+			$( "#ins" ).click(function(){$( "#dialog" ).dialog( "open" );});
+			$('#validar').mouseover(function(){
+  			$('audio')[0].play();
+  			
+  		});
+  		$('#validar').click(function(){
+  			$('audio')[1].play();
+  			
+  		});
+  		$('#tarea').mouseover(function(){
+  			$('audio')[0].play();
+  			
+  		});
+  		$('#tarea').click(function(){
+  			$('audio')[1].play();
+  			
+  		});
+  		$('#ins').mouseover(function(){
+  			$('audio')[0].play();
+  			
+  		});
+  		$('#ins').click(function(){
+  			$('audio')[1].play();
+  			
+  		});
+  		$('#submit_btn').mouseover(function(){
+  			$('audio')[0].play();
+  			
+  		});
+  		
+  		$('#submit_btn').click(function(){
+  			$('audio')[1].play();
+  			
+  		});
+			
+		});
+		
+		</script>
+		
+	</head>
+	<body>
+		
+		<!-- Sonidos -->
+		<audio src="sonidos/boton1.wav" preload></audio>
+		<audio src="sonidos/boton2.wav" preload></audio>
+		<audio src="sonidos/entrada1.wav" preload></audio>
+		
+		
+		<div class="contenido">
+			<div class="encabezado">
+				<a><span>&laquo; Leccion 3: </span>Componentes Básicos</a>
+				<span class="right_ab"><a><strong>Programación Orientada a Objetos</strong></a></span>
+			</div>
+			
+			<h1>Estructura de un programa: Ejercicio 3.5 <span>Instrucciones: completa los cuadros de texto.</span></h1>
+			
+			<div class="linea"></div>
+			
+			<!-- EJERCICIO -->
+			<div class="ejercicio">	
+			
+				<div id="etiquetas" class="etiquetas">
+					
+					 <div id="multiplicar"><img id="multiplicar" src="images/multiplicar.jpg"/></div>
+					 <div id="x"><img id="x" src="images/x.jpg"/></div>
+					 <div id="entero1"><img id="entero1" src="images/entero1.jpg"/></div>
+		     		 <div id="y"><img id="y" src="images/y.jpg"/></div>
+		      		 <div id="entero2"><img id="entero2" src="images/entero2.jpg"/></div>
+		      		 <div id="z"><img id="z" src="images/z.jpg"/></div>
+		      		 <div id="entero3"><img id="entero3" src="images/entero3.jpg"/></div>
+		      		 <div id="imprime1"><img id="imprime1" src="images/imprime1.jpg"/></div>
+		      		 <div id="imprime2"><img id="imprime2" src="images/imprime2.jpg"/></div>
+		      		 <div id="operacion"><img id="operacion" src="images/operacion.jpg"/></div>
+		      		 <div id="imprime3"><img id="imprime3" src="images/imprime3.jpg"/></div>
+				</div>
+			<div>
+		   <form name="contact" method="post" action="">
+    
+    		  <input type="text" name="cont1" id="cont1" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont1" id="cont1_error">Completa.</label>
+		      
+		      <input type="text" name="cont2" id="cont2" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont2" id="cont2_error">Completa.</label>
+		      
+		      <input type="text" name="cont3" id="cont3" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont3" id="cont3_error">Completa.</label>
+		      
+		      <input type="text" name="cont4" id="cont4" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont4" id="cont4_error">Completa.</label>
+		  
+		      <input type="text" name="cont5" id="cont5" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont5" id="cont5_error">Completa.</label>
+		      
+		      <input type="text" name="cont6" id="cont6" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont6" id="cont6_error">Completa.</label>
+		      
+		      <input type="text" name="cont7" id="cont7" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont7" id="cont7_error">Completa.</label>
+		      
+		      <input type="text" name="cont8" id="cont8" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont8" id="cont8_error">Completa.</label>
+		      
+		      <input type="text" name="cont9" id="cont9" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont9" id="cont9_error">Completa.</label>
+		      
+		      <input type="text" name="cont10" id="cont10" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont10" id="cont10_error">Completa.</label>
+		      
+		      <input type="text" name="cont11" id="cont11" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont11" id="cont11_error">Completa.</label>
+		      
+		      <input type="text" name="cont12" id="cont12" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont12" id="cont12_error">Completa.</label>
+		      
+		      <input type="text" name="cont13" id="cont13" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont13" id="cont13_error">Completa.</label>
+		      
+		        <br />
+		      <div id="submit_btn1"><input type="submit" name="submit" class="button" id="submit_btn" value="Validar" /></div>
+		 
+  		    </form>	
+  		    
+  		    </div>	
+  		    
+		 </div>	
+			
+			<div class="demo">
+
+				<div id="dialog" title="Ejercicio 3.5">
+					<p>Elabora un programa en lenguaje Lumin que pida al usuario dos números, los multiplique e imprima el resultado.</p>
+				</div>
+				<div id="dialog2" title="Tarea"><p>Elabora un programa en lenguaje Lumin que obtenga el área de un triángulo.</p></div>
+
+		    <div id="instrucciones"><button id="ins">Instrucciones</button></div>
+		     
+		    <button id="validar">Obtener Puntos</button>
+		    <button id="tarea">Tarea</button>	
+		    
+			</div><!-- End demo -->
+			
+		</div>    <!-- fin container -->
+	</body>
+</html>	

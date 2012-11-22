@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8 " />
+		
+        <title>Ejercicio 3.2</title>
+        
+        <!-- ARCHIVOS EXTERNOS -->
+        <link rel="stylesheet" type="text/css" href="css/style_atributos.css" />
+		<link rel="stylesheet" type="text/css" href="css/style_ejercicio3_2.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="css/jquery.ui.all.css">
+		<script src="js/jquery-1.2.3.pack.js"></script><!-- LIBRERIA -->
+		<script src="js/runonload.js"></script>
+		<script src="js/tutorial.js"></script>
+		
+		
+
+		
+		<!-- LIBRERIAS -->
+		<link href='http://fonts.googleapis.com/css?family=Volkhov:400italic,700' rel='stylesheet' type='text/css' />
+		<script src="js/jquery-1.7.2.js"></script>
+		<script src="js/jquery.bgiframe-2.1.2.js"></script>
+		<script src="js/jquery.ui.core.js"></script>
+		<script src="js/jquery.ui.widget.js"></script>
+		<script src="js/jquery.ui.mouse.js"></script>
+		<script src="js/jquery.ui.draggable.js"></script>
+		<script src="js/jquery.ui.position.js"></script>
+		<script src="js/jquery.ui.resizable.js"></script>
+		<script src="js/jquery.ui.dialog.js"></script>
+		<script src="js/jquery.effects.core.js"></script>
+		<script src="js/jquery.effects.blind.js"></script>
+		<script src="js/jquery.effects.explode.js"></script>
+	    <script type="text/javascript">google.load("jquery", "1.6");</script>
+	    
+		<script type="text/javascript">
+			
+		$(document).ready(function(){
+			$("#validar").hide();
+			$("#tarea").hide();
+			$.fx.speeds._default = 1000;
+			$(function(){
+			$( "#dialog" ).dialog({
+			autoOpen: true,
+			show: "blind",
+			hide: "explode"
+				});
+		});
+		
+		$.fx.speeds._default = 1000;
+			$(function(){
+			$( "#dialog2" ).dialog({
+			autoOpen: false,
+			show: "blind",
+			hide: "explode"
+				});
+		});
+			
+			$( "#ins" ).click(function(){$( "#dialog" ).dialog( "open" );});
+			$('#validar').mouseover(function(){
+  			$('audio')[0].play();
+  			
+  		});
+  		$('#validar').click(function(){
+  			$('audio')[1].play();
+  			
+  		});
+  		$('#tarea').mouseover(function(){
+  			$('audio')[0].play();
+  			
+  		});
+  		$('#tarea').click(function(){
+  			$('audio')[1].play();
+  			
+  		});
+  		$('#ins').mouseover(function(){
+  			$('audio')[0].play();
+  			
+  		});
+  		$('#ins').click(function(){
+  			$('audio')[1].play();
+  			
+  		});
+  		$('#submit_btn').mouseover(function(){
+  			$('audio')[0].play();
+  			
+  		});
+  		
+  		$('#submit_btn').click(function(){
+  			$('audio')[1].play();
+  			
+  		});
+			
+		});
+		
+		</script>
+		
+	</head>
+	<body>
+		
+		<!-- Sonidos -->
+		<audio src="sonidos/boton1.wav" preload></audio>
+		<audio src="sonidos/boton2.wav" preload></audio>
+		<audio src="sonidos/entrada1.wav" preload></audio>
+		
+		
+		<div class="contenido">
+			<div class="encabezado">
+				<a><span>&laquo; Leccion 3: </span>Componentes Básicos</a>
+				<span class="right_ab"><a><strong>Programación Orientada a Objetos</strong></a></span>
+			</div>
+			
+			<h1>Atributos: Ejercicio 3.2. <span>Instrucciones: completa los cuadros de texto.</span></h1>
+			
+			<div class="linea"></div>
+			
+			<!-- EJERCICIO -->
+			<div class="ejercicio">	
+			
+				<div id="etiquetas" class="etiquetas">
+					 <!--<img id="etiqueta1" src="images/tieneuna1.jpg"/> -->
+					 <div id="nombre"><img id="nombre" src="images/nombre.jpg"/></div>
+					 <div id="igual1"><img id="igual1" src="images/igual1.jpg"/></div>
+				     <!--<img id="tipo1" src="images/tipo1.jpg"/>-->
+					 <div><img id="numControl" src="images/numControl.jpg"/></div>
+		     		 <div id="igual2"><img id="igual2" src="images/igual2.jpg"/></div>
+		      		 <div id="carrera"><img id="carrera" src="images/carrera.jpg"/></div>
+		      		 <div id="igual3"><img id="igual3" src="images/igual3.jpg"/></div>
+		      		 <div id="semestre"><img id="semestre" src="images/semestre.jpg"/></div>
+		      		 <div id="igual4"><img id="igual4" src="images/igual4.jpg"/></div>
+		      		 <div id="grupo"><img id="grupo" src="images/grupo.jpg"/></div>
+		      		 <div id="igual5"><img id="igual5" src="images/igual5.jpg"/></div>
+		      		 <div id="edad"><img id="edad" src="images/edad.jpg"/></div>
+		      		 <div id="igual6"><img id="igual6" src="images/igual6.jpg"/></div>
+				</div>
+			<div>
+		   <form name="contact" method="post" action="">
+    
+    		  <input type="text" name="cont1" id="cont1" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont1" id="cont1_error">Completa.</label>
+		      
+		      <input type="text" name="cont2" id="cont2" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont2" id="cont2_error">Completa.</label>
+		      
+		      <input type="text" name="cont3" id="cont3" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont3" id="cont3_error">Completa.</label>
+		      
+		      <input type="text" name="cont4" id="cont4" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont4" id="cont4_error">Completa.</label>
+		  
+		      <input type="text" name="cont5" id="cont5" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont5" id="cont5_error">Completa.</label>
+		      
+		      <input type="text" name="cont6" id="cont6" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont6" id="cont6_error">Completa.</label>
+		      
+		      <input type="text" name="cont7" id="cont7" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont7" id="cont7_error">Completa.</label>
+		      
+		      <input type="text" name="cont8" id="cont8" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont8" id="cont8_error">Completa.</label>
+		      
+		      <input type="text" name="cont9" id="cont9" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont9" id="cont9_error">Completa.</label>
+		      
+		      <input type="text" name="cont10" id="cont10" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont10" id="cont10_error">Completa.</label>
+		      
+		      <input type="text" name="cont11" id="cont11" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont11" id="cont11_error">Completa.</label>
+		      
+		      <input type="text" name="cont12" id="cont12" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont12" id="cont12_error">Completa.</label>
+		      
+		      <input type="text" name="cont13" id="cont13" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont13" id="cont13_error">Completa.</label>
+		      
+		      <input type="text" name="cont14" id="cont14" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont14" id="cont14_error">Completa.</label>
+		      
+		      <input type="text" name="cont15" id="cont15" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont15" id="cont15_error">Completa.</label>
+		      
+		      <input type="text" name="cont16" id="cont16" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont16" id="cont16_error">Completa.</label>
+		      
+		      <input type="text" name="cont17" id="cont17" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont17" id="cont17_error">Completa.</label>
+		      
+		      <input type="text" name="cont18" id="cont18" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont18" id="cont18_error">Completa.</label>
+		      
+		      <input type="text" name="cont19" id="cont19" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont19" id="cont19_error">Completa.</label>
+		      
+		      <input type="text" name="cont20" id="cont20" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont20" id="cont20_error">Completa.</label>
+		      
+		      <input type="text" name="cont21" id="cont21" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont21" id="cont21_error">Completa.</label>
+		      
+		      <input type="text" name="cont22" id="cont22" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont22" id="cont22_error">Completa.</label>
+		      
+		      <input type="text" name="cont23" id="cont23" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont23" id="cont23_error">Completa.</label>
+		      
+		      <input type="text" name="cont24" id="cont24" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont24" id="cont24_error">Completa.</label>
+		      
+		      <input type="text" name="cont25" id="cont25" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont25" id="cont25_error">Completa.</label>
+		      
+		      <input type="text" name="cont26" id="cont26" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont26" id="cont26_error">Completa.</label>
+		      
+		      <input type="text" name="cont27" id="cont27" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont27" id="cont27_error">Completa.</label>
+		      
+		      <input type="text" name="cont28" id="cont28" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont28" id="cont28_error">Completa.</label>
+		      
+		      <input type="text" name="cont29" id="cont29" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont29" id="cont29_error">Completa.</label>
+		      
+		      <input type="text" name="cont30" id="cont30" size="30" value="" class="text-input" required/>
+		      <label class="error" for="cont30" id="cont30_error">Completa.</label>
+		      <br />
+		      <div id="submit_btn1"><input type="submit" name="submit" class="button" id="submit_btn" value="Validar" /></div>
+    
+  		    </form>	
+  		    </div>		
+		 </div>	
+			
+			<div class="demo">
+
+				<div id="dialog" title="Ejercicio 3.2">
+					<p>Se tiene un objeto llamado <b>estudiante</b> con los siguientes atributos:</p>
+					
+					<p><b>nombre:</b> Carlos</p>
+					<p><b>número de control:</b> 12345</p>
+					<p><b>carrera:</b> sistemas</p>
+					<p><b>semestre:</b> 1</p>
+					<p><b>grupo:</b> b</p>
+					<p><b>edad:</b> 18</p>
+					<p>Codifica los atributos mencionados en lenguaje Lumin.</p>
+				</div>
+				<div id="dialog2" title="Tarea"><p>Identifica los atributos de cinco objetos y posteriormente codificalos en lenguaje Lumin.</p></div>
+
+		    <div id="instrucciones"><button id="ins">Instrucciones</button></div>
+		    
+		    <button id="validar">Obtener Puntos</button>
+		    <button id="tarea">Tarea</button>
+		    
+			</div><!-- End demo -->
+		</div>    <!-- fin container -->
+	</body>
+</html>	

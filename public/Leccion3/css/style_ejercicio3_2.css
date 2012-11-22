@@ -1,0 +1,141 @@
+@charset "utf-8";
+/** **/
+/** Estilo de etiquetas**/
+#nombre  {margin-top:10px; margin-left:110px;}
+#igual1  {margin-top:-16px; margin-left:173px;}
+#numControl  {margin-top:36px; margin-left:220px;}
+#igual2      {margin-top:-16.8px; margin-left:173px;}
+#carrera     {margin-top:17px; margin-left:110px;}
+#igual3      {margin-top:-16px; margin-left:173px;}
+#semestre    {margin-top:18px; margin-left:110px;}
+#igual4      {margin-top:-16.9px; margin-left:173px;}
+#grupo       {margin-top:19px; margin-left:110px;}
+#igual5      {margin-top:-17px; margin-left:173px;}
+#edad        {margin-top:19px; margin-left:110px;}
+#igual6      {margin-top:-17px; margin-left:173px;}
+/**Estilos de input**/
+label
+{ 
+	font-size:90%; display:block; float:left; width:10em; text-align:right;
+	margin:.2em .2em 0 0; color:#ffd; font-weight:bold;padding:8px 0px; 
+}
+																						
+label.error           
+{
+	 font-weight:normal;color:white;text-align:left;width:140px; padding-left:25px;
+     background: transparent url(/images/cancel.png) no-repeat scroll left; 
+}
+                        
+                        
+input.text-input   {margin:4px;padding:2px 0;color:#333;}
+
+input#cont2        {position:absolute; top:190px; left:432px; width:70px;}/*constante 1*/
+label#cont2_error  {position:absolute; top:230px; left:378px;}
+input#cont3        {position:absolute; top:190px; left:672px;width:70px;}/*carlos*/
+input#cont5        {position:absolute; top:190px; left:829px; width:70px;} /*tipo 1*/
+input#cont6        {position:absolute; top:261px; left:350px; width:70px;}/*tiene una 2*/
+input#cont7        {position:absolute; top:260px; left:430px; width:70px;}/*constante 2*/
+input#cont8        {position:absolute; top:260px; left:673px; width:70px;} /*nc*/
+input#cont9        {position:absolute; top:260px; left:752px; width:70px;}/*tipo 2*/
+input#cont1        {position:absolute; top:190px; left:351px; width:70px;}/*tiene una 1*/
+input#cont4        {position:absolute; top:190px; left:750px; width:70px;}/*tipo 2*/
+input#cont10        {position:absolute; top:261px; left:831px; width:70px;}/*entero1*/
+input#cont11        {position:absolute; top:331px; left:350px; width:70px;}/*tipo 2*/
+input#cont12        {position:absolute; top:331px; left:430px; width:70px;}/*constante 3*/
+input#cont13        {position:absolute; top:331px; left:673px; width:70px;}/*sistemas*/
+input#cont14        {position:absolute; top:331px; left:753px; width:70px;}/*tipo3*/
+input#cont15        {position:absolute; top:331px; left:833px; width:70px;}/*tipo3*/
+input#cont16        {position:absolute; top:401px; left:350px; width:70px;}/*tipo3*/
+input#cont17        {position:absolute; top:401px; left:430px; width:70px;}/*tipo3*/
+input#cont18        {position:absolute; top:401px; left:673px; width:70px;}/*tipo3*/
+input#cont19        {position:absolute; top:401px; left:753px; width:70px;}/*tipo3*/
+input#cont20        {position:absolute; top:401px; left:833px; width:70px;}/*tipo3*/
+input#cont21        {position:absolute; top:471px; left:350px; width:70px;}/*tipo3*/
+input#cont22        {position:absolute; top:471px; left:430px; width:70px;}/*tipo3*/
+input#cont23        {position:absolute; top:471px; left:673px; width:70px;}/*tipo3*/
+input#cont24        {position:absolute; top:471px; left:753px; width:70px;}/*tipo3*/
+input#cont25        {position:absolute; top:471px; left:833px; width:70px;}/*tipo3*/
+input#cont26        {position:absolute; top:541px; left:350px; width:70px;}/*tipo3*/
+input#cont27        {position:absolute; top:541px; left:430px; width:70px;}/*tipo3*/
+input#cont28        {position:absolute; top:541px; left:673px; width:70px;}/*tipo3*/
+input#cont29        {position:absolute; top:541px; left:753px; width:70px;}/*tipo3*/
+input#cont30        {position:absolute; top:541px; left:833px; width:70px;}/*tipo3*/
+/*
+input.button
+{ 
+	position:absolute; top:600px; left:600px; padding:3px 6px; border:2px solid #fff; margin:20px 0px 0px 0px; 
+	color:#3D7169; font-family:Verdana, Arial, Helvetica, sans-serif; background:#CCC; -moz-border-radius:5px; 
+}
+
+input.button:hover	{background:#009FAA none repeat scroll 0% 0%; color:white;}*/
+#message			{width:180px;margin:60px 0 0 100px;}
+#message h2			{font-size:150%;color:white;}
+#message p			{color:white;font-weight:bold;margin:6px 0px; }
+#checkmark			{position:relative;top:-46px;left:-60px;}
+
+/** Estilo de botones**/
+
+#tarea         {margin-left:80px; margin-top:30px;}
+#validar       {margin-left:590px; margin-top:370px;}
+#instrucciones {margin-left:230px; margin-top:-400px;}
+#submit_btn1    {margin-left:100px; margin-top:30px;}
+
+
+#validar, #tarea, #ins, #submit_btn
+{
+	width:116px; height:50px; background-color:#0f789b; font-weight:bold; opacity:0.9;
+	
+	-moz-border-radius:4px;
+	-webkit-border-radius:3px;
+	border-radius:15px 2px 15px 2px;
+	
+	background-image: linear-gradient(bottom, rgb(202,240,234) 4%, rgb(243,255,255) 52%);
+	background-image: -o-linear-gradient(bottom, rgb(202,240,234) 4%, rgb(243,255,255) 52%);
+	background-image: -moz-linear-gradient(bottom, rgb(202,240,234) 4%, rgb(243,255,255) 52%);
+	background-image: -webkit-linear-gradient(bottom, rgb(202,240,234) 4%, rgb(243,255,255) 52%);
+	background-image: -ms-linear-gradient(bottom, rgb(202,240,234) 4%, rgb(243,255,255) 52%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.04, rgb(15,120,155)),
+		color-stop(0.52, rgb(15,120,155))
+	);
+	
+	-moz-box-shadow: 0 4px 5px #CCA2A2;
+	-webkit-box-shadow: 0 4px 5px #CCA2A2;
+	box-shadow: 0 4px 5px #CCA2A2;
+}
+#validar:hover, #tarea:hover, #ins:hover, #submit_btn:hover
+{
+	opacity:1.0;
+	-moz-border-radius:4px;
+	-webkit-border-radius:3px;
+	border-radius:20px 3px 20px 3px;
+	
+		box-shadow:
+		#000 0px 0px 40px,
+		#000 0px 0px 25px;
+	-moz-box-shadow:
+		#000 0px 0px 40px,
+		#000 0px 0px 25px;
+	-webkit-box-shadow:
+		#000 0px 0px 40px,
+		#000 0px 0px 25px;	
+
+	opacity: 1;
+	transform:scale(1.2,1.2);
+	-webkit-transform:scale(1.2,1.2);
+}
+
+.ejercicio
+{
+	width:700px; height:420px; max-width:1024px; margin:auto;
+	background-color: #30be76;
+	border-top: 1px solid #DDD;
+	border-left: 1px solid #DDD;	
+	-moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: 10px 10px 5px #888;
+}	

@@ -1,0 +1,31 @@
+	<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </div>
+  <br />
+  <div class="field">
+  	
+  <%= f.hidden_field :usuario, :value => current_alumno.nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :texto %><br />
+    <%= f.text_area :texto %>
+  </div>
+  <br />
+  <div >
+    <%= f.submit "Publicar", :class =>"button fleft" , :id=>"boton"%>
+  </div>
+<% end %>

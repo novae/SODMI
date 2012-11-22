@@ -1,0 +1,191 @@
+body
+{
+	background: rgb(179,1,55); height:1000px; width:1300px;
+}
+
+/** BANNER **/
+div.banner 
+{
+	background:#3399CC; width:1309px; height:300px; margin-left:-9px; margin-top:-9px;
+}
+			   
+#arbol1
+{
+	position:absolute; width:1308px; height:450px; margin-top:-130px;
+	background:transparent url(pasto4.png) 0 130px repeat-x;		
+}
+			
+#arbol2 
+{
+	position:absolute; width:1308px; height:500px; margin-top:-181px;
+	background:transparent url(pasto5.png) 0 130px repeat-x;
+}
+	
+#pasto1 
+{
+	position:absolute; width:1308px; height:416px; margin-top:-30px;
+	background:transparent url(pasto3.png) 0 130px repeat-x;
+}
+					
+#pasto2 
+{
+	position:absolute; width:1308px; height:416px; margin-top:-30px;
+	background:transparent url(pasto1.png) 0 130px repeat-x; 	
+}
+			
+#avion 
+{
+	position:absolute; width:730px; height:220px;
+	background:transparent url(planesprite4.png) 0 50px no-repeat;
+}
+
+#nubes
+{
+	position:absolute; width:1308px; height:416px; margin-top:-100px;
+	background:transparent url(nubes.png) 0 130px repeat-x;
+}
+		
+/*** MENU ***/
+
+#menu
+{ 
+	float:right; position:absolute; top:310px; right:950px; z-index:10; 
+}
+ 
+#menu a	
+{ 
+	background:#FFF; color: #398080;font-weight:bold; border:#E84779 3px solid;  text-decoration:none; padding:10px;
+	margin-right:10px; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px;
+	
+	box-shadow:
+		#000 0px 0px 40px,
+		#000 0px 0px 25px;
+	-moz-box-shadow:
+		#000 0px 0px 40px,
+		#000 0px 0px 25px;
+	-webkit-box-shadow:
+		#000 0px 0px 10px,
+		#000 0px 0px 10px;	
+			
+	transition:opacity 1s, box-shadow 1s, transform 1s, background 1s;
+	-webkit-transition: opacity 1s, -webkit-box-shadow 1s, -webkit-transform 1s, background 1s;
+	transform:scale(1,1);
+	-webkit-transform:scale(1,1);
+}
+ 
+#menu a:hover		
+{ 
+	background:#B5375E; color:#FFF; border:#FFF 3px solid; text-decoration:none; padding:10px;
+	margin-right:10px; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px;
+						
+	box-shadow:
+		#000 0px 0px 40px,
+		#000 0px 0px 25px;
+	-moz-box-shadow:
+		#000 0px 0px 40px,
+		#000 0px 0px 25px;
+	-webkit-box-shadow:
+		#000 0px 0px 40px,
+		#000 0px 0px 25px;	
+
+	opacity: 1;
+	transform:scale(1.2,1.2);
+	-webkit-transform:scale(1.2,1.2);					
+}
+ 
+#menu li	{ float:left;}
+
+#menu a.selected 
+{ 
+	background:#588F27; 
+	opacity: 1;
+	color:#FFF; 
+	border:#fff 3px solid; 
+	text-decoration:none; 
+	padding:10px;
+	margin-right:10px; 
+	border-radius:10px;
+	 -moz-border-radius:10px; 
+	-webkit-border-radius:10px;
+}
+
+/*** CUADRO DE TEXTO ***/
+
+#wrapper	{ width:100%; height:100%; position:absolute; top:270; left:0; overflow:hidden; }
+ 
+#mask		{ width:400%; height:100%; }
+ 
+.box		{ width:25%; height:100%; float:left; }
+ 
+.content	
+{ 
+	width:700px; height:450px; top:20%; margin: 0 auto; position:relative; background:rgba(255,255,255, 0.3);
+	border-radius:35px; -moz-border-radius:35px; -webkit-border-radius:35px; 
+			
+	box-shadow:
+		#000 0px 0px 40px,
+		#000 0px 0px 25px;
+	-moz-box-shadow:
+		#000 0px 0px 40px,
+		#000 0px 0px 25px;
+	-webkit-box-shadow:
+		#000 0px 0px 40px,
+		#000 0px 0px 25px;	
+					
+	transition:opacity 1s, box-shadow 1s, transform 1s, background 1s;
+	-webkit-transition: opacity 1s, -webkit-box-shadow 1s, -webkit-transform 1s, background 1s;
+	transform:scale(1,1);
+	-webkit-transform:scale(1,1);
+}
+.content:hover
+{
+	opacity: 1;
+	background: #588F27;
+	transform:scale(1.1,1.1);
+	-webkit-transform:scale(1.1,1.1);
+}
+
+.inner
+{ 
+	width:660px; height:410px; background:rgba(255, 255, 255, 0.3); border-radius:30px; -moz-border-radius:30px;
+	-webkit-border-radius:30px; margin:5px; padding:15px; top:5px; position:relative; 
+}
+
+.biblio
+{
+	background: rgba(63,148,148, 0.2);	
+	height:120px;
+	width:260px;
+}
+
+/*** TEXTO ***/
+
+.content h2
+{
+	font-size: 1.5em; margin: 0.83em 0;
+}
+
+.content div h2
+{
+	color: #398080; font-weight:bold; text-shadow:5px 4px 19px #000000;
+}
+ 
+.content div p
+{
+	font-size: 14px;
+	line-height: 22px;
+	text-align: left;
+	margin: 0;
+	padding-left: 15px;
+	font-family: Cambria, Georgia, serif;
+	border-left: 8px solid rgba(63,148,148, 0.2);
+}
+
+/*** BOLAS ***/
+
+.clouds					{ width:100%; height:262px; overflow:hidden; }
+#clouds-small			{ width:3000px; height:100%; background:url(../images/bolas2.png) repeat-x;}
+#cloud2					{ position:relative; top:-262px; }
+#clouds-big				{ width:4000px; height:100%; background:url(../images/bola1.png) repeat-x;}
+
+

@@ -1,0 +1,41 @@
+<% provide(:title, 'Maestros Registrados') %>
+<script>
+	administradorWeb();
+</script>
+<div class="row">
+		<header class="title">
+			<p class="fleft">Maesto</p>
+		</header>
+<h1>Maestros Registrados</h1>
+
+<table>
+  <tr>
+    <th> Idmaestro</th>
+    <th> Nombre</th>
+    <th> Email</th>
+    <th> Fotografia</th>
+    <th> Contraseña</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+
+<% @maestros.each do |maestro| %>
+  <tr>
+    <td><%= maestro.idmaestro %></td>
+    <td><%= maestro.nombre %></td>
+    <td><%= maestro.email %></td>
+	<td>	</td>
+    <td><%= maestro.password %></td>
+    <td><%= link_to 'Show', maestro %></td>
+    <td><%= link_to 'Edit', edit_maestro_path(maestro) %></td>
+    <td><%= link_to 'Destroy', maestro, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Maestro', new_maestro_path %>
+</div>

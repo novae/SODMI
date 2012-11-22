@@ -1,0 +1,131 @@
+<% provide(:title, 'Lumin') %>
+<div class="row">
+	<header >
+		
+		<div class="twelve columns">
+			<div class="panel callout ">
+				<h2 class="color-blanco sombra-titulo "> Lenguaje de Programación Lumin&copy; </h2>
+				 
+			</div>
+			
+		</div>
+			<br /><br />
+		<hr />
+			<div class="row">
+		<div class="twelve columns">
+			<dl  class="sub-nav" data-magellan-expedition="fixed">
+				<dt>Documentación:</dt>
+				<dd  class="active" data-magellan-arrival="definicion">
+					<%=link_to "Definición", "#definicion"%>
+				</dd>
+				<dd data-magellan-arrival="generalidades" >
+					<%=link_to "Generalidades", "#generalidades"%>
+				</dd>
+				<dd data-magellan-arrival="reglas">
+					<%=link_to "Reglas", "#reglas"%>
+				</dd>
+				<dd data-magellan-arrival="elementos">
+					<%=link_to " Elementos Lexicos", "#elementos"%>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="twelve columns">
+		 <%= link_to image_tag("logo-lumin.png", alt: "SODMI" ), "#" %>
+		</div>
+		<br /><br />
+		<hr />
+	</header>
+
+		
+
+
+	<div class="row">
+		
+		<section>
+			<div  data-magellan-destination='definicion' id='definicion' class="panel twelve columns">
+				
+				<article >
+					<h5>Definición del lenguaje Lumin© (Versión 1.0)</h5>
+					<p align="justify">
+						El lenguaje de programación Lumin© se diseñó como producto del proyecto de investigación “Herramienta integral para él aprendizaje y desarrollo de las habilidades de programación en principiantes”, con el fin de facilitar el aprendizaje y el desarrollo de las habilidades de programación en hispanohablantes. Sigue el paradigma de la programación orientada a objetos y presenta en su sintaxis una forma simple de asimilar las diferentes estructuras que el mismo maneja.
+						Lumin© ha cambiado de nombre en dos ocasiones por motivos de originalidad en el nombre para su registro como marca, motivo por el cual se denominaba inicialmente Iris, posteriormente recibió el nombre de Visum (que es el nombre bajo el cual se registró en el presente proyecto) hasta recibir el actual y definitivo nombre Lumin©, motivo por el cual se le denominará de esta manera de ahora en adelante.
+					</p>
+				</article>
+			</div>
+			<div data-magellan-destination='generalidades' id="generalidades" class="panel twelve columns">
+				
+				<article>
+				
+						<h5>Generalidades de lenguaje Lumin©</h5>
+						<br />
+					
+					<ul>
+						<li>
+							 Fue diseñado para aprender a programar.
+						</li>
+						<li>
+							Es un lenguaje de  Programación Orientado a Objetos.
+						</li>
+						<li>
+							Tiene una gramática similar al español para facilitar los procesos mentales de comprensión y aprendizaje.
+						</li>
+						<li>
+						 Orientado a programadores principiantes hispanohablantes.
+						</li>
+						<li>
+							Maneja un nivel bajo de abstracción utilizando símbolos sólo en casos necesarios como lo son las operaciones lógicas, matemáticas, relacionales y de asignación, ampliando el uso de palabras reservadas que faciliten la lectura del código.
+						</li>
+						<li>
+							Facilita el manejo de bloques, y el aprendizaje de los conceptos de algoritmos y objetos, con todo aquello que estos engloban.
+						</li>
+					</ul>
+					<br />
+				</article>
+			</div>
+			
+			<div data-magellan-destination='reglas' id="reglas" class="panel twelve columns">
+			<articLe>
+			
+					<h5>Reglas generales del lenguaje</h5>
+					<br />
+					Para programar correctamente en Lumin© es necesario seguir las siguientes reglas:
+					<br /><br />
+				<ul>
+					<li> Los nombres de las variables no deben llevar espacios intermedios, caracteres especiales, ni comenzar con algún dígito como primer caracter.</li>
+					<li> Los bloques de código respectivos de una estructura de control deberán ir encerrados con las palabras correspondientes a cada estructura.</li>
+					<li> Los métodos deben ser declarados dentro de una clase, y nunca dentro de otro método.</li>
+					<li> Todo programa escrito en Lumin© deberá ser guardado con extensión  .Lumin©  para su interpretación por el compilador. </li>
+					<li> No debe ser escrita más de una instrucción en cada renglón del programa, se entiende que una instrucción ha terminado al encontrar un salto de línea y no deberá escribirse ningún carácter al final de cada instrucción.</li>
+					
+				</ul>
+				<br />
+			</article>
+			</div>
+			<div data-magellan-destination='elementos' id="elementos" class="panel twelve columns">
+			<article>
+				
+					<h5>Elementos léxicos del lenguaje Lumin©</h5>
+					<br />
+					
+				<p align="justify">
+				
+				En esta sección se describirá la composición de los lexemas válidos dentro de Lumin© así como una breve descripción de su significado.
+				Identificadores. Un identificador es un elemento léxico compuesto por una sucesión de caracteres que sirven para referenciar un valor constante o variable, así como para
+				·           nombrar los distintos elementos del lenguaje tales como paquetes, clases, métodos etc. y no pueden estar duplicados en un mismo ámbito dentro del programa.
+				En Lumin© un identificador válido está definido por la siguiente expresión regular:
+				_?letra+(_?letra)* digito*
+				Donde:
+				letra={ ∀ x | X Є alfabeto español}
+				digito={∀ x | X >= 0 y X<=9 }
+				Ejemplos:
+				_x
+				_x1
+				Casa_de_x
+			</p>
+			</article>
+			</div>
+			</section>
+		
+			</div>
+			</div> 

@@ -1,0 +1,34 @@
+<% provide(:title, "Entrar") %>
+<div class="row">
+	<div class=" show  center part">
+		<header class="title">
+			<h2 class="fleft">Maestro </h2>
+		</header>
+		<div id="fomulariologin" class="white_content visible" >
+			<br />
+			<%= form_for @session, :as => :session, :url => sessions_path, :html => { :class => "formulario", :id => "beautiful" } do |f| %>
+			<fieldset>
+				<p>
+					<%= f.label 'ID de Usuario'  %>
+					<%= f.text_field :idmaestro %>
+				</p>
+				<br />
+				<p>
+					<%= f.label :contraseña %>
+					<%= f.password_field :password %>
+				</p>
+				<br />
+				<p>
+					<%= f.submit "Entrar", :id=>"submit" %>
+					<button type="button" id="submit" class="cancela" >
+						Cancelar
+					</button>
+				</p>
+			</fieldset>
+			<p>
+				¿Nuevo Maestro? <%= link_to "¡Registrarse!", new_maestro_path,   :class => "linkClass" %>
+			</p>
+			<% end %>
+		</div>
+	</div>
+</div>

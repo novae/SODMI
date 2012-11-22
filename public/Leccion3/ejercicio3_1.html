@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8 " />
+		
+        <title>Ejercicio 3.1</title>
+        
+        <!-- ARCHIVOS EXTERNOS -->  <!--  -->
+        <link rel="stylesheet" type="text/css" href="css/style_objetos.css" />
+		<link rel="stylesheet" type="text/css" href="css/style_ejercicio3_1.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="css/jquery.ui.all.css">
+		<!--<script src="js/ejercicio.js" type="text/javascript"></script>-->
+	
+		
+		<!-- LIBRERIAS -->
+		<link href='http://fonts.googleapis.com/css?family=Volkhov:400italic,700' rel='stylesheet' type='text/css' />
+		<!-- <script type="text/javascript" src="js/jquery.jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.19.custom.min.js"></script>-->
+		<script src="js/jquery-1.7.2.js"></script>
+		<script src="js/jquery.bgiframe-2.1.2.js"></script>
+		<script src="js/jquery.ui.core.js"></script>
+		<script src="js/jquery.ui.widget.js"></script>
+		<script src="js/jquery.ui.mouse.js"></script>
+		<script src="js/jquery.ui.draggable.js"></script>
+		<script src="js/jquery.ui.position.js"></script>
+		<script src="js/jquery.ui.resizable.js"></script>
+		<script src="js/jquery.ui.dialog.js"></script>
+		<script src="js/jquery.effects.core.js"></script>
+		<script src="js/jquery.effects.blind.js"></script>
+		<script src="js/jquery.effects.explode.js"></script>
+	   <!-- <script type="text/javascript" src="https://www.google.com/jsapi?key=ABQIAAAAAa_xc3cplYGMwVbx_zW2chTWZSld1Wm-gV17JxrvtQa7WXWbRRTOL98qj5hk-yEw1n5LrYmEoAwzOg"></script>-->
+	   
+	   
+	   <!-- Eventos en jquery -->
+	   
+	    <script type="text/javascript">
+		handImage = new Image(); 
+		handImage.src = "images/hand.png";
+		
+	    $(document).ready(function() {
+			$("#validar").hide();
+			$("#tarea").hide();
+			var $puntos =0;
+			var $contador = 0;
+			fillTheItems(); //Carga las etiquetas
+			
+			/** Draggable events **/
+			
+			$('.ejercicio #items .item').bind('dragstart', function(event) {
+				event.originalEvent.dataTransfer.effectAllowed = "move";
+			   	event.originalEvent.dataTransfer.setData("text/plain", event.target.getAttribute('id'));
+				$(event.target).addClass('itemSelected');
+			});
+
+			/** Un elemento está siendo arrastrado. **/
+
+			$('.ejercicio #items .item').bind('drag', function(event) {
+			
+			});
+
+			/** Un elemento termina de arrastrarse. **/
+
+			$('.ejercicio #items .item').bind('dragend', function(event) {
+				
+				$(event.target).removeClass('itemSelected');
+			});
+
+			/** Eventos Drop **/
+
+			/** Un elemento comienza a ser arrastrado sobre una área válida. **/
+
+			$('.ejercicio #boxes .box').bind('dragenter', function(event) {
+				
+				$(event.target).addClass('itemOnDropArea');
+				return false;
+			});
+
+			/** Un elemento deja de ser arrastrado. **/
+
+			$('.ejercicio #boxes .box').bind('dragleave', function(event) {
+				
+				$(event.target).removeClass('itemOnDropArea');
+				return false;
+			});
+			
+			/** Dragover. **/
+
+			$('.ejercicio #boxes .box').bind('dragover', function(event) {
+
+				event.originalEvent.dataTransfer.dropEffect = "move";
+				return false;
+			});
+			
+			/** Drop. **/
+
+			$('.ejercicio #boxes .box').bind('drop', function(event) {
+		
+				var itemId = event.originalEvent.dataTransfer.getData("text/plain");
+				var itemType = $("#" + itemId).attr('alt');
+				var dropboxType = $(event.target).attr('id');
+				
+				if(dropboxType == 'toolbox')
+				{
+					$contador=$contador+1;
+					if(itemType == 'car')
+					{
+						
+						$("#" + itemId).remove();
+						$puntos=$puntos+1;
+						$( "#dialog" ).dialog( "open" );
+						//alert($puntos);
+						
+					}
+					else
+					{
+						$("#" + itemId).remove();
+						$( "#dialog2" ).dialog( "open" );
+					}
+				}
+				
+				if(dropboxType == 'fruitbasket')
+				{
+					$contador=$contador+1;
+					if(itemType == 'comp')
+					{
+						$puntos=$puntos+1;
+						$( "#dialog" ).dialog( "open" );
+						
+						//alert($puntos);
+						$("#" + itemId).remove();
+					}
+					else
+					{
+						$("#" + itemId).remove();
+						$( "#dialog2" ).dialog( "open" );
+					}
+				}
+				
+				$(event.target).removeClass('itemOnDropArea');
+					
+				if($contador == 10)
+				{
+					$("#validar").show("slow");
+					$("#tarea").show("slow");
+					$( "#validar" ).click(function() {
+						alert("PUNTOS: "+ $puntos);
+					});
+					$( "#tarea" ).click(function() {
+							alert("Elije 5 objetos del mundo real e identifica sus características y comportamientos.");
+					});
+					
+				}
+				return false;
+			});
+		});
+
+		/** Función para cargar las etiquetas. **/
+
+		function fillTheItems()
+		{
+			var itemList = [];
+			
+			for(var i=0; i<5; i++)
+			{
+				itemList.push("car" + i);
+				itemList.push("comp" + i);
+			}
+
+			itemList.sort(function(a,b) {
+				return  Math.round(Math.random());
+			});
+			
+			////////////////////////////////////////////////////////////
+
+			var items = $('.ejercicio #items');
+
+			for(var item in itemList)
+			{
+				var itemId = itemList[item];
+				var itemType = itemId.substring(0, itemId.length - 1);
+				
+				// Creates the draggable item HTML tag.
+				
+				html = "<img id='" + itemId + "' draggable='true' class='item' alt='" + itemType + "' src='images/" + itemId + ".png' />";
+				
+				items.append(html);
+			}
+		}
+	
+	//Efecto para el cuadro de diálogo
+	$.fx.speeds._default = 1000;
+	$(function() {
+		$( "#dialog" ).dialog({
+			autoOpen: false,
+			show: "blind",
+			hide: "explode"
+		});
+
+	});
+		
+	$.fx.speeds._default = 1000;
+	$(function() {
+		$( "#dialog2" ).dialog({
+			autoOpen: false,
+			show: "blind",
+			hide: "explode"
+		});
+		
+		$('#validar').mouseover(function(){
+  			$('audio')[0].play();
+  			
+  		});
+  		$('#validar').click(function(){
+  			$('audio')[1].play();
+  			
+  		});
+  		$('#tarea').mouseover(function(){
+  			$('audio')[0].play();
+  			
+  		});
+  		$('#tarea').click(function(){
+  			$('audio')[1].play();
+  			
+  		});
+
+	});
+
+	</script>
+	    
+	</head>
+	<body>
+		
+		<!-- Sonidos -->
+		<audio src="sonidos/boton1.wav" preload></audio>
+		<audio src="sonidos/boton2.wav" preload></audio>
+		<audio src="sonidos/entrada1.wav" preload></audio>
+		
+		
+		<div class="contenido">
+			<div class="encabezado">
+				<a><span>&laquo; Leccion 3: </span>Componentes Básicos</a>
+				<span class="right_ab"><a><strong>Programación Orientada a Objetos</strong></a></span>
+			</div>
+			
+			<h1>Objetos: Ejercicio 3.1. <span>Instrucciones: Identifica las características y comportamientos de un Automovíl. Selecciona las etiquetas y arrástralas al contenedor correspondiente.</span></h1>
+			
+			<div class="linea"></div>
+			
+			<!-- EJERCICIO -->
+			<div class="ejercicio">
+				<div id='boxes'>
+				<img id='toolbox' class='box' alt='Toolbox' title='Caracteristícas' src='images/caracteristicas.png' />
+				<img id='fruitbasket' class='box' alt='Fruit Basket' title='Comportamientos' src='images/comportamientos.png' />
+			</div>
+
+			<!-- SECCIÓN DE LAS ETIQUETAS -->
+			<section id='items'>	
+			</section>
+				
+			</div>	
+			
+			<div class="demo">
+
+				<div id="dialog" title="">
+					<p>CORRECTO !!!</p>
+				</div>
+
+				<div id="dialog2" title="">
+					<p>INCORRECTO !!!</p>
+				</div>
+		    <button id="validar">Obtener Puntos</button>
+		    <button id="tarea">Tarea</button>
+		    
+			</div><!-- End demo -->
+		</div>    <!-- fin container -->
+	</body>
+</html>	

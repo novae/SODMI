@@ -1,0 +1,75 @@
+<%=  form_for @maestro, :html => {  :multipart => true} do |f| %>
+<% if @maestro.errors.any? %>
+<div class="alert-box row alert" id="error_explanation">
+	<a href="" class="close">×</a>
+	<p>
+		Tiene uno o mas errores Verifique los datos que ha ingresado
+	</p>
+</div>
+<% end %>
+<fieldset>
+	<legend>
+		Datos del Nuevo Profesor
+	</legend>
+	<div class="row">
+		<div class="two columns">
+			<label class="right inline">ID:</label>
+		</div>
+		<div class="ten columns">
+			<%= f.text_field :idmaestro,:required=>true,:placeholder=>"Ingrese su ID"%>
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="two columns">
+			<label class="right inline">Nombre:</label>
+		</div>
+		<div class="ten columns">
+			<%= f.text_field :nombre , :required=>true,:placeholder=>"Nombre del Profesor"%>
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="two columns">
+			<label class="right inline">Email:</label>
+		</div>
+		<div class="ten columns">
+			<%= f.email_field :email, :required=>true ,:placeholder=>"ejemplo@correo.com"%>
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="two columns">
+			<label class="right inline">Fotografía:</label>
+		</div>
+		<div class="ten columns">
+			<%= f.file_field :avatar%>
+			<%= f.hidden_field :avatar_cache %>
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="two columns">
+			<label class="right inline">Contraseña:</label>
+		</div>
+		<div class="ten columns">
+			<%= f.password_field :password, :required=>true,:placeholder=>"********"%>
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="two columns">
+			<label class="right inline">Confirmación: </label>
+		</div>
+		<div class="ten columns">
+			<%= f.password_field :password_confirmation , :required=>true,:placeholder=>"Vuelve a introducir tu Contraseña"%>
+		</div>
+	</div>
+	<br />
+	<div class="five columns centered">
+		<%= f.submit "       Guardar       ",  :class=> "button radius" %>
+	</div>
+	<br />
+	<br />
+</fieldset>
+<% end %>

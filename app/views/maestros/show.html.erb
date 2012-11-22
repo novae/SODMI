@@ -1,0 +1,36 @@
+<% provide(:title, @maestro.nombre) %>
+<div class="show center part clearfix">
+	<header class="title">
+		<h2 class="fleft">Maestro</h2>
+	</header>
+	<div class="columnthird content ">
+		<%= render 'layouts/menumaestro' %>
+		<article id="infomaestro" class="detail">
+			
+			
+			<ul>
+				<li>
+				<%= image_tag @maestro.avatar_url.to_s%>
+				
+				</li>
+				<li>
+						
+					<br />
+					<br />
+					<h4>ID Maestro:</h4>
+					<%= @maestro.idmaestro %>
+				</li>
+				<br />
+				<li>
+					<h4>Nombre:</h4>
+					<%= @maestro.nombre %>
+				</li>
+				<br />
+				<li>
+					<h4>Email:</h4>
+					<%= @maestro.email %>
+				</li>
+			</ul>
+		</article>
+	</div>
+</div>

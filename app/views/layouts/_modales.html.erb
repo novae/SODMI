@@ -1,0 +1,96 @@
+<!-- Map Modal -->
+<div class="reveal-modal small " id="mapaModal">
+	<iframe width="500" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.mx/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Avenida+Tecnol%C3%B3gico+%23100++Ciudad+Guzm%C3%A1n+Jalisco+&amp;aq=&amp;sll=20.546345,-108.142156&amp;sspn=9.188272,16.907959&amp;t=h&amp;ie=UTF8&amp;hq=Avenida+Tecnol%C3%B3gico+%23100++Ciudad+Guzm%C3%A1n+Jalisco&amp;hnear=&amp;radius=15000&amp;ll=19.668755,-103.484645&amp;spn=0.009032,0.016512&amp;z=14&amp;iwloc=A&amp;cid=6056955507112129687&amp;output=embed"></iframe>
+	<br />
+	<small><a href="https://maps.google.com.mx/maps?f=q&amp;source=embed&amp;hl=es&amp;geocode=&amp;q=Avenida+Tecnol%C3%B3gico+%23100++Ciudad+Guzm%C3%A1n+Jalisco+&amp;aq=&amp;sll=20.546345,-108.142156&amp;sspn=9.188272,16.907959&amp;t=h&amp;ie=UTF8&amp;hq=Avenida+Tecnol%C3%B3gico+%23100++Ciudad+Guzm%C3%A1n+Jalisco&amp;hnear=&amp;radius=15000&amp;ll=19.668755,-103.484645&amp;spn=0.009032,0.016512&amp;z=14&amp;iwloc=A&amp;cid=6056955507112129687" style="color:#0000FF;text-align:left">Ver mapa más grande</a></small>
+	<!-- Any anchor with this class will close the modal. This also inherits certain styles, which can be overriden. -->
+	<a href="#" class="close-reveal-modal">&times;</a>
+</div>
+<!-- End Modal -->
+
+<!-- Formulario de Login Alumno Modal -->
+<div class="reveal-modal small " id="loginAlumnoModal">
+	<div class="row">
+		<header class="twelve columns panel callout centered">
+			<h3 class="color-blanco"><span class="glyph social" style="font-size: 30px; line-height: 30px"> x </span>Alumno</h3>
+		</header>
+		<br />
+		<div class="twelve columns panel">
+			
+			<%= form_for @session_alumno, :as => :session_alumno, :url => sessions_alumno_index_path do |f| %>
+			<fieldset>
+			<legend>Datos de Alumno</legend>
+					
+					<%= f.text_field :nc,:placeholder => 'Numero de Control',:required=>true %>
+			
+				<br />
+			
+					<%= f.password_field :password,:placeholder => 'Contraseña',:required=>true%>
+			
+				<br />
+					<div class="four columns centered">
+					<%= f.submit "Entrar",:class=>"secondary  button round" %>
+					</div>
+				
+				<br />
+			
+			</fieldset>
+			<p>
+				¿Nuevo Alumno? <%= link_to "¡Registrarse!", new_alumno_path %> <span class="glyph enclosed" > d </span>
+			</p>
+			<% flash.each do |key, value| %>
+			<div id="flash" class="alert-<%= key %>">
+				<%= value %>
+			</div>
+			<% end %>
+			<% end %>
+		</div>
+	</div>
+	<!-- Any anchor with this class will close the modal. This also inherits certain styles, which can be overriden. -->
+	<a href="#" class="close-reveal-modal">&times;</a>
+</div>
+<!-- End Modal -->
+
+<!-- Formulario de Login Maestro Modal -->
+<div class="reveal-modal 	 " id="loginMaestroModal">
+	<div class="row">
+		<header class="twelve columns panel callout centered">
+			<h3 class="color-blanco"><span class="glyph general" style="font-size: 30px; line-height: 30px"> ] </span>Profesor</h3>
+		</header>
+		<br />
+		<div class="twelve columns panel">
+			
+			<%= form_for @session, :as => :session, :url => sessions_path do |f| %>
+			<fieldset>
+			<legend>Datos de Profesor</legend>
+
+					
+					<%= f.text_field :idmaestro,:placeholder => 'ID',:required=>true %>
+			
+				<br />
+			
+					<%= f.password_field :password,:placeholder => 'Contraseña',:required=>true%>
+			
+				<br />
+					<div class="four columns centered">
+					<%= f.submit "Entrar",:class=>"secondary  button round" %>
+					</div>
+				
+				<br />
+			
+			</fieldset>
+			<p>
+				¿Nuevo Profesor? <%= link_to "¡Registrarse!", new_maestro_path,:class=>"linkClass"%> <span class="glyph enclosed " > d </span>
+			</p>
+			<% flash.each do |key, value| %>
+			<div id="flash" class="alert-<%= key %>">
+				<%= value %>
+			</div>
+			<% end %>
+			<% end %>
+		</div>
+	</div>
+	<!-- Any anchor with this class will close the modal. This also inherits certain styles, which can be overriden. -->
+	<a href="#" class="close-reveal-modal">&times;</a>
+</div>
+<!-- End Modal -->

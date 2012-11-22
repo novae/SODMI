@@ -1,0 +1,64 @@
+#fomularioregistrarse {
+  margin-left: 10%;
+  p {
+    color: #82b9c9;
+  }
+}
+
+form#registro {
+  width: 530px;
+  margin: auto;
+  background: #FFF;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 2px solid #DDD;
+  //box-shadow: 0 0 7px 0px #000 inset, 0 0 16px 0px #000;
+  //-moz-box-shadow: 0 0 7px 0px #000 inset, 0 0 16px 0px #000;
+  //  -webkit-box-shadow: 0 0 7px 0px #000 inset, 0 0 16px 0px #000;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(255, 255, 255)), color-stop(0.41, rgb(217, 217, 217)), color-stop(1, rgb(255, 255, 255)));
+  background: -moz-linear-gradient(center bottom, rgb(255, 255, 255) 0%, rgb(217, 217, 217) 41%, rgb(255, 255, 255) 100%);
+  -webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.2)));
+  fieldset {
+    border: 0;
+    margin-left: 10px;
+    p {
+      margin: 5px 1px 1px 1px;
+    }
+    input {
+      width: 90%;
+      padding: 12px 10px;
+      border: 0;
+      font-size: 23px;
+      border-radius: 10px;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+      -moz-box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+      -webkit-box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+      -webkit-background-clip: padding-box;
+      &#submit {
+        width: 220px;
+        margin-left: 25%;
+        cursor: pointer;
+        height: 50px;
+        box-shadow: 0 0 4px 0 #666;
+        -moz-box-shadow: 0 0 4px 0 #666;
+        -webkit-box-shadow: 0 0 4px 0 #666;
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(237, 237, 237)), color-stop(0.41, rgb(217, 217, 217)), color-stop(1, rgb(255, 255, 255)));
+        background: -moz-linear-gradient(center bottom, rgb(237, 237, 237) 0%, rgb(217, 217, 217) 41%, rgb(255, 255, 255) 100%);
+        &:hover {
+          background-image: linear-gradient(bottom, rgb(22, 145, 188) 13%, rgb(49, 174, 226) 57%, rgb(79, 209, 255) 79%);
+          background-image: -o-linear-gradient(bottom, rgb(22, 145, 188) 13%, rgb(49, 174, 226) 57%, rgb(79, 209, 255) 79%);
+          background-image: -moz-linear-gradient(bottom, rgb(22, 145, 188) 13%, rgb(49, 174, 226) 57%, rgb(79, 209, 255) 79%);
+          background-image: -webkit-linear-gradient(bottom, rgb(22, 145, 188) 13%, rgb(49, 174, 226) 57%, rgb(79, 209, 255) 79%);
+          background-image: -ms-linear-gradient(bottom, rgb(22, 145, 188) 13%, rgb(49, 174, 226) 57%, rgb(79, 209, 255) 79%);
+          background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.13, rgb(22, 145, 188)), color-stop(0.57, rgb(49, 174, 226)), color-stop(0.79, rgb(79, 209, 255)));
+          color: #FFF;
+        }
+      }
+    }
+  }
+}
+    
+    

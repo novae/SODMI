@@ -1,0 +1,16 @@
+._u507.f3s_top
+{
+	background-image: url("../images/u507-full.png");
+	background-position: left top;
+}
+
+#u70,#u507,#u513
+{
+	position: relative;
+}
+
+#u70_img,#u513_img
+{
+	vertical-align: top;
+}
+

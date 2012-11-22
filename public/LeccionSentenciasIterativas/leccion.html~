@@ -1,0 +1,641 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Leccion </title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Crimson+Text:regular,600,bold' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="/css/reset.css">
+		<link rel="stylesheet" href="/css/main.css">
+	</head>
+	
+	<body>
+		
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div id="main">
+			
+			<section id="fondo">
+				<br />
+				<br />
+				<h1>Sentencias Iterativas</h1>
+				<br />
+				<br />
+				<img src="/assets/images/icono-ciclo.png" />
+				<script>
+					// Delicously hacky. Look away.
+					var message = navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ? 'Presiona para Navegar' : 'Para navegar utiliza las flechas del Teclado o los Botones';
+					document.write( '<p style="color: rgba(0,0,0,0.5); text-shadow: none;">('+message+')</p>' );
+				</script>
+				<div id="botones">
+					<a href="#/1" ><img src="/assets/images/derecha.png" /></a>
+				</div>
+			</section>
+			
+			<section id="fondo">
+				<h2>Estructuras iterativas: repetir mientras, hasta, desde</h2>
+				<div id="textos">
+				<p align="justify">
+					Es muy común encontrar en los programas operaciones que se deben ejecutar un número repetido de veces. Si bien, las instrucciones son las mismas los datos sobre los que operan varían. 
+					<br/>
+					<br/>
+					Para repetir varias veces un proceso determinado se hace uso de los ciclos repetitivos, a los cuales se les conoce con el nombre de estructura repetitiva, estructura iterativa, lazo, bucle o ciclo.
+					
+				</p>
+				</div>
+				<div id="botones">
+					<a href="#/" ><img src="/assets/images/izquierda.png" /></a>
+					<a href="#/2" ><img src="/assets/images/derecha.png" /></a>
+					
+				</div>
+				
+			</section>
+			
+			<!-- Slides Verticales -->
+			<section>
+				<section id="fondo">
+					<br />
+					<br />
+					<h3>Por lo general se pueden encontrar<br /> tres tipos de ciclos:</h3>
+					<br />
+					<div id="textos">
+					<p align="justify">
+						•	Entrada Asegurada (while).
+						<br />
+						<br />
+						•	Hacer Mientras (do.. while). 
+						
+						<br />
+						<br />
+						•	Ciclo Controlado por Contador (for). 
+		<br />
+					</p>
+					</div>
+						
+					<div id="botones">
+					<a href="#/1" ><img src="/assets/images/izquierda.png" /></a>
+					<a href="#/2/1" ><img src="/assets/images/abajo.png" /></a>
+					
+				</div>
+				</section>
+				<section id="fondo">
+					<h4>Mapa conceptual que ilustra los diferentes ciclos</h4>
+					<div id="imagenes">
+					<img src="/assets/images/Mapaciclos.png" />
+					</div>
+					<div id="botones">
+					<a href="#/2" ><img src="/assets/images/arriba.png" /></a>
+					<a href="#/2/2" ><img src="/assets/images/abajo.png" /></a>
+					
+				</div>
+				</section>
+				<section id="fondo">
+					<h3>Funcionamiento de un Ciclo</h3> 
+					<br />
+					<div id="textos">
+						<br />
+						<p align="justify">
+							Un ciclo funciona de la siguiente manera: evalúa una condición, de resultar cierta, realiza una acción o bloque de acciones, luego vuelve a evaluar la condición y si nuevamente resulta cierta, realiza la(s) acción(es).
+							<br/>
+							<br />
+							Cuando la condición dé cómo resultado falso, se sale del ciclo y continúa con la ejecución normal del programa.
+
+						
+							<br/>
+						</p>
+						<br /><br />
+					</div>
+					<br />
+					<div id="botones">
+						<a href="#/2/1" ><img src="/assets/images/arriba.png" /></a>
+						<a href="#/2/3" ><img src="/assets/images/abajo.png" /></a>
+					</div>
+				</section>
+				<section id="fondo">
+				<h4>Diagrama de Flujo de un Ciclo</h4>
+				
+					<div id="imagenes">
+					<img src="assets/images/flujo.png">
+					</div>
+					<br />
+					<div id="botones">
+						<a href="#/2/2" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/2/4" ><img src="assets/images/abajo.png" /></a>
+					</div>
+				</a>
+			</section>
+				<section id="fondo">
+					<br />
+					<h3>Para llevar el control de las repeticiones <br /> usa un contador o una bandera.</h3>
+					<div id="textos">
+						<br />
+						
+						<p align="justify">
+							- Una bandera es una variable de tipo lógico que sólo admite dos valores: cierto o falso.
+							<br/>
+							<br/>
+							- Un contador es una variable de tipo entero, que se declara al principio de la estructura y que ayuda en el programa a contabilizar el número de ejecuciones de una misma acción.
+							<br/>
+							<br/>
+						</p>
+					</div>
+					<div id="botones">
+						<a href="#/2/3" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/2/5" ><img src="assets/images/abajo.png" /></a>
+					</div>
+				</section>
+			
+			
+			<section id="fondo">
+				
+				<h3>Un contador tiene 3 valores distintos</h3>
+				<div id="textos">
+				
+				
+					<p align="justify"><u>- Valor Inicial:</u> Es el valor con el cual se inicia el contador. Generalmente es cero. Esta asignación puede hacerse cuando se declara la variable.</p>
+					<p align="justify"><u>- Valor Final:</u> Después de la ejecución del ciclo el valor del contador, será distinto a su valor inicial, este puede ser mayor o menor que el mismo, todo depende si fue una cuenta creciente o decreciente.</p>
+					<p align="justify"><u>- Valor de Cambio:</u> Es el valor constante en el cual se irá incrementando el contador, este puede ser positivo o negativo; es decir, si la cuanta se realiza de manera ascendente o descendente. </p>
+				
+						<div id="botones">
+						<a href="#/2/4" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/3" ><img src="assets/images/derecha.png" /></a>
+					</div>
+				</div>
+				
+					
+			</section>
+			
+			
+			
+			
+			
+			
+			
+			</section>
+<!---------------------Nueva Columna-------------------------------------------------->	
+<!----------------------------------------------------------------------------------------->		
+			<section>
+				<section id="fondo">
+					<br />
+					<br />
+					<h2>Estructura: Repetir Mientras</h2>
+					<div id="textos">
+						<p align="justify">
+							<br />
+							Mientras la condición sea verdadera, se ejecutarán las sentencias del bloque, es decir, ejecuta repetidamente el mismo bloque de código hasta que se cumpla una condición de terminación.
+							<br />
+							<br />
+							Hay cuatro partes en cualquier ciclo: inicialización, cuerpo, iteración y terminación.
+							<br />
+							<br />
+						</p>
+					</div>
+					<br />
+					<div id="botones">
+						<a href="#/2/5" ><img src="assets/images/izquierda.png" /></a>
+						<a href="#/3/1" ><img src="assets/images/abajo.png" /></a>
+					</div>
+					
+				</section>
+
+<!----------------------------------------------------------------------------------------->			
+<section id="fondo">
+					<br />
+					
+					<h3>Estructura Básica</h3>
+					
+					<div id="imagenes">
+						<img src="assets/images/ciclo1-1.png">
+					</div>
+					<br />
+					
+					<div id="botones">
+						<a href="#/3" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/3/2" ><img src="assets/images/abajo.png" /></a>
+					</div>
+					
+				</section>
+<!----------------------------------------------------------------------------------------->
+<section id="fondo">
+					<br />
+					<br />
+					
+					<div id="textos">
+						
+						<br />
+						<h3>Nota</h3>
+						<p align="justify">
+							Hay que tener mucho cuidado, cuando se trabaja con ciclos, ya que se puede caer en un ciclo infinito, es decir que nunca se sale de él.
+							<br />
+							<br />
+							Por lo cual en las acciones se debe siempre colocar algo que haga que se modifique el resultado de la condición, lo cual puede ser una bandera, un contador o un acumulador.
+						</p>
+						<br />
+					</div>
+					<br />
+					<div id="botones">
+						<a href="#/3/1" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/3/3" ><img src="assets/images/abajo.png" /></a>
+					</div>
+				
+				</section>
+<!----------------------------------------------------------------------------------------->	
+<!----------------------------------------------------------------------------------------->
+	<section id="fondo">
+				
+					<h4>En Lumin, este tipo de ciclo tiene dos formatos, el primero es el siguiente:</h4>
+					
+				
+							
+						
+						<div id="imagenes">
+						<img src="assets/images/ciclo1-2.png">
+					</div>
+					<div id="textos">
+					<p align="justify">En este ciclo, el bloque de instrucciones dentro de la estructura mientras, se ejecuta cuando la expresión sea verdadera.</p>
+					</div>
+					<div id="botones">
+						<a href="#/3/2" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/3/4" ><img src="assets/images/abajo.png" /></a>
+					</div>
+					
+				</section>
+<!----------------------------------------------------------------------------------------->		
+<!----------------------------------------------------------------------------------------->
+	<section id="fondo">
+				
+					<h4>Ejemplo</h4>					
+						<div id="imagenes">
+						<img src="assets/images/ciclo1-3.png">
+					</div>
+					<div id="textos">
+					<p align="justify" class="letrachica">Que imprime los números 0, 6, 12, 18, 24, 30, 36, 42 y 48, dado que el contador x inicia en 0, imprime el cero, después de imprimir se indica que se sumen 5 a su valor, pero antes de volver a repetir, el contador se incrementa automáticamente, por lo que avanza de 6 en 6.</div>
+					<div id="botones">
+						<a href="#/3/3" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/3/5" ><img src="assets/images/abajo.png" /></a>
+					</div>
+					
+				</section>
+<!----------------------------------------------------------------------------------------->				
+<!----------------------------------------------------------------------------------------->
+	<section id="fondo">
+				
+					<h4> El otro formato es el siguiente:</h4>
+					
+				
+							
+						
+						<div id="imagenes">
+						<img src="assets/images/ciclo1-4.png">
+					</div>
+					<div id="textos">
+					<p align="justify" >Este ciclo realiza el bloque de instrucciones y después evalúa, si se cumple la expresión regresa a la instrucción repite para volver a realizar el bloque de sentencias, termina cuando deja de cumplirse la expresión.</div>
+					<div id="botones">
+						<a href="#/3/4" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/3/6" ><img src="assets/images/abajo.png" /></a>
+					</div>
+					
+				</section>
+<!----------------------------------------------------------------------------------------->	
+<!----------------------------------------------------------------------------------------->
+	<section id="fondo">
+				
+					<h4>Ejemplo</h4>					
+						<div id="imagenes">
+						<img src="assets/images/ciclo1-5.png">
+					</div>
+					<div id="textos">
+					<p align="justify" class="letrachica">Este ejemplo imprime los números 0, 5, 10, 15, 20, 25, 30, 35, 40 y 45, dado que el contador x inicia en 0 y después de imprimir se indica que se sumen 5 a su valor, por lo que avanza de 5 en 5.<div id="botones">
+						<a href="#/3/5" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/4" ><img src="assets/images/derecha.png" /></a>
+					</div>
+					
+				</section>
+<!----------------------------------------------------------------------------------------->		
+			</section>
+<!----------------------------TErmina Columna------------------------------------------------------>			
+<!---------------------Nueva Columna-------------------------------------------------->		
+		<section>
+<!----------------------------------------------------------------------------------------->		
+			
+				<section id="fondo">
+					<br />
+					<br />
+					<h2>Estructura: Repetir Hasta</h2>
+					<div id="textos">
+						<p align="justify">
+							<br />
+							
+							Se ejecuta el bloque de sentencias, hasta que la condición sea verdadera.
+							<br />
+							<br />
+							 Es lo mismo que en el caso anterior pero aquí como mínimo siempre se ejecutará el cuerpo una vez, en el caso anterior es posible que no se ejecute ni una sola vez.
+							<br />
+							<br />
+						</p>
+					</div>
+					<br />
+					<div id="botones">
+						<a href="#/3/6" ><img src="assets/images/izquierda.png" /></a>
+						<a href="#/4/1" ><img src="assets/images/abajo.png" /></a>
+					</div>
+					
+				</section>
+
+<!----------------------------------------------------------------------------------------->			
+<!----------------------------------------------------------------------------------------->			
+<section id="fondo">
+					<br />
+					
+					<h3>Estructura Básica</h3>
+					
+					<div id="imagenes">
+						<img src="assets/images/ciclo2-1.png">
+					</div>
+					<br />
+					
+					<div id="botones">
+						<a href="#/4" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/4/2" ><img src="assets/images/abajo.png" /></a>
+					</div>
+					
+				</section>
+<!----------------------------------------------------------------------------------------->		
+<!----------------------------------------------------------------------------------------->
+<section id="fondo">
+					<br />
+					<br />
+					<br />
+					<div id="textos">
+						<br />
+						<h3>Diferencias con el ciclo anterior</h3>
+							<br />
+						<p align="justify">
+						La diferencia fundamental, entre el ciclo Repetir-Mientras y Repetir-Hasta, es que en este último, las sentencias se realizarán por lo menos una vez, en cambio, con while, sólo se cumplirán mientras se cumpla la condición, lo cual puede ser nunca.
+						</p>
+						<br />
+					</div>
+					<br />
+					<div id="botones">
+						<a href="#/4/1" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/4/3" ><img src="assets/images/abajo.png" /></a>
+					</div>
+					
+				</section>
+<!----------------------------------------------------------------------------------------->	
+<!----------------------------------------------------------------------------------------->
+	<section id="fondo">
+				
+					<h3>En Lumin tiene dos formatos generales. <br /> El primero es el que sigue:</h3>
+					
+				
+							
+				
+						
+						
+						<div id="imagenes">
+						<img src="assets/images/ciclo2-2.png">
+					</div>
+					
+					<div id="botones">
+						<a href="#/4/2" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/4/4" ><img src="assets/images/abajo.png" /></a>
+					</div>
+					
+				</section>
+<!----------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------->
+	<section id="fondo">
+				
+					<h4>Ejemplo</h4>					
+						<div id="imagenes">
+						<img src="assets/images/ciclo2-3.png">
+					</div>
+					<div id="textos">
+					<p align="justify" class="letrachica">Este ejemplo imprime los números 0, 5, 10, 15, 20, 25, 30, 35, 40 y 45, dado que el contador x inicia en 0 y después de imprimir se indica que se sumen 5 a su valor, por lo que avanza de 5 en 5.<div id="botones">
+						<a href="#/4/3" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/4/5" ><img src="assets/images/abajo.png" /></a>
+					</div>
+					
+				</section>
+<!----------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------->
+	<section id="fondo">
+				
+					<h4> El otro formato es el siguiente:</h4>
+					
+				
+							
+						
+						<div id="imagenes">
+						<img src="assets/images/ciclo2-4.png">
+					</div>
+					<div id="textos">
+					<p align="justify" >Este ciclo deja de realizar el bloque de instrucciones hasta que se cumpla la expresión evaluada.
+						<div id="botones">
+						<a href="#/4/4" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/4/6" ><img src="assets/images/abajo.png" /></a>
+					</div>
+					
+				</section>
+<!----------------------------------------------------------------------------------------->	
+<!----------------------------------------------------------------------------------------->
+	<section id="fondo">
+				
+					<h4>Ejemplo</h4>					
+						<div id="imagenes">
+						<img src="assets/images/ciclo2-5.png">
+					</div>
+					<div id="textos">
+					<p align="justify" class="letrachica">imprime los números 0, 3, 6, 9, 12, … , 96, dado que el contador x inicia en 0, imprime el cero, después de imprimir se indica que se sumen 2 a su valor, pero antes de volver a repetir, el contador se incrementa automáticamente, por lo que parece que avanza de 3 en 3.
+						<div id="botones">
+						<a href="#/4/5" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/5" ><img src="assets/images/derecha.png" /></a>
+					</div>
+					
+				</section>
+<!----------------------------------------------------------------------------------------->	
+		</section>
+<!-----------------------Termoina Columna---------------------------------------------------->
+
+<!---------------------------Inicia Nueva Columna------------------------------------------------>	
+	<section>
+<!----------------------------------------------------------------------------------------->		
+			
+				<section id="fondo">
+					
+					<h2>Estructura: Repetir Desde</h2>
+					<div id="textos">
+						<p align="justify">
+						
+							En algunas ocasiones, se sabe el número de veces que se tiene que repetir una misma acción o bloque de acciones. 
+							<br />Para ello es que sirve, esta estructura. 
+					
+							<br />
+							Su sintaxis es la siguiente:
+							<br />
+							<br />
+							
+							
+						</p>
+					</div>
+					<div id="imagenes">
+						<img src="assets/images/ciclo3-1.png">
+					</div>
+					<br />
+					<div id="botones">
+						<a href="#/4/6" ><img src="assets/images/izquierda.png" /></a>
+						<a href="#/5/1" ><img src="assets/images/abajo.png" /></a>
+					</div>
+					
+				</section>
+
+<!----------------------------------------------------------------------------------------->	
+<!----------------------------------------------------------------------------------------->		
+			
+				<section id="fondo">
+			<br />		
+					<h3>Donde..</h3>
+					<div id="textos">
+						<p align="justify">
+	<br />				
+							- Inicialización: es el valor con el cual se inicia la variable de control.
+<br />
+<br />
+- Condición: si la cumple, ejecuta la sentencia o sentencias e incrementa o decrementa la variable de control, si no cumple la condición, se sale del ciclo.
+<br />
+<br />
+- Incremento: que puede ser positivo o negativo (decremento).
+<br />
+<br />
+							
+						</p>
+					</div>
+					
+					<br />
+					<div id="botones">
+						<a href="#/5" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/5/2" ><img src="assets/images/abajo.png" /></a>
+					</div>
+					
+				</section>
+
+<!----------------------------------------------------------------------------------------->	
+<!----------------------------------------------------------------------------------------->		
+			
+				<section id="fondo">
+					<br />
+					<div id="textos">
+						<br />
+						<h4>En este ciclo puede usarse la instrucción: continue o break</h4>
+						<p align="justify">
+							<br />
+							- La instrucción <u>continue</u> lo que hace es ignorar las sentencias que tiene el ciclo y saltar directamente a la condición para ver si sigue siendo verdadera, si es así sigue dentro del ciclo, en caso contrario saldría directamente de él.
+							<br />	
+							<br />
+							
+							- La instrucción <u>break</u> causa la salida inmediata de la estructura. La ejecución continúa en el siguiente enunciado después de la estructura.
+
+							<br />
+							
+							<br />
+			
+						</p>
+					</div>
+					
+					<br />
+					<div id="botones">
+						<a href="#/5/1" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/5/3" ><img src="assets/images/abajo.png" /></a>
+					</div>
+					
+				</section>
+
+<!----------------------------------------------------------------------------------------->	
+
+<!----------------------------------------------------------------------------------------->		
+			
+				<section id="fondo">
+					
+					<h3>Estructura en Lumin</h4>
+					<div id="textos">
+						
+						
+						
+						<p align="justify">
+							En Lumin el contador se decrementa automáticamente.
+						
+							En este caso el contador es el número de iteraciones (número de veces) que se recorren a través del ciclo.
+							 A sí mismo el valor que puede tomar es cierto ó falso.
+							 
+							 <br />
+							 Su formato es el siguiente:
+							<br />
+						</p>
+					</div>
+					<div id="imagenes">
+						<img src="assets/images/ciclo3-2.png">
+					</div>
+					<br />
+					<div id="botones">
+						<a href="#/5/2" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/5/4" ><img src="assets/images/abajo.png" /></a>
+					</div>
+				
+				</section>
+
+<!----------------------------------------------------------------------------------------->	
+<!----------------------------------------------------------------------------------------->
+	<section id="fondo">
+				
+					<h4>Ejemplo</h4>					
+						<div id="imagenes">
+						<img src="assets/images/ciclo3-3.png">
+					</div>
+					<div id="textos">
+					<p align="justify" class="letrachica">En este caso, se imprimen los números 0, 6, 12, 18, 24, 30, 36, 42 y 48, dado que el contador x inicia en 0, imprime el cero, después de imprimir se indica que se sumen 5 a su valor, pero antes de volver a repetir, el contador se incrementa automáticamente, por lo que parece que avanza de 6 en 6.
+						<div id="botones">
+						<a href="#/5/3" ><img src="assets/images/arriba.png" /></a>
+						<a href="#/6" ><img src="assets/images/derecha.png" /></a>
+					</div>
+					
+				</section>
+<!----------------------------------------------------------------------------------------->
+		
+	</section>
+<!----------------------------Termiona Columna----------------------------------------------------------->	
+
+<!--------------------------------------FIn--------------------------------------------------->
+
+		<section id="fondo">
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+					<h1 class="inverted">Fin de la Lección</h1>					
+					
+					
+					
+						<div id="botones">
+						<a href="#/5/4" ><img src="assets/images/izquierda.png" /></a>
+						<a href="#" ><img src="assets/images/home.png" /></a>
+					</div>
+					
+				</section>
+		</div>
+		
+		<script src="js/slideshow.js"></script>
+		
+		
+		
+		<!-- Everything below this point is unrelated to the slideshow -->
+		
+		
+		
+	
+	</body>
+</html>

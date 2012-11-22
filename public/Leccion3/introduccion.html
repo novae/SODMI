@@ -1,0 +1,113 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <!-- -->
+  	<title>Lección 2. Componentes Básicos.</title>
+  	
+
+	<!-- LIBRERIAS -->
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css">
+	<script src="js/jquery-1.6.3.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/jquery.spritely-0.6.js"></script>
+	<script type="text/javascript" src="http://flesler-plugins.googlecode.com/files/jquery.scrollTo-1.4.2-min.js"></script>
+	<script type="text/javascript" src="js/jquery.jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.19.custom.min.js"></script>
+	<!--<script src=" https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>-->
+	
+	<!-- ARCHIVOS EXTERNOS -->
+    <link href="css/stiloleccion2.css" rel="stylesheet" type="text/css"/>
+    <script src="js/cuadro_texto.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+
+</script>
+</head> 
+<body>
+
+<!-- SONIDOS -->
+<audio src="sonidos/entrada1.wav" preload></audio>
+<audio src="sonidos/boton1.wav" preload></audio>
+
+<!-- BANNER -->
+<div class="banner">
+	<div id="nubes"></div>
+	<div id="pasto1"></div>
+	<div id="arbol1"></div>
+	<div id="arbol2"></div>
+	<div id="pasto2"></div>
+	<div id="avion"></div>
+	
+</div>
+    
+<!-- CÍRCULOS -->      
+<div id="cloud1" class="clouds"><div id="clouds-small"></div></div>
+<div id="cloud2" class="clouds"><div id="clouds-big"></div></div>
+     
+     
+<!-- MENU -->
+<ul id="menu">
+	<li><a href="#box1" class="link">Inicio</a></li>
+	<li><a href="#box2" class="link">2</a></li>
+	<li><a href="#box3" class="link">3</a></li>
+</ul>
+
+<!-- CUADRO DE TEXTO -->	
+	<div id="wrapper">
+    	<ul id="mask">
+        	<li id="box1" class="box">
+            	<a name="box1"></a>
+                 <div class="content"><div class="inner">
+                	<h2>Introducción</h2>
+                	<p>
+                		El desarrollo de programas orientados a objetos es un enfoque diferente del mundo informático. Implica la creación de modelos del mundo real y la construcción de programas informáticos basados en esos modelos. El proceso completo de la programación comienza con la construcción de un modelo del suceso (evento) real. El resultado final del proceso es un programa de computadora que contiene características que representan algunos de los objetos del mundo real que son parte del suceso.  
+                	</p>
+                	<br>
+                	<br>
+                	<p>
+                		La programación orientada a objetos es un importante conjunto de técnicas que pueden utilizarse para hacer el desarrollo de programas más eficientes, a la par que mejora la fiabilidad de los programas de computadora. En este paradigma de la programación los componentes básicos que se requieren para crear programas informáticos son las <i>clases</i>, los <i>objetos</i>, los <i>atributos</i> y los <i>métodos</i>, en donde un <b>objeto</b> representa una persona, un lugar o una cosa. 
+                	</p>
+                	</div></div>
+            </li><!-- end box1 -->
+            <li id="box2" class="box">
+            	<a name="box2"></a>
+                <div class="content"><div class="inner">
+                	<br>
+                	<br>
+                	<br>
+                	<p>
+                		Ejemplos de objetos: maestro, computadora, vuelo de avión, ciudad, bicicleta, etc. Por otro lado, una <b>clase</b> es una caracterización abstracta de un conjunto de objetos; todos los objetos similares pertenecen a una clase determinada. Por ejemplo, un conjunto de objetos reales como cuadrados, triángulos, círculos, lineas, etc., pertenecen a una clase <i>figura</i>, por lo tanto dentro de una clase se define las <i>variables</i> (datos) y <i>métodos</i> (operaciones) comunes a un conjunto de objetos. 
+                	</p>
+                	<br>
+                	<br>
+                	<p>
+                		La mayoría de los objetos del mundo real tienen <b>atributos</b>, los cuales son las características que los describen. Por ejemplo, los atributos de una persona incluyen el nombre, la edad, el sexo, la fecha de nacimiento , la dirección, etc.,  los objetos tienen atributos, y ellos, a su vez, comportamientos. El <b>comportamiento</b> es el conjunto de cosas que puede hacer un objeto; por ejemplo, una persona puede estudiar, caminar, trabajar, etc., a dichos comportamientos en la programación orientada a objetos se les conoce como <b>métodos</b>. 
+                	</p>
+                </div></div>
+            </li><!-- end box2 -->
+            <li id="box3" class="box">
+            	<a name="box3"></a>
+                <div class="content"><div class="inner">
+                	<br>
+                	<br>
+                	<br>
+                	<p>
+                		En el presente módulo se dará a conocer a detalle los componentes básicos de la programación orientada a objetos, al inicio de cada tema se hará una evaluación inicial para conocer los conocimientos previos del alumno. En cada explicación de los temas mencionados incluirá videos, ejercicios y juegos que contribuirán a obtener una mayor compresión de cada uno de los temas,  al termino de cada cesión se realizará una evaluación final para medir el aprendizaje del alumno.
+                	</p>
+                	<br>
+                	<br>
+                	<br>
+                	<br>
+                	<br>
+                	<div class="biblio" >
+                		<p>Programación Orientada a Objetos.</p>
+						<p>Conceptos, modelado, diseño y codificaciones en C++.</p>
+						<p>Autor: Luis Joyanes Aguilar</p>
+						<p>Editorial: McGraw-Hill</p>
+                	</div>
+                </div></div>
+            </li><!-- end box3 -->
+        </ul><!-- end mask -->
+    </div><!-- end wrapper -->
+</body>
+</html>

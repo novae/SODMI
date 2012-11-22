@@ -1,0 +1,95 @@
+<% provide(:title, 'Inicio') %>
+
+  <div class="row">
+    <div class="twelve columns">
+      <div id="slider">
+        <%= link_to image_tag("unidad1.jpg", alt: "Unidad 1"), lecciones_path %>
+        <%= link_to image_tag("unidad2.png", alt: "Unidad 2"), lecciones_path %>
+        <%= link_to image_tag("unidad3.png", alt: "Unidad 3"), lecciones_path %>
+        <%= link_to image_tag("unidad4.png", alt: "Unidad 4"), lecciones_path %>
+      </div>
+      
+      <hr />
+    </div>
+  </div>
+
+ 	<div class="row">
+	<section class="part clearfix">
+		<header class="title clearfix">
+			<p class="fleft">Inicio</p>
+			<%= link_to "seguir leyendo >>", about_path, :class => "arrow more fright"%>
+			
+		</header>
+		<div class="column2 mright">
+			<h1>Software Didáctico Multimedia <br>
+			vía Internet
+			
+            </h1>
+			<p>Herramienta que se desarrolla con el fin de facilitar el aprendizaje y el desarrollo de las habilidades de programación en estudiantes. <br /> SODMI utiliza el modelo de diseño instruccional EAC (Entorno de Aprendizaje Constructivista), que está enfocado al manejo de las estructuras básicas soportadas por el lenguaje Lumin©, con la intención de introducir al estudiante al mundo de la Programación Orientada a Objetos, de manera interactiva, sencilla y agradable. Consta de una serie de lecciones en las que se explica al estudiante tanto los conceptos básicos como la sintaxis de los elementos utilizados en POO; de igual manera, incluye variados ejercicios interactivos que refuerzan lo entendido en dichas lecciones y, se aplican evaluaciones parciales al término de cada lección, así como una evaluación final, para concretar los resultados generados.
+			</p>
+			
+		</div>
+			
+	
+	</section>
+	<section class="part clearfix">
+		<header class="title clearfix">
+			<p class="fleft">Recomendación</p>
+			
+		</header>
+			<article class="column3 mright services">
+			
+			<div class="sepmini"></div>
+			
+			<div class="sepmini"></div>
+			<h2>NOTA:</h2>
+			<p>El s&iacute;tio esta desarrollado con HTML5, CSS3 y JS, por lo que algunas partes pueden no funcinar de manera correcta si se utiliza un navegador desactualizado <br> Se recomienda el uso de la ultima version de su navegador, siendo recomendado <b>Google Chrome</b> </p>
+		</article>
+		<article class="column3 mright services">
+			
+			
+			<p align="center"><%= link_to "Ir al sitio oficial para descargar Google Chrome", 'https://www.google.com/chrome' %></p>
+			
+			<br />
+			<p align="center"><%= link_to image_tag("linkdescargachrome.png", alt: "Chrome" ), 'https://www.google.com/chrome'  %></p>
+		</article>
+		</section>
+		
+	<section class="part clearfix">
+		<header class="title clearfix">
+			<p class="fleft">Servicios</p>
+			<%= link_to "ver mas >>", "#", :class => "arrow more fright"%>
+		</header>
+		<article class="column3 mright services">
+			<p class="number">01</p>
+			<div class="sepmini"></div>
+			<h5>LUMIN</h5>
+			<div class="sepmini"></div>
+			<p>Se brinda el acceso al entorno de desarrollo para el lenguaje de programaci&oacute;n Lumin.</p>
+		</article>
+		<article class="">
+			<p class="number">02</p>
+			<div class="sepmini"></div>
+			<h5>LECCIONES</h5>
+			
+			<div class="sepmini"></div>
+			<p>La p&aacute;gina ofrece un modulo, que contiene una serie de lecciones, que estan orientadas a que el alumno desarrolle una habilidad de programaci&oacute;n b&aacute;sica
+            y brinda la posibilidad de almacenar su progreso y desempeño en las leeciones.
+             </p>
+		</article>
+		<article class="">
+			<p class="number">03</p>
+			<div class="sepmini"></div>
+			<h5>BLOG</h5>
+			<div class="sepmini"></div>
+			<p>Este modulo brinda la posibilidad para que <br>
+            los alumnos registrados publiquen dudas o comentarios
+            y que estos puedan ser vistos<br> por los demas usuarios.</p>
+		</article>
+	</section>
+	
+
+</div>
+
+
+

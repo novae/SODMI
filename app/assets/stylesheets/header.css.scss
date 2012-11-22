@@ -1,0 +1,20 @@
+
+#cabecera{
+  background: url("/assets/bg_header.png") repeat-x left top;
+  -webkit-box-shadow: 0 1px 0 rgb(255,255,255), inset 0 -2px 5px rgba(0,0,0,.5);
+  -moz-box-shadow: 0 1px 0 rgb(255,255,255), inset 0 -2px 5px rgba(0,0,0,.5);
+   box-shadow: 0 1px 0 rgb(255,255,255), inset 0 -2px 5px rgba(0,0,0,.5);
+}
+.shadow-down {
+    background: url('/assets/shadowDown.png') no-repeat center;
+    opacity: 1;
+    width: 95%;
+    height: 45px;
+    margin: -4px auto 0;
+    position: relative;
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }

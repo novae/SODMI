@@ -1,0 +1,52 @@
+<div id="fondo-footer">
+<footer class="row">
+<div class="shadow-down"></div>
+<div class="twelve columns">
+<div class="row">
+<div class="four columns">
+<h3 class="color-blanco">Redes Sociales!</h3>
+
+</div>
+<div class="eight columns right">
+<ul class="link-list right">
+
+<li><%= link_to "", "https://www.facebook.com/pages/Sodmi/300189260078633",:id=>"face" %></li>
+<li><%= link_to "", "https://twitter.com/ProyectoSodmi",:id=>"tweet" %></li>
+<li><%= link_to "", "https://plus.google.com/115756941105878029675/posts",:id=>"google" %></li>
+</ul>
+</div>
+
+</div>
+<hr />
+
+		
+	
+	<div class="row">
+	<div class="six columns">
+          <p>&copy; Copyright Free. By IvanSnek and JC with Foundation.</p>
+        </div>
+        <div class="six columns">
+          <ul class="link-list right">
+	
+			<li><%= link_to "Inicio", root_path ,:class=>"color-blanco"%></li>
+			<li><%= link_to "Nosotros", about_path ,:class=>"color-blanco"%></li>
+			<li><%= link_to "Lumin", lumin_path,:class=>"color-blanco" %></li>
+			<li><%= link_to "Lecciones", lecciones_path,:class=>"color-blanco" %></li>
+			<% if signed_in_alumno? %>
+			
+				<li >
+					<%= link_to "Blog", posts_path ,:class=>"color-blanco"%>
+				</li>
+		<% else %>
+			<li class= "btn_blog">
+				<%= link_to "Blog", "#",:class=>"color-blanco"%>
+			</li>
+		<%end%>
+			<li><%= link_to "Contactanos", contact_path ,:class=>"color-blanco"%></li>
+		</ul>
+	</div>
+	</div>
+	</div>
+	 
+</footer>
+</div>

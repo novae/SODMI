@@ -1,0 +1,23 @@
+<% provide(:title, 'Blog') %>
+<div class=" row">
+	<header>
+		<div class="column1in  fright">
+		<h4><%= link_to 'Nueva Entrada', new_post_path %></h4>
+	</div>
+		<h2 >Blog SODMI</h2>
+		
+	</header>
+	
+	<% @posts.each do |post| %>
+	<div class="services">
+		<h3 class="post-title"> <%= link_to post.titulo, post %></h3>
+		<p>
+			<%= truncate post.texto%>
+		</p>
+		<p>
+			Publicado <%= time_ago_in_words  post.created_at%> atrás
+		</p>
+	</div>
+	<% end %>
+	<br />
+</div>
