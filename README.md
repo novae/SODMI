@@ -1,6 +1,8 @@
 # Plataforma SODMI — Software Didáctico Multimedia vía Internet 
 ![LOGO.](https://github.com/ivansnek/SODMI/blob/master/doc/logo.png?raw=true)
 
+##Descripción
+
 Herramienta que se desarrolla con el fin de facilitar el aprendizaje y el desarrollo de las habilidades de programación en estudiantes.
 SODMI utiliza el modelo de diseño instruccional EAC (Entorno de Aprendizaje Constructivista), que está enfocado al manejo de las estructuras básicas
 soportadas por el lenguaje Lumin©, con la intención de introducir al estudiante al mundo de la Programación Orientada a Objetos, de manera interactiva, sencilla y agradable. 
