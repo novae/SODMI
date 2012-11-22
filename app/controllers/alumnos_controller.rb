@@ -51,7 +51,7 @@ class AlumnosController < ApplicationController
         #Ingresa el alumno a la pagina
         sign_in @alumno
         format.html { redirect_to @alumno
-            flash[:success] = "Bienvenido a SODMI! \n Se ha guardado tu Registro con exito "
+            flash[:success] = "Bienvenido a SODMI! "+ @alumno.nombre+ " se ha guardado tu registro con exito "
              }
         format.json { render json: alumno, status: :created, location: alumno }
       else

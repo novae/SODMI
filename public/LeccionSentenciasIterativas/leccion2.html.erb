@@ -1,0 +1,69 @@
+<% provide(:title, 'Contacto') %>
+<div class="row">
+	<header class="twelve columns">
+		<div class="twelve columns panel callout centered">
+			<h2 class="color-blanco"><span class="glyph general" style="font-size: 40px; line-height: 40px"> h </span> Contáctanos </h2>
+		</div>
+		<br />
+	</header>
+	<section class="eight columns panel">
+		<br />
+		<br />
+		<h3>Dejanos un Mensaje</h3>
+		<p>
+			Nos gustaria saber tu opinion acerca de la página.
+			No olvides escribir tu dirección de correo electrónico!
+		</p>
+		<%= form_tag "/static_pages/contact", :id => "contact_form" , :class => "contact_form" do %>
+		<fieldset>
+			<span class="secondary label">Nombre:</span>
+			<%= text_field_tag :nombre ,nil, :class => "", :id=>"name", :placeholder => 'Ingresa tu nombre',:required=>true%>
+
+			<span class="secondary label">Correo Electronico:</span>
+			<%= email_field_tag :email, nil,:class => "",:id=>"email", :placeholder => 'Ingresa tu Correo Electronico',:required=>true%>
+
+			<span class="secondary label">Mensaje:</span>
+			<%= text_area_tag :mensaje, nil, :class=>"",:size => "25x10", :placeholder => 'Escribe el mensaje que deseas enviarnos!',:required=>true%>
+			<button type="submit" id="submit" class="button radius">
+				Enviar
+			</button>
+			<br /><br />
+		</fieldset>
+		
+		<% end %>
+	</section>
+	<aside class="four columns panel">
+		<br />
+		<br />
+		<h4>SODMI</h4>
+		<address>
+			<br >
+			<span class="glyph general">m</span>
+			Avenida Tecnológico #100
+
+			Ciudad Guzmán Jalisco
+			<br >
+		</address>
+		<p >
+			<span class="glyph general">r</span>
+			01 341412121
+			<br >
+			<span class="glyph general">r</span>
+			01 341 575 2050
+		</p>
+		<div class="panel callout radius">
+			<%= link_to image_tag("map.png", alt: "SODMI" ), "#", :class=>"mapa" %>
+			<br />
+			<a href="#" class="radius button mapa">Ver en Google Maps</a>
+		</div>
+		<p>
+			<span class="strong">Horarios de Oficina: </span>
+			<br >
+			Lunes a Viernes
+			<br >
+			09:00 am a 4:00 pm
+		</p>
+		<br />
+		<br />
+	</aside>
+	</div> 

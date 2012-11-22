@@ -72,11 +72,11 @@
 				<% if signed_in_alumno? %>
 			
 				<div class="one columns ">
-				<%= image_tag current_alumno.avatar_url.to_s %>
+				<span class="has-tip" data-width="100" title="<%=current_alumno.nombre%>"><%= image_tag current_alumno.avatar_url.to_s %></span>
 			</div>
 			<% elsif signed_in?%>
 			<div class="one columns ">
-				<%= image_tag current_maestro.avatar_url.to_s %>
+				<span class="has-tip" data-width="100" title="<%=current_maestro.nombre%>"><%= image_tag current_maestro.avatar_url.to_s %></span>
 			</div>
 			
 			<%end%>
