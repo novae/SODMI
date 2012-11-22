@@ -3,7 +3,7 @@ $(document).ready ->
     $("#mapaModal").reveal
       animation: "fadeAndPop"
       $("#mapaModal").css('display','block')
-      animationSpeed: 100
+      animationSpeed: 200
       closeOnBackgroundClick: true 
       dismissModalClass: "close-reveal-modal"
       

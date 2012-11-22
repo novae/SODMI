@@ -5,6 +5,6 @@ $(document).ready ->
   $("#loginMaestro").click ->
     $("#loginMaestroModal").reveal
       animation: "fadeAndPop"
-      animationSpeed: 100
+      animationSpeed: 200
       closeOnBackgroundClick: true 
       dismissModalClass: "close-reveal-modal"
