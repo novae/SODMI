@@ -13,7 +13,6 @@
  *= require foundation-icons
  *= require_tree .
  */
-
 .container{
   background-image: url('/assets/bg3.png');
   background-repeat: repeat top;

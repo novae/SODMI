@@ -26,8 +26,9 @@
 // Font Settings
 
 // $fontSmoothing: antialiased;
-// $headerFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $headerFontWeight: bold;
+
+//$headerFontFamily:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+//$headerFontWeight: normal;
 // $headerFontStyle: normal;
 // $headerFontColor: #222;
 // $bodyFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -242,4 +243,6 @@ $inputFontSize: 20px;
 // http://www.modularscale.com by Tim Brown
 // https://github.com/scottkellum/modular-scale by scottkellum
 @import 'foundation';
+
+
 
