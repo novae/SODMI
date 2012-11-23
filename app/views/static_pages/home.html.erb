@@ -1,6 +1,6 @@
 <% provide(:title, 'Inicio') %>
 <div class="row">
-	<div class="twelve columns">
+	<div class="ten columns centered">
 		<div id="slider">
 			<%= link_to image_tag("unidad1.jpg", alt: "Unidad 1"), lecciones_path %>
 			<%= link_to image_tag("unidad2.png", alt: "Unidad 2"), lecciones_path %>
@@ -8,47 +8,45 @@
 			<%= link_to image_tag("unidad4.png", alt: "Unidad 4"), lecciones_path %>
 		</div>
 	</div>
+	<hr />
 </div>
-<div class="row">
-	<section>
-		<div class="twelve columns panel">
+	<section class="row">
+		<article class="twelve columns panel">
+			<header>
 			<h2>Software Didáctico Multimedia vía Internet (SODMI) </h2>
+			</header>
 			<p align="justify">
 				Herramienta que se desarrolla con el fin de facilitar el aprendizaje y el desarrollo de las habilidades de programación en estudiantes.
-				
+				<br />
 				SODMI utiliza el modelo de diseño instruccional EAC (Entorno de Aprendizaje Constructivista), que está enfocado al manejo de las estructuras básicas soportadas por el lenguaje <span class="has-tip" data-width="210" title="Lenguaje de Programación Oriendato a Objetos, con gramática similar al español.">Lumin©</span>, con la intención de introducir al estudiante al mundo de la Programación Orientada a Objetos, de manera interactiva, sencilla y agradable. Consta de una serie de lecciones en las que se explica al estudiante tanto los conceptos básicos como la sintaxis de los elementos utilizados en POO; de igual manera, incluye variados ejercicios interactivos que refuerzan lo entendido en dichas lecciones y, se aplican evaluaciones parciales al término de cada lección, así como una evaluación final, para concretar los resultados generados.
 			</p>
-			<%= link_to "seguir leyendo >>", about_path, :class => "button small"%>
-		</div>
+			<footer>
+			<%= link_to "seguir leyendo >>", about_path, :class => "button small"%></footer>
+		</article>
 	</section>
 	<br />
 	<br />
-</div>
-</section> <!-- Three-up Content Blocks -->
+ <!-- Three-up Content Blocks -->
 <div class="row ">
 	<div class="twelve columns panel">
-		<section >
-			<div class="four columns">
-				<a href="/lumin" class="th sombra-1"><%= image_tag("logo-lumin2.png",alt:"Lumin")%></a>
+		<section class="four columns">
+				<a href="/lumin" class="th sombra-3"><%= image_tag("logo-lumin2.png",alt:"Lumin")%></a>
 				<h4 class="subheader">LUMIN</h4>
 				<p align="justify">
 					Se brinda el acceso al entorno de desarrollo para el lenguaje de programaci&oacute;n Lumin.
 				</p>
-			</div>
 		</section>
-		<section>
-			<div class="four columns">
-				<a href="/lecciones" class="th sombra-1"><%= image_tag("LogoLeccion4.png",alt:"Lecciones")%></a>
+		<section class="four columns">
+				<a href="/lecciones" class="th sombra-3"><%= image_tag("ejemplologo.png",alt:"Lecciones")%></a>
 				<h4 class="subheader">LECCIONES</h4>
 				<p align="justify">
 					La p&aacute;gina ofrece un modulo, que contiene una serie de lecciones, que estan orientadas a que el alumno desarrolle una habilidad de programaci&oacute;n b&aacute;sica
 					y brinda la posibilidad de almacenar su progreso y desempeño en las leeciones.
 				</p>
-			</div>
 		</section>
-		<div class="four columns">
-			<section>
-				<a href="/posts" class="th sombra-1">
+		<section class="four columns">
+			
+				<a href="/posts" class="th sombra-3">
 				<div class="six columns centered">
 					<span class="glyph social" style="font-size: 95px; line-height: 135px"> c </span>
 				</div></a>
@@ -60,7 +58,6 @@
 					<br>
 					por los demas usuarios.
 				</p>
-		</div>
 		</section>
 	</div>
 </div>
