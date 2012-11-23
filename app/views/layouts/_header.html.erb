@@ -1,5 +1,5 @@
-<!-- Header y Barra de Navegacion -->
-<header  id="cabecera" >
+<!-- Header y Barra de Navegacion para Desktops and LAptops -->
+<header  id="cabecera" class="hide-for-small">
 	<br />
 	<div class="row">
 		<div class="three columns">
@@ -90,5 +90,100 @@
 				</nav >
 				</div>
 				</header>
-				<div class="shadow-down"></div>
+
+<!-- Header y Barra de Navegacion para Moviles y Tabs -->
+<header  id="cabecera-moviles" class="show-for-small" >
+	<br />
+	<div class="row">
+		<div class="three columns">
+			<h1><%= link_to image_tag("logo.png", alt: "SODMI" ), root_path %></h1>
+		</div>
+		<nav class="nine columns ">
+			<ul class="nav-bar hide-on-phones">
+				<li >
+					<%= link_to "Inicio", root_path  %>
+				</li>
+				<li>
+					<%= link_to "Nosotros", about_path%>
+				</li>
+				<li>
+					<%= link_to "Lumin", lumin_path %>
+				</li>
+				<li>
+					<%= link_to "Lecciones", lecciones_path %>
+				</li>
+				<li>
+					<%= link_to "Contactanos", contact_path %>
+				</li>
+				<% if signed_in_alumno? %>
+				<li >
+					<%= link_to "Blog", posts_path %>
+				</li>
+				<% else %>
+				<li class= "btn_blog">
+					<%= link_to "Blog", "#"%>
+				</li>
+				<%end%>
+				<% if signed_in? %>
+				<li class="has-flyout">
+					<%= link_to "Cuenta", '#' %> <a href="#" class="flyout-toggle"><span> </span></a>
+					<ul class="flyout">
+						<li>
+							<%= link_to "Perfil", current_maestro %>
+						</li>
+						<li>
+							<%= link_to "Salir", signout_path, method: "delete" %>
+						</li>
+					</ul>
+				</li>
+				<% elsif signed_in_alumno? %>
+
+				<li class="has-flyout"">
+
+				<%= link_to "Cuenta", "#" %>
+				<a href="#" class="flyout-toggle"><span> </span></a>
+
+				<ul class="flyout">
+				<li>
+
+				<%= link_to "Perfil", current_alumno %>
+
+				</li>
+				<li>
+				<%= link_to "Salir", signoutalumno_path, method: "delete" %>
+				</li>
+				</ul>
+				</li>
+				<% else %>
+				<li class="has-flyout">
+				<%= link_to "Entrar", "#" %>
+				<a href="#" class="flyout-toggle"><span> </span></a>
+				<ul class="flyout">
+				<li>
+				<%= link_to "Profesor", "#",:id=> "loginMaestro"%>
+				</li>
+				<li>
+				<%= link_to "Alumno", "#",:id=>"loginAlumno"%>
+				</li>
+				</ul>
+				</li>
+				<% end %>
+				<% if signed_in_alumno? %>
+
+				<div class="one columns hide-for-small">
+				<span class="has-tip" data-width="100" title="<%= current_alumno.nombre%>"><%= image_tag current_alumno.avatar_url.to_s %></span>
+				</div>
+				<% elsif signed_in?%>
+				<div class="one columns hide-for-small">
+				<span class="has-tip" data-width="100" title="<%= current_maestro.nombre%>"><%= image_tag current_maestro.avatar_url.to_s %></span>
+				</div>
+
+				<%end%>
+				</ul>
+				</nav >
+				</div>
+				</header>
+
+				
+				<div class="shadow-down "></div>
 				<!-- Fin de la Barra de Navegación-->

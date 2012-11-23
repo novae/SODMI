@@ -53,10 +53,9 @@ box-shadow: 0px 5px 8px 1px rgba(0, 0, 0, .4);
   width:8000px;
   padding:0px;
   position:absolute;
-  top:15%;
+  top:120px;
   left:-20%;
-  background:url(clouds.png) repeat-x ;
-
+  background:url(nubes.png) repeat-x ;
   z-index:0;
 }
 
