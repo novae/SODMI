@@ -1,6 +1,9 @@
 <% provide(:title, 'Lecciones') %>
 <div class="row">
-	<br /><br /><br /><br />
+	<br />
+	<br />
+	<br />
+	<br />
 	<div class="three columns">
 		<ul class="accordion hide-on-phones">
 			<li class="active">
@@ -8,40 +11,26 @@
 					<h5>Conseptos Básicos</h5>
 				</div>
 				<div class="content">
-					<p>
-						<ul id="links">
-							<div class="mueve">
-								<li>
-									<%= link_to 'Introducción', '#Introduccion1',:id=>"link-Introduccion1" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Evaluación Inicial', '#EvaluacionInicial1',:id=>"link-EvaluacionInicial" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Algoritmo', '#Algoritmo',:id=>"link-Algoritmo" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Pseudocódigo', '#Pseudocodigo',:id=>"link-Pseudocodigo" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Programa', '#Programa',:id=>"link-Programa" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Evaluación Final', '#EvaluacionFinal1',:id=>"link-EvaluacionFinal" %>
-								</li>
-							</div>
-						</ul>
-					</p>
+					<ul class="links">
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span> <%= link_to 'Introducción', '#Introduccion1',:id=>"link-Introduccion1" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span><%= link_to 'Evaluación Inicial', '#EvaluacionInicial1',:id=>"link-EvaluacionInicial" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span> <%= link_to 'Algoritmo', '#Algoritmo',:id=>"link-Algoritmo" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span> <%= link_to 'Pseudocódigo', '#Pseudocodigo',:id=>"link-Pseudocodigo" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span> <%= link_to 'Programa', '#Programa',:id=>"link-Programa" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span> <%= link_to 'Evaluación Final', '#EvaluacionFinal1',:id=>"link-EvaluacionFinal" %>
+						</li>
+					</ul>
 				</div>
 			</li>
 			<li>
@@ -49,45 +38,35 @@
 					<h5>Elementos del Lenguaje</h5>
 				</div>
 				<div class="content">
-					<p>
-						<ul id="links">
-							<div class="mueve">
-								<li>
-									<%= link_to 'Introducción', '#Introduccion3',:id=>"link-Introduccion" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Evaluación Inicial', '#EvaluacionInicial3',:id=>"link-EvaluacionInicial" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Palabras Reservadas', '#PalabrasReservadas',:id=>"link-Datos" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Datos', '#Datos',:id=>"link-Literales" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Entrada de Datos', '#EntradadeDatos',:id=>"link-EntradaYSalidadeDatos" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Salida de Datos', '#SalidadeDatos',:id=>"link-Constantes" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Evaluación Final', '#EvaluacionFinal3',:id=>"link-EvaluacionFInal" %>
-								</li>
-							</div>
-						</ul>
-					</p>
+					<ul class="links">
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span> <%= link_to 'Introducción', '#Introduccion3',:id=>"link-Introduccion" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Evaluación Inicial', '#EvaluacionInicial3',:id=>"link-EvaluacionInicial" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Palabras Reservadas', '#PalabrasReservadas',:id=>"link-Datos" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Datos', '#Datos',:id=>"link-Literales" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Entrada de Datos', '#EntradadeDatos',:id=>"link-EntradaYSalidadeDatos" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Salida de Datos', '#SalidadeDatos',:id=>"link-Constantes" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Evaluación Final', '#EvaluacionFinal3',:id=>"link-EvaluacionFInal" %>
+						</li>
+					</ul>
 				</div>
 			</li>
 			<li>
@@ -95,55 +74,44 @@
 					<h5>Componentes Basicos</h5>
 				</div>
 				<div class="content">
-					<p>
-						<ul id="links">
-							<div class="mueve">
-								<li>
-									<%= link_to 'Introducción', '#Introduccion2',:id=>"link-Introduccion2" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Evaluación Inicial', '#EvaluacionInicial2',:id=>"link-EvaluacionInicial" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Objetos', '#Objetos',:id=>"link-Objetos" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Atributos', '#Atributos',:id=>"link-Atributos" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Métodos', '#Metodos',:id=>"link-Metodos" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Clases', '#Clases',:id=>"link-Clases" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Creación del Objeto', '#CreacionObjeto',:id=>"link-CreacionObjeto" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Estructura de un Programa', '#Estructura',:id=>"link-Estructura" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Evaluación Final', '#EvaluacionFinal2',:id=>"link-EvaluacionFInal" %>
-								</li>
-							</div>
-						</ul>
-					</p>
+					<ul class="links">
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Introducción', '#Introduccion2',:id=>"link-Introduccion2" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Evaluación Inicial', '#EvaluacionInicial2',:id=>"link-EvaluacionInicial" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Objetos', '#Objetos',:id=>"link-Objetos" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Atributos', '#Atributos',:id=>"link-Atributos" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Métodos', '#Metodos',:id=>"link-Metodos" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Clases', '#Clases',:id=>"link-Clases" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Creación del Objeto', '#CreacionObjeto',:id=>"link-CreacionObjeto" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Estructura de un Programa', '#Estructura',:id=>"link-Estructura" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Evaluación Final', '#EvaluacionFinal2',:id=>"link-EvaluacionFInal" %>
+						</li>
+					</ul>
 				</div>
 			</li>
 			<li>
@@ -151,40 +119,32 @@
 					<h5>Control de Flujo</h5>
 				</div>
 				<div class="content">
-					<p>
-						<ul id="links">
-							<div class="mueve">
-								<li>
-									<%= link_to 'Introducción', '#Introduccion5',:id=>"link-Introduccion4" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Evaluación Inicial', '#EvaluacionInicial4',:id=>"link-EvaluacionInicial" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Estructuras Secuenciales', '#EstructurasSecuenciales',:id=>"link-EstructurasSecuenciales" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Estructuras Selectivas', '#EstructurasSelectivas',:id=>"link-EstructurasSelectivas" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Estructuras Iterativas', '#EstructurasIterativas',:id=>"link-EstructurasIterativas" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Evaluación Final', '#EvaluacionFinal4',:id=>"link-EvaluacionFinal" %>
-								</li>
-							</div>
-						</ul>
-					</p>
+					<ul class="links">
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Introducción', '#Introduccion5',:id=>"link-Introduccion4" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Evaluación Inicial', '#EvaluacionInicial4',:id=>"link-EvaluacionInicial" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Estructuras Secuenciales', '#EstructurasSecuenciales',:id=>"link-EstructurasSecuenciales" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Estructuras Selectivas', '#EstructurasSelectivas',:id=>"link-EstructurasSelectivas" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Estructuras Iterativas', '#EstructurasIterativas',:id=>"link-EstructurasIterativas" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Evaluación Final', '#EvaluacionFinal4',:id=>"link-EvaluacionFinal" %>
+						</li>
+					</ul>
 				</div>
 			</li>
 			<li>
@@ -192,72 +152,62 @@
 					<h5>Conseptos avanzados</h5>
 				</div>
 				<div class="content">
-					<p>
-						<ul id="links">
-							
-							<div class="mueve">
-								<li>
-									<%= link_to 'Introducción', '#Introduccion5',:id=>"link-Introduccion2" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Evaluación Inicial', '#EvaluacionInicial5',:id=>"link-EvaluacionInicial" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Tipos de Clases', '#Clases2',:id=>"link-Clases" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Herencia', '#Herencia',:id=>"link-Herencia" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Tipos de Métodos', '#TiposdeMetodos',:id=>"link-Metodos" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Sobrecarga', '#Sobrecarga',:id=>"link-Sobrecarga" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Polimorfismo', '#Polimorfismo',:id=>"link-Polimorfismo" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Paquetes', '#Paquetes',:id=>"link-Paquetes" %>
-								</li>
-							</div>
-							<div class="mueve">
-								<li>
-									<%= link_to 'Evaluación Final', '#EvaluacionFinal5',:id=>"link-EvaluacionFInal" %>
-								</li>
-							</div>
-						</ul>
-					</p>
+					<ul class="links">
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Introducción', '#Introduccion5',:id=>"link-Introduccion2" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Evaluación Inicial', '#EvaluacionInicial5',:id=>"link-EvaluacionInicial" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Tipos de Clases', '#Clases2',:id=>"link-Clases" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Herencia', '#Herencia',:id=>"link-Herencia" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Tipos de Métodos', '#TiposdeMetodos',:id=>"link-Metodos" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Sobrecarga', '#Sobrecarga',:id=>"link-Sobrecarga" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Polimorfismo', '#Polimorfismo',:id=>"link-Polimorfismo" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Paquetes', '#Paquetes',:id=>"link-Paquetes" %>
+						</li>
+						<li>
+							<span class="glyph enclosed" style="font-size: 17px; line-height: 17px"> u </span>
+							<%= link_to 'Evaluación Final', '#EvaluacionFinal5',:id=>"link-EvaluacionFInal" %>
+						</li>
+					</ul>
 				</div>
 			</li>
 		</ul>
-		
 	</div>
 	<div class=" nine columns panel callout">
-		
-	<div class="row min-largo">
-		<object class="min-largo" name="leccion5iterativas" type="text/html" data="/LeccionSentenciasIterativas/leccion.html"  width="730" height="500" > </object>
+		<div class="row min-largo">
+			<object class="min-largo" name="leccion5iterativas" type="text/html" data="/LeccionSentenciasIterativas/leccion.html"  width="730" height="500" ></object>
+		</div>
 	</div>
-		
-		
-	</div>
-
 </div>
-
-
-<br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

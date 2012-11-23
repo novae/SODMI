@@ -1,0 +1,16 @@
+.links{
+  
+   list-style-type:none; 
+ li{ 
+   margin: 0 0 13px 0;
+   }
+  li a:hover{
+     font-size:18px;
+    -webkit-transition: all 80ms ease-in;
+-moz-transition: all 80ms ease-in;
+-ms-transition: all 80ms ease-in;
+-o-transition: all 80ms ease-in;
+transition: all 80ms ease-in;
+  }
+
+}
