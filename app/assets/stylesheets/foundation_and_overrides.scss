@@ -244,5 +244,9 @@ $inputFontSize: 20px;
 // https://github.com/scottkellum/modular-scale by scottkellum
 @import 'foundation';
 
+body{
+  overflow-x:hidden;
+}
+
 
 

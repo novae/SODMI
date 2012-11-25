@@ -6,7 +6,7 @@
 			<h1><%= link_to image_tag("logo.png", alt: "SODMI" ), root_path %></h1>
 		</div>
 		<nav class="nine columns ">
-			<ul class="nav-bar hide-on-phones">
+			<ul class="nav-bar ">
 				<li >
 					<%= link_to "Inicio", root_path  %>
 				</li>
@@ -67,10 +67,10 @@
 				<a href="#" class="flyout-toggle"><span> </span></a>
 				<ul class="flyout">
 				<li>
-				<%= link_to "Profesor", "#",:id=> "loginMaestro"%>
+				<%= link_to "Profesor", "#",:class=> "loginMaestro"%>
 				</li>
 				<li>
-				<%= link_to "Alumno", "#",:id=>"loginAlumno"%>
+				<%= link_to "Alumno", "#",:class=>"loginAlumno"%>
 				</li>
 				</ul>
 				</li>
@@ -92,14 +92,14 @@
 				</header>
 
 <!-- Header y Barra de Navegacion para Moviles y Tabs -->
-<header  id="cabecera-moviles" class="show-for-small" >
+<header  id="cabecera-moviles" class="show-for-small"  >
 	<br />
 	<div class="row">
 		<div class="three columns">
 			<h1><%= link_to image_tag("logo.png", alt: "SODMI" ), root_path %></h1>
 		</div>
 		<nav class="nine columns ">
-			<ul class="nav-bar hide-on-phones">
+			<ul class="nav-bar ">
 				<li >
 					<%= link_to "Inicio", root_path  %>
 				</li>
@@ -125,48 +125,41 @@
 				</li>
 				<%end%>
 				<% if signed_in? %>
-				<li class="has-flyout">
-					<%= link_to "Cuenta", '#' %> <a href="#" class="flyout-toggle"><span> </span></a>
-					<ul class="flyout">
+				<li >
+					<p align="center"><strong> Cuenta:</strong></p>
+					</li>
 						<li>
 							<%= link_to "Perfil", current_maestro %>
 						</li>
 						<li>
 							<%= link_to "Salir", signout_path, method: "delete" %>
 						</li>
-					</ul>
-				</li>
+				
 				<% elsif signed_in_alumno? %>
 
-				<li class="has-flyout"">
-
-				<%= link_to "Cuenta", "#" %>
-				<a href="#" class="flyout-toggle"><span> </span></a>
-
-				<ul class="flyout">
 				<li>
 
+				<p align="center"><strong> Cuenta:</strong></p>
+				</li>
+				<li>
 				<%= link_to "Perfil", current_alumno %>
-
 				</li>
 				<li>
 				<%= link_to "Salir", signoutalumno_path, method: "delete" %>
 				</li>
-				</ul>
-				</li>
 				<% else %>
-				<li class="has-flyout">
-				<%= link_to "Entrar", "#" %>
-				<a href="#" class="flyout-toggle"><span> </span></a>
-				<ul class="flyout">
 				<li>
-				<%= link_to "Profesor", "#",:id=> "loginMaestro"%>
+				 <p align="center"><strong>  Entrar como >></strong></p>
+				</li>
+				
+				<li>
+				<%= link_to "Profesor", "#",:class=> "loginMaestro"%>
 				</li>
 				<li>
-				<%= link_to "Alumno", "#",:id=>"loginAlumno"%>
+				<%= link_to "Alumno", "#",:class=>"loginAlumno"%>
 				</li>
-				</ul>
-				</li>
+				
+				
 				<% end %>
 				<% if signed_in_alumno? %>
 
