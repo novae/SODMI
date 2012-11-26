@@ -2,12 +2,7 @@ class MaestrosController < ApplicationController
   # GET /maestros
   # GET /maestros.json
   def index
-    @maestros = Maestro.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: maestros }
-    end
+   redirect_to "/404.html" 
   end
 
   # GET /maestros/1

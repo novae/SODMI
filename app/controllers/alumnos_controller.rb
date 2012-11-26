@@ -2,12 +2,7 @@ class AlumnosController < ApplicationController
   # GET /alumnos
   # GET /alumnos.json
   def index
-    @alumnos = Alumno.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: alumnos }
-    end
+    redirect_to "/404.html"  
   end
 
   # GET /alumnos/1

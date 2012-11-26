@@ -28,8 +28,8 @@ ProyectoSodmi::Application.routes.draw do
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
   post "static_pages/contact"
-  match '/lecciones', to: 'static_pages#lecciones'
-
+ 
+  get  "static_pages#error-no-permisos"
   mount Foundation::Icons::Rails::Engine => '/fi'
   
 
