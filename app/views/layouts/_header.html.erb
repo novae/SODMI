@@ -1,5 +1,5 @@
 <!-- Header y Barra de Navegacion para Desktops and LAptops -->
-<header  id="cabecera" class="hide-for-small">
+<header   class="cabecera hide-for-small">
 	<br />
 	<div class="row">
 		<div class="three columns">
@@ -92,88 +92,83 @@
 				</header>
 
 <!-- Header y Barra de Navegacion para Moviles y Tabs -->
-<header  id="cabecera-moviles" class="show-for-small"  >
+<header   class=" cabecera show-for-small"  >
 	<br />
 	<div class="row">
-		<div class="three columns">
+		<div class="mobile-four columns ">
 			<h1><%= link_to image_tag("logo.png", alt: "SODMI" ), root_path %></h1>
 		</div>
-		<nav class="nine columns ">
-			<ul class="nav-bar ">
-				<li >
-					<%= link_to "Inicio", root_path  %>
-				</li>
-				<li>
-					<%= link_to "Nosotros", about_path%>
-				</li>
-				<li>
-					<%= link_to "Lumin", lumin_path %>
-				</li>
-				<li>
-					<%= link_to "Lecciones", lecciones_path %>
-				</li>
-				<li>
-					<%= link_to "Contactanos", contact_path %>
-				</li>
-				<% if signed_in_alumno? %>
-				<li >
-					<%= link_to "Blog", posts_path %>
-				</li>
-				<% else %>
-				<li class= "btn_blog">
-					<%= link_to "Blog", "#"%>
-				</li>
-				<%end%>
-				<% if signed_in? %>
-				<li >
-					<p align="center"><strong> Cuenta:</strong></p>
-					</li>
-						<li>
-							<%= link_to "Perfil", current_maestro %>
+		<nav class="top-bar mobile-four columns">
+                    <ul>
+                      <!-- Title Area -->
+                      <li class="name">
+                        <h1>
+                          <a href="#">
+                            Menú
+                          </a>
+                        </h1>
+                      </li>
+                      <li class="toggle-topbar"><a href="#"></a></li>
+                    </ul>
+
+                    
+                  <section >
+                      <!-- Left Nav Section -->
+                      <ul class="left">
+                        <li class="divider"></li>
+                        <li> <%= link_to "Inicio", root_path  %></li>
+                        <li class="divider"></li>
+                        <li> <%= link_to "Nosotros", about_path%></li>
+                        <li class="divider"></li>
+                        <li> <%= link_to "Lumin", lumin_path %></li>
+                        <li class="divider"></li>
+                        <li> <%= link_to "Lecciones", lecciones_path %></li>
+                        <li class="divider"></li>
+                        <li> <%= link_to "Contactanos", contact_path %></li>
+                        <li class="divider"></li>
+						<% if signed_in_alumno? %>
+						<li ><%= link_to "Blog", posts_path %></li>
+						<% else %>
+						<li class= "btn_blog">
+						<%= link_to "Blog", "#"%>
 						</li>
-						<li>
-							<%= link_to "Salir", signout_path, method: "delete" %>
-						</li>
-				
-				<% elsif signed_in_alumno? %>
-
-				<li>
-
-				<p align="center"><strong> Cuenta:</strong></p>
-				</li>
-				<li>
-				<%= link_to "Perfil", current_alumno %>
-				</li>
-				<li>
-				<%= link_to "Salir", signoutalumno_path, method: "delete" %>
-				</li>
-				<% else %>
-				<li>
-				 <p align="center"><strong>  Entrar como >></strong></p>
-				</li>
-				
-				<li>
-				<%= link_to "Profesor", "#",:class=> "loginMaestro"%>
-				</li>
-				<li>
-				<%= link_to "Alumno", "#",:class=>"loginAlumno"%>
-				</li>
-				
-				
-				<% end %>
-				<% if signed_in_alumno? %>
-
-				<div class="one columns hide-for-small">
-				<span class="has-tip" data-width="100" title="<%= current_alumno.nombre%>"><%= image_tag current_alumno.avatar_url.to_s %></span>
-				</div>
-				<% elsif signed_in?%>
-				<div class="one columns hide-for-small">
-				<span class="has-tip" data-width="100" title="<%= current_maestro.nombre%>"><%= image_tag current_maestro.avatar_url.to_s %></span>
-				</div>
-
-				<%end%>
-				</ul>
-				</nav >
+						<%end%>
+                        <li class="divider"></li>
+                        <% if signed_in? %>
+                        
+                        <li class="has-dropdown">
+                          <a class="active" href="#">Cuenta:</a>
+                          <ul class="dropdown"><li class="title back js-generated" style=""></li>
+                            <li class="divider"></li>
+                            <li><%= link_to "Perfil", current_maestro %></li>
+                            <li><%= link_to "Salir", signout_path, method: "delete" %></li>
+                            <li class="divider"></li>
+                          </ul>
+                        </li>     
+                        <% elsif signed_in_alumno? %>
+                         <li class="has-dropdown">
+                          <a class="active" href="#">Cuenta:</a>
+                          <ul class="dropdown"><li class="title back js-generated" style=""></li>
+                            <li class="divider"></li>
+                            <li><%= link_to "Perfil", current_alumno %></li>
+                            <li><%= link_to "Salir", signoutalumno_path, method: "delete" %></li>
+                            <li class="divider"></li>
+                          </ul>
+                        </li>  
+                        <% else %>
+                        <li class="has-dropdown">
+                          <a class="active" href="#">Entrar</a>
+                          <ul class="dropdown"><li class="title back js-generated" style=""></li>
+                            <li class="divider"></li>
+                            <li><label>Entrar a SODMI como:</label></li>
+                            <li><%= link_to "Profesor", "#",:class=> "loginMaestro"%></li>
+                            <li><%= link_to "Alumno", "#",:class=>"loginAlumno"%></li>
+                            <li class="divider"></li>
+                          </ul>
+                        </li>                    
+                 <%end%>
+                      </ul>
+                    </section></nav>
 				</div>
 				</header>
 

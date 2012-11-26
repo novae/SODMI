@@ -1,20 +1,7 @@
 
-#cabecera{
+.cabecera{
+   background: #2799be; /* Old browsers */
   background: url("/assets/bg_header.png") repeat-x left top;
-  -webkit-box-shadow: 0 1px 0 rgb(255,255,255), inset 0 -2px 5px rgba(0,0,0,.5);
-  -moz-box-shadow: 0 1px 0 rgb(255,255,255), inset 0 -2px 5px rgba(0,0,0,.5);
-   box-shadow: 0 1px 0 rgb(255,255,255), inset 0 -2px 5px rgba(0,0,0,.5);
-}
-#cabecera-moviles{
- background: #2799be; /* Old browsers */
-background: -moz-linear-gradient(top,  #2799be 0%, #2997bb 54%, #177598 97%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2799be), color-stop(54%,#2997bb), color-stop(97%,#177598)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #2799be 0%,#2997bb 54%,#177598 97%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #2799be 0%,#2997bb 54%,#177598 97%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #2799be 0%,#2997bb 54%,#177598 97%); /* IE10+ */
-background: linear-gradient(to bottom,  #2799be 0%,#2997bb 54%,#177598 97%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2799be', endColorstr='#177598',GradientType=0 ); /* IE6-9 */
-
   -webkit-box-shadow: 0 1px 0 rgb(255,255,255), inset 0 -2px 5px rgba(0,0,0,.5);
   -moz-box-shadow: 0 1px 0 rgb(255,255,255), inset 0 -2px 5px rgba(0,0,0,.5);
    box-shadow: 0 1px 0 rgb(255,255,255), inset 0 -2px 5px rgba(0,0,0,.5);
