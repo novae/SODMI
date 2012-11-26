@@ -25,11 +25,12 @@ ProyectoSodmi::Application.routes.draw do
   match '/signoutalumno', to: 'sessions_alumno#destroy', via: :delete
   
   match '/lumin',    to: 'static_pages#lumin'
+  match '/lecciones',    to: 'static_pages#lecciones'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
   post "static_pages/contact"
  
-  get  "static_pages#error-no-permisos"
+   
   mount Foundation::Icons::Rails::Engine => '/fi'
   
 
