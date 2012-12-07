@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
-gem 'rmagick'
-gem 'carrierwave'
+
 gem 'composite_primary_keys'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -14,6 +13,11 @@ group :development, :test do
   gem 'annotate', '~> 2.4.1.beta'
 
  
+end
+
+group :production do
+gem 'rmagick'
+gem 'carrierwave'
 end
 # Gems used only for assets and not required
 # in production environments by default.
