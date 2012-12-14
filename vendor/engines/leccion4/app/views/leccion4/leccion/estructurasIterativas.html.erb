@@ -1,0 +1,831 @@
+<!--------------------------Inicia Estructuras Iterativas (Primera Columna))------------------------------>		
+<section id="fondo">
+	<br />
+	<br />
+	<h1>Estructuras Iterativas</h1>
+	<br />
+	<br />
+	<%= image_tag("leccion4/icono-ciclo.png")%>
+	<div id="botones">
+		<%= link_to image_tag("leccion4/izquierda.png", alt: "Izquierda" ), "#/1" %>
+		<%= link_to image_tag("leccion4/derecha.png", alt: "Derecha" ), "#/3" %>
+	</div>
+</section>
+<!--------------------------Termina Portada Estructuras Iterativas------------------------->
+<!-----------------------------------Intro (Segunda Columna)---------------------------------------->	
+<section id="fondo">
+	<h2>Estructuras iterativas: repetir mientras, hasta, desde</h2>
+	<div id="textos">
+		<p>
+			Es muy común encontrar en los programas operaciones que se deben ejecutar un número repetido de veces. Si bien, las instrucciones son las mismas los datos sobre los que operan varían.
+			<br/>
+			<br/>
+			Para repetir varias veces un proceso determinado se hace uso de los ciclos repetitivos, a los cuales se les conoce con el nombre de estructura repetitiva, estructura iterativa, lazo, bucle o ciclo.
+		</p>
+	</div>
+	<div id="botones">
+		<%= link_to image_tag("leccion4/izquierda.png", alt: "Izquierda" ), "#/2" %>
+		<%= link_to image_tag("leccion4/derecha.png", alt: "Derecha" ), "#/4" %>
+	</div>
+</section>
+<!----------------------------------Termina Primera Columna------------------------------------------------------>				
+<!---------------------------------Segunda Columna--------------------------------------------------------------->
+<section>
+<!-----------------------------------Renglon 1 Columna 1------------------------------------------------------>					
+<section id="fondo">
+		<br />
+		<br />
+		<h3>Por lo general se pueden encontrar
+		<br />
+		tres tipos de ciclos:</h3>
+		<br />
+		<div id="textos">
+			<p>
+				•	Entrada Asegurada (while).
+				<br />
+				<br />
+				•	Hacer Mientras (do.. while).
+				<br />
+				<br />
+				•	Ciclo Controlado por Contador (for).
+				<br />
+			</p>
+		</div>
+		<div id="botones">
+			<%= link_to image_tag("leccion4/izquierda.png", alt: "Izquierda" ), "#/3" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/4/1" %>
+		</div>
+</section>
+<!---------------------Termina Renglon 1 Columna 1------------------------------------------------------>					
+<!--------------------------------Renglon 2 Columna 1--------------------------------------------------->					
+<section id="fondo">
+		<h4>Mapa conceptual que ilustra los diferentes ciclos</h4>
+		<div id="imagenes">
+			<%= image_tag("leccion4/Mapaciclos.png")%>
+		</div>
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "Arriba" ), "#/4" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "Abajo" ), "#/4/2" %>
+		</div>
+	</section>
+<!------------------------Termina Renglon 2 Columna 1--------------------------------------------------->					
+<!--------------------------------Renglon 3 Columna 1--------------------------------------------------->				
+<section id="fondo">
+		<h3>Funcionamiento de un Ciclo</h3>
+		<br />
+		<div id="textos">
+			<br />
+			<p align="justify">
+				Un ciclo funciona de la siguiente manera: evalúa una condición, de resultar cierta, realiza una acción o bloque de acciones, luego vuelve a evaluar la condición y si nuevamente resulta cierta, realiza la(s) acción(es).
+				<br/>
+				<br />
+				Cuando la condición dé cómo resultado falso, se sale del ciclo y continúa con la ejecución normal del programa.
+				<br/>
+			</p>
+			<br />
+			<br />
+		</div>
+		<br />
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "Arriba" ), "#/4/1" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "Abajo" ), "#/4/3" %>
+		</div>
+	</section>
+<!------------------------Termina Renglon 3 Columna 1--------------------------------------------------->	
+<!--------------------------------Renglon 4 Columna 1--------------------------------------------------->					
+<section id="fondo">
+		<h4>Diagrama de Flujo de un Ciclo</h4>
+		<div id="imagenes">
+			<%= image_tag("leccion4/flujo.png")%>
+		</div>
+		<br />
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "Arriba" ), "#/4/2" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "Abajo" ), "#/4/4" %>
+		</div>
+	</section>
+<!------------------------Termina Renglon 4 Columna 1--------------------------------------------------->
+<!--------------------------------Renglon 5 Columna 1--------------------------------------------------->				
+<section id="fondo">
+		<br />
+		<h3>Para llevar el control de las repeticiones
+		<br />
+		usa un contador o una bandera.</h3>
+		<div id="textos">
+			<br />
+			<p align="justify">
+				- Una bandera es una variable de tipo lógico que sólo admite dos valores: cierto o falso.
+				<br/>
+				<br/>
+				- Un contador es una variable de tipo entero, que se declara al principio de la estructura y que ayuda en el programa a contabilizar el número de ejecuciones de una misma acción.
+				<br/>
+				<br/>
+			</p>
+		</div>
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "Arriba" ), "#/4/3" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "Abajo" ), "#/4/5" %>
+		</div>
+	</section>
+<!------------------------Termina Renglon 5 Columna 1--------------------------------------------------->				
+<!--------------------------------Renglon 6 Columna 1--------------------------------------------------->			
+<section id="fondo">
+		<h3>Un contador tiene 3 valores distintos</h3>
+		<div id="textos">
+			<p align="justify">
+				<u>- Valor Inicial:</u> Es el valor con el cual se inicia el contador. Generalmente es cero. Esta asignación puede hacerse cuando se declara la variable.
+			</p>
+			<p align="justify">
+				<u>- Valor Final:</u> Después de la ejecución del ciclo el valor del contador, será distinto a su valor inicial, este puede ser mayor o menor que el mismo, todo depende si fue una cuenta creciente o decreciente.
+			</p>
+			<p align="justify">
+				<u>- Valor de Cambio:</u> Es el valor constante en el cual se irá incrementando el contador, este puede ser positivo o negativo; es decir, si la cuanta se realiza de manera ascendente o descendente.
+			</p>
+		</div>
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "Arriba" ), "#/4/4" %>
+			<%= link_to image_tag("leccion4/derecha.png", alt: "Derecha" ), "#/4/6" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 5 Columna 1--------------------------------------------------->						
+</section>
+<!--------------------------------------Tercera Columna------------------------------------------------->
+<section>	
+<!--------------------------------Renglon 1 Columna 2--------------------------------------------------->		
+<section id="fondo">
+		<br />
+		<br />
+		<h2>Estructura: Repetir Mientras</h2>
+		<div id="textos">
+			<p align="justify">
+				<br />
+				Mientras la condición sea verdadera, se ejecutarán las sentencias del bloque, es decir, ejecuta repetidamente el mismo bloque de código hasta que se cumpla una condición de terminación.
+				<br />
+				<br />
+				Hay cuatro partes en cualquier ciclo: inicialización, cuerpo, iteración y terminación.
+				<br />
+				<br />
+			</p>
+		</div>
+		<br />
+		<div id="botones">
+			<%= link_to image_tag("leccion4/izquierda.png", alt: "izquierda" ), "#/4/6" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "Abajo" ), "#/5/1" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 1 Columna 2--------------------------------------------------->
+<!--------------------------------Renglon 2 Columna 2--------------------------------------------------->			
+<section id="fondo">
+		<br />
+		<h3>Estructura Básica</h3>
+		<div id="imagenes">
+			<%= image_tag("leccion4/ciclo1-1.png")%>
+		</div>
+		<br />
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/5" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/5/2" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 2 Columna 2--------------------------------------------------->	
+<!--------------------------------Renglon 3 Columna 2--------------------------------------------------->
+<section id="fondo">
+		<br />
+		<br />
+		<div id="textos">
+			<br />
+			<h3>Nota</h3>
+			<p align="justify">
+				Hay que tener mucho cuidado, cuando se trabaja con ciclos, ya que se puede caer en un ciclo infinito, es decir que nunca se sale de él.
+				<br />
+				<br />
+				Por lo cual en las acciones se debe siempre colocar algo que haga que se modifique el resultado de la condición, lo cual puede ser una bandera, un contador o un acumulador.
+			</p>
+			<br />
+		</div>
+		<br />
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/5/1" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/5/3" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 2 Columna 2--------------------------------------------------->	
+<!--------------------------------Renglon 4 Columna 2--------------------------------------------------->
+<section id="fondo">
+		<h4>En Lumin, este tipo de ciclo tiene dos formatos, el primero es el siguiente:</h4>
+		<div id="imagenes">
+			<%= image_tag("leccion4/ciclo1-2.png")%>
+		</div>
+		<div id="textos">
+			<p align="justify">
+				En este ciclo, el bloque de instrucciones dentro de la estructura mientras, se ejecuta cuando la expresión sea verdadera.
+			</p>
+		</div>
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/5/2" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/5/4" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 4 Columna 2--------------------------------------------------->
+<!--------------------------------Renglon 5 Columna 2--------------------------------------------------->
+<section id="fondo">
+		<h4>Ejemplo</h4>
+		<div id="imagenes">
+			<%= image_tag("leccion4/ciclo1-3.png")%>
+		</div>
+		<div id="textos">
+			<p align="justify" >
+				Que imprime los números 0, 6, 12, 18, 24, 30, 36, 42 y 48, dado que el contador x inicia en 0, imprime el cero, después de imprimir se indica que se sumen 5 a su valor, pero antes de volver a repetir, el contador se incrementa automáticamente, por lo que avanza de 6 en 6.
+		</div>
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/5/3" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/5/5" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 5 Columna 2--------------------------------------------------->				
+<!--------------------------------Renglon 6 Columna 2--------------------------------------------------->
+<section id="fondo">
+		<h4> El otro formato es el siguiente:</h4>
+		<div id="imagenes">
+			<%= image_tag("leccion4/ciclo1-4.png")%>
+		</div>
+		<div id="textos">
+			<p align="justify" >
+				Este ciclo realiza el bloque de instrucciones y después evalúa, si se cumple la expresión regresa a la instrucción repite para volver a realizar el bloque de sentencias, termina cuando deja de cumplirse la expresión.
+		</div>
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/5/4" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/5/6" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 6 Columna 2--------------------------------------------------->	
+<!--------------------------------Renglon 7 Columna 2--------------------------------------------------->
+<section id="fondo">
+		<h4>Ejemplo</h4>
+		<div id="imagenes">
+			<%= image_tag("leccion4/ciclo1-5.png")%>
+		</div>
+		<div id="textos">
+			<p align="justify" >
+				Este ejemplo imprime los números 0, 5, 10, 15, 20, 25, 30, 35, 40 y 45, dado que el contador x inicia en 0 y después de imprimir se indica que se sumen 5 a su valor, por lo que avanza de 5 en 5.<div id="botones"></div>
+				<div id="botones">
+					<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/5/5" %>
+					<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/5/7" %>
+				</div>
+</section>
+<!------------------------Termina Renglon 7 Columna 2--------------------------------------------------->	
+<!--------------------------------Renglon 8 Columna 2--------------------------------------------------->				
+<!----------------------------------EJERCICIOS 1-------------------------------------------------------->		
+<section id="fondo">
+		<br />
+		<div class="textosTab">
+			<br />
+			<dl class="tabs contained three-up">
+				<dd class="active ">
+					<a href="#iterativas-ejercicio1-tab1">Ejercicio 1</a>
+				</dd>
+				<dd>
+					<a href="#iterativas-ejercicio1-tab2">Ejercicio 2</a>
+				</dd>
+				<dd>
+					<a href="#iterativas-ejercicio1-tab3">Ejercicio 3</a>
+				</dd>
+			</dl>
+			<button class="tiny button instrucciones1">
+				Instrucciones
+			</button>
+			
+			<div class="display-error">
+		</div>
+			
+			<ul class="tabs-content">
+				
+				<li class="active" id="iterativas-ejercicio1-tab1Tab">
+					<div id="Ejercicio1" class="minimo">
+						<div class="contenido_ejercicio five columns primera_columna" id="droppable1-1">
+							<ul class="droptrue" id="lista-sortable1">
+								<%
+								lineasBasura_size=0
+								i=0
+								while i<(@ejercicio.length)
+								if @ejercicio[i].Ejercicio==1 && @ejercicio[i].IdModulo==4
+								%>
+								<li class="lineas-codigo"><%= @ejercicio[i].Linea%></li>
+								<%if lineasBasura_size < ControladorHelper::LineasBasura.length%>
+									<li class="lineas-codigo" id="ejercicio1linea99"><%= ControladorHelper::LineasBasura[lineasBasura_size]%></li>
+									<%
+									end
+									lineasBasura_size+=1
+									end
+									i+=1
+									end
+									%>
+							</ul>
+						</div>
+						<div class="contenido_ejercicio five columns" id="droppable1">
+							<ul  class="droptrue" id="lista-sortable2"></ul>
+						</div>
+						<br />
+						<button class="tiny button botones-ejercicio problema" id="problema-1">
+							Problema
+						</button>
+						<button class="tiny success button botones-ejercicio evaluar" id="evaluar1">
+							Evaluar
+						</button>
+					</div>
+				</li>
+				<li id="iterativas-ejercicio1-tab2Tab">
+					<div class="minimo">
+						<div class="contenido_ejercicio five columns" id="droppable2-1">
+							<ul class="connectedSortable2" id="lista-sortable3">
+								<%
+								lineasBasura_size=0
+								i=0
+								while i<(@ejercicio.length)
+								if @ejercicio[i].Ejercicio==2 && @ejercicio[i].IdModulo==4
+								%>
+								<li class="lineas-codigo" ><%= @ejercicio[i].Linea%></li>
+								<%if lineasBasura_size <ControladorHelper::LineasBasura.length%>
+									<li class="lineas-codigo" id="ejercicio1linea99"><%= ControladorHelper::LineasBasura[lineasBasura_size]%></li>
+									<%
+									end
+									lineasBasura_size+=1
+									end
+									i+=1
+									end
+									%>
+							</ul>
+						</div>
+						<div class="contenido_ejercicio five columns" id="droppable2">
+							<ul  class="connectedSortable2" id="lista-sortable4"></ul>
+						</div>
+						<br />
+						<button class="tiny button botones-ejercicio problema" id="problema-2">
+							Problema
+						</button>
+						<button class="tiny success button botones-ejercicio evaluar" id="evaluar2">
+							Evaluar
+						</button>
+					</div>
+				</li>
+				<li id="iterativas-ejercicio1-tab3Tab">
+					<div class="minimo">
+						<div class="contenido_ejercicio five columns" id="droppable3-1">
+							<ul class="connectedSortable3" id="lista-sortable5">
+								<%
+								lineasBasura_size=0
+								i=0
+								while i<(@ejercicio.length)
+								if @ejercicio[i].Ejercicio==3 && @ejercicio[i].IdModulo==4
+								%>
+								<li class="lineas-codigo" ><%= @ejercicio[i].Linea%></li>
+								<%if lineasBasura_size<ControladorHelper::LineasBasura.length%>
+									<li class="lineas-codigo" id="ejercicio1linea99"><%= ControladorHelper::LineasBasura[lineasBasura_size]%></li>
+									<%
+									end
+									lineasBasura_size+=1
+									end
+									i+=1
+									end
+									%>
+							</ul>
+						</div>
+						<div class="contenido_ejercicio five columns" id="droppable3">
+							<ul  class="connectedSortable3" id="lista-sortable6"></ul>
+						</div>
+						<br />
+						<button class="tiny button botones-ejercicio problema" id="problema-3">
+							Problema
+						</button>
+						<button class="tiny success button botones-ejercicio evaluar" id="evaluar3">
+							Evaluar
+						</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "Arriba" ), "#/4/5" %>
+			<%= link_to image_tag("leccion4/derecha.png", alt: "Derecha" ), "#/5" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 8 Columna 2--------------------------------------------------->
+<!----------------------------Termina Columna 2--------------------------------------------------------->	
+</section>		
+<!--------------------------------Columna 3------------------------------------------------------------->		
+<section>
+<!--------------------------------Renglon 1 Columna 3--------------------------------------------------->		
+<section id="fondo">
+		<br />
+		<br />
+		<h2>Estructura: Repetir Hasta</h2>
+		<div id="textos">
+			<p align="justify">
+				<br />
+				Se ejecuta el bloque de sentencias, hasta que la condición sea verdadera.
+				<br />
+				<br />
+				Es lo mismo que en el caso anterior pero aquí como mínimo siempre se ejecutará el cuerpo una vez, en el caso anterior es posible que no se ejecute ni una sola vez.
+				<br />
+				<br />
+			</p>
+		</div>
+		<br />
+		<div id="botones">
+			<%= link_to image_tag("leccion4/izquierda.png", alt: "izquierda" ), "#/5/7" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/6/1" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 1 Columna 3--------------------------------------------------->
+<!--------------------------------Renglon 2 Columna 3--------------------------------------------------->					
+<section id="fondo">
+		<br />
+		<h3>Estructura Básica</h3>
+		<div id="imagenes">
+			<%= image_tag("leccion4/ciclo2-1.png")%>
+		</div>
+		<br />
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/6" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/6/2" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 2 Columna 3--------------------------------------------------->
+<!--------------------------------Renglon 3 Columna 3--------------------------------------------------->	
+<section id="fondo">
+		<br />
+		<br />
+		<br />
+		<div id="textos">
+			<br />
+			<h3>Diferencias con el ciclo anterior</h3>
+			<br />
+			<p align="justify">
+				La diferencia fundamental, entre el ciclo Repetir-Mientras y Repetir-Hasta, es que en este último, las sentencias se realizarán por lo menos una vez, en cambio, con while, sólo se cumplirán mientras se cumpla la condición, lo cual puede ser nunca.
+			</p>
+			<br />
+		</div>
+		<br />
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/6/1" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/6/3" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 3 Columna 3--------------------------------------------------->
+<!--------------------------------Renglon 4 Columna 3--------------------------------------------------->
+<section id="fondo">
+		<h3>En Lumin tiene dos formatos generales.
+		<br />
+		El primero es el que sigue:</h3>
+		<div id="imagenes">
+			<%= image_tag("leccion4/ciclo2-2.png")%>
+		</div>
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/6/2" %>
+			<%= link_to image_tag( "leccion4/abajo.png" , alt: "abajo" ), "#/6/4" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 4 Columna 3--------------------------------------------------->
+<!--------------------------------Renglon 5 Columna 3--------------------------------------------------->
+<section id="fondo">
+		<h4>Ejemplo</h4>
+		<div id="imagenes">
+			<%= image_tag("leccion4/ciclo2-3.png")%>
+		</div>
+		<div id="textos">
+			<p align="justify" >
+				Este ejemplo imprime los números 0, 5, 10, 15, 20, 25, 30, 35, 40 y 45, dado que el contador x inicia en 0 y después de imprimir se indica que se sumen 5 a su valor, por lo que avanza de 5 en 5.
+		</div>
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/6/3" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/6/5" %>
+		</div>
+	</section>
+<!------------------------Termina Renglon 5 Columna 3--------------------------------------------------->
+<!--------------------------------Renglon 6 Columna 3--------------------------------------------------->
+<section id="fondo">
+		<h4> El otro formato es el siguiente:</h4>
+		<div id="imagenes">
+			<%= image_tag("leccion4/ciclo2-4.png")%>
+		</div>
+		<div id="textos">
+			<p align="justify" >
+				Este ciclo deja de realizar el bloque de instrucciones hasta que se cumpla la expresión evaluada.
+			</p>
+			<div id="botones">
+				<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/6/4" %>
+				<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/6/6" %>
+			</div>
+</section>
+<!------------------------Termina Renglon 6 Columna 3--------------------------------------------------->
+<!--------------------------------Renglon 7 Columna 3--------------------------------------------------->
+<section id="fondo">
+		<h4>Ejemplo</h4>
+		<div id="imagenes">
+			<%= image_tag("leccion4/ciclo2-5.png")%>
+		</div>
+		<div id="textos">
+			<p align="justify" >
+				imprime los números 0, 3, 6, 9, 12, … , 96, dado que el contador x inicia en 0, imprime el cero, después de imprimir se indica que se sumen 2 a su valor, pero antes de volver a repetir, el contador se incrementa automáticamente, por lo que parece que avanza de 3 en 3.
+				<div id="botones">
+					<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/6/5" %>
+					<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/6/7" %>
+				</div>
+</section>
+<!------------------------Termina Renglon 7 Columna 3--------------------------------------------------->
+<!--------------------------------Renglon 8 Columna 3--------------------------------------------------->				
+<!--------------------------------------Ejercicio 2----------------------------------------------------->
+<section id="fondo">
+		<br />
+		<div class="textosTab">
+			<br />
+			<dl class="tabs contained three-up">
+				<dd class="active ">
+					<a href="#iterativas-ejercicio2-tab1">Ejercicio 1</a>
+				</dd>
+				<dd>
+					<a href="#iterativas-ejercicio2-tab2">Ejercicio 2</a>
+				</dd>
+			</dl>
+			
+			<ul class="tabs-content">
+				
+				<li class="active" id="iterativas-ejercicio2-tab1Tab">
+					<p align="center"><button class="tiny button instrucciones1" >
+						Instrucciones
+					</button></p>
+					
+					<div class="display-error"></div>
+					
+					<div class="minimo">
+						<div class="contenido_ejercicio five columns primera_columna" id="droppable4-1">
+							<ul class="droptrue" id="lista-sortable7">
+								<%
+								lineasBasura_size=0
+								i=0
+								while i<(@ejercicio.length)
+								if @ejercicio[i].Ejercicio==4 &&@ejercicio[i].IdModulo==4
+								%>
+								<li class="lineas-codigo" ><%= @ejercicio[i].Linea%></li>
+								<%if lineasBasura_size < ControladorHelper::LineasBasura.length%>
+									<li class="lineas-codigo" id="ejercicio1linea99"><%= ControladorHelper::LineasBasura[lineasBasura_size]%></li>
+									<%
+									end
+									lineasBasura_size+=1
+									end
+									i+=1
+									end
+									%>
+							</ul>
+						</div>
+						<div class="contenido_ejercicio five columns" id="droppable4">
+							<ul  class="droptrue" id="lista-sortable8"></ul>
+						</div>
+						<br />
+						<button class="tiny button botones-ejercicio problema" id="problema-4">
+							Problema
+						</button>
+						<button class="tiny success button botones-ejercicio evaluar" id="evaluar4">
+							Evaluar
+						</button>
+					</div>
+				</li>
+				<!--Esta Pestaña corresponde al ejercicio de Escribir Codigo y Evalua-->
+				<li id="iterativas-ejercicio2-tab2Tab">
+					<button class="tiny button instrucciones2" >
+						Instrucciones
+					</button>
+					<div class="display-error"></div>
+					<div class="minimo">
+					
+						
+					<div class="ten columns ">
+					<%= form_tag "/controlador/estructurasIterativas", :id => "ejercicio_area_codigo_1" do %>
+						<p>
+							<%= text_area_tag "description", "", :size=>"2x18", :id=>"area_1" %>
+						</p>
+						<% end %>
+					</div>
+
+						<button class="tiny button botones-ejercicio problema" id="problema-5">
+							Problema
+						</button>
+						<button class="tiny success button botones-ejercicio" id="evaluar5">
+							Evaluar
+						</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "Arriba" ), "#/4/5" %>
+			<%= link_to image_tag("leccion4/derecha.png", alt: "Derecha" ), "#/5" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 8 Columna 3--------------------------------------------------->	
+<!-----------------------Termina Columna---------------------------------------------------------------->
+</section>
+<!----------------------------Columna 4----------------------------------------------------------------->	
+<section>
+<!--------------------------------Renglon 8 Columna 3--------------------------------------------------->				
+<section id="fondo">
+		<h2>Estructura: Repetir Desde</h2>
+		<div id="textos">
+			<p align="justify">
+				En algunas ocasiones, se sabe el número de veces que se tiene que repetir una misma acción o bloque de acciones.
+				<br />
+				Para ello es que sirve, esta estructura.
+				<br />
+				Su sintaxis es la siguiente:
+				<br />
+				<br />
+			</p>
+		</div>
+		<div id="imagenes">
+			<%= image_tag("leccion4/ciclo3-1.png")%>
+		</div>
+		<br />
+		<div id="botones">
+			<%= link_to image_tag("leccion4/izquierda.png", alt: "izquierda" ), "#/6/7" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/7/1" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 1 Columna 4--------------------------------------------------->
+<!--------------------------------Renglon 2 Columna 4--------------------------------------------------->	
+<section id="fondo">
+		<br />
+		<h3>Donde..</h3>
+		<div id="textos">
+			<p align="justify">
+				<br />
+				- Inicialización: es el valor con el cual se inicia la variable de control.
+				<br />
+				<br />
+				- Condición: si la cumple, ejecuta la sentencia o sentencias e incrementa o decrementa la variable de control, si no cumple la condición, se sale del ciclo.
+				<br />
+				<br />
+				- Incremento: que puede ser positivo o negativo (decremento).
+				<br />
+				<br />
+			</p>
+		</div>
+		<br />
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/7" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/7/2" %>
+		</div>
+	</section>
+<!------------------------Termina Renglon 2 Columna 4--------------------------------------------------->
+<!--------------------------------Renglon 3 Columna 4--------------------------------------------------->		
+<section id="fondo">
+		<br />
+		<div id="textos">
+			<br />
+			<h4>En este ciclo puede usarse la instrucción: continue o break</h4>
+			<p align="justify">
+				<br />
+				- La instrucción <u>continue</u> lo que hace es ignorar las sentencias que tiene el ciclo y saltar directamente a la condición para ver si sigue siendo verdadera, si es así sigue dentro del ciclo, en caso contrario saldría directamente de él.
+				<br />
+				<br />
+				- La instrucción <u>break</u> causa la salida inmediata de la estructura. La ejecución continúa en el siguiente enunciado después de la estructura.
+				<br />
+				<br />
+			</p>
+		</div>
+		<br />
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/7/1" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/7/3" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 3 Columna 4--------------------------------------------------->
+<!--------------------------------Renglon 4 Columna 4--------------------------------------------------->	
+<section id="fondo">
+		<h3>Estructura en Lumin</h4>
+		<div id="textos">
+			<p align="justify">
+				En Lumin el contador se decrementa automáticamente.
+				En este caso el contador es el número de iteraciones (número de veces) que se recorren a través del ciclo.
+				A sí mismo el valor que puede tomar es cierto ó falso.
+				<br />
+				Su formato es el siguiente:
+				<br />
+			</p>
+		</div>
+		<div id="imagenes">
+			<%= image_tag("leccion4/ciclo3-2.png")%>
+		</div>
+		<br />
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/7/2" %>
+			<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/7/4" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 4 Columna 4--------------------------------------------------->
+<!--------------------------------Renglon 5 Columna 4--------------------------------------------------->
+<section id="fondo">
+		<h4>Ejemplo</h4>
+		<div id="imagenes">
+			<%= image_tag("leccion4/ciclo3-3.png")%>
+		</div>
+		<div id="textos">
+			<p align="justify" >
+				En este caso, se imprimen los números 0, 6, 12, 18, 24, 30, 36, 42 y 48, dado que el contador x inicia en 0, imprime el cero, después de imprimir se indica que se sumen 5 a su valor, pero antes de volver a repetir, el contador se incrementa automáticamente, por lo que parece que avanza de 6 en 6.
+				<div id="botones">
+					<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/7/3" %>
+					<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/7/5" %>
+				</div>
+	</section>
+<!------------------------Termina Renglon 5 Columna 4--------------------------------------------------->
+<!--------------------------------Renglon 6 Columna 4--------------------------------------------------->					
+<!--------------------------------------Ejercicios 3---------------------------------------------------->			
+<section id="fondo">
+		<br />
+		<div class="textosTab">
+			<br />
+			<dl class="tabs contained three-up">
+				<dd class="active ">
+					<a href="#iterativas-ejercicio3-tab1">Ejercicio 1</a>
+				</dd>
+				<dd>
+					<a href="#iterativas-ejercicio3-tab2">Ejercicio 2</a>
+				</dd>
+			</dl>
+			
+			<ul class="tabs-content">
+				
+				<li class="active" id="iterativas-ejercicio3-tab1Tab">
+					<p align="center"><button class="tiny button instrucciones1" >
+						Instrucciones
+					</button></p>
+					
+					<div class="display-error"></div>
+					
+					<div class="minimo">
+						<div class="contenido_ejercicio five columns primera_columna" id="droppable5-1">
+							<ul class="droptrue" id="lista-sortable9">
+								<%
+								lineasBasura_size=0
+								i=0
+								while i<(@ejercicio.length)
+								if @ejercicio[i].Ejercicio==5 &&@ejercicio[i].IdModulo==4
+								%>
+								<li class="lineas-codigo" ><%= @ejercicio[i].Linea%></li>
+								<%if lineasBasura_size < ControladorHelper::LineasBasura.length%>
+									<li class="lineas-codigo" id="ejercicio1linea99"><%= ControladorHelper::LineasBasura[lineasBasura_size]%></li>
+									<%
+									end
+									lineasBasura_size+=1
+									end
+									i+=1
+									end
+									%>
+							</ul>
+						</div>
+						<div class="contenido_ejercicio five columns" id="droppable5">
+							<ul  class="droptrue" id="lista-sortable10"></ul>
+						</div>
+						<br />
+						<button class="tiny button botones-ejercicio problema" id="problema-6">
+							Problema
+						</button>
+						<button class="tiny success button botones-ejercicio evaluar" id="evaluar6">
+							Evaluar
+						</button>
+					</div>
+				</li>
+				<!--Esta Pestaña corresponde al ejercicio de Escribir Codigo y Evalua-->
+				<li id="iterativas-ejercicio3-tab2Tab">
+					<button class="tiny button instrucciones2" >
+						Instrucciones
+					</button>
+					<div class="display-error"></div>
+					<div class="minimo">
+					
+						
+					<div class="ten columns ">
+					<%= form_tag "/controlador/estructurasIterativas", :id => "ejercicio_area_codigo_2" do %>
+						<p>
+							<%= text_area_tag "description", "", :size=>"2x18", :id=>"area_2" %>
+						</p>
+						<% end %>
+					</div>
+
+						<button class="tiny button botones-ejercicio problema" id="problema-7">
+							Problema
+						</button>
+						<button class="tiny success button botones-ejercicio" id="evaluar7">
+							Evaluar
+						</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "Arriba" ), "#/4/5" %>
+			<%= link_to image_tag("leccion4/derecha.png", alt: "Derecha" ), "#/5" %>
+		</div>
+</section>
+<!------------------------Termina Renglon 6 Columna 4--------------------------------------------------->
+<!-----------------------Termina Columna---------------------------------------------------------------->		
+	</section>

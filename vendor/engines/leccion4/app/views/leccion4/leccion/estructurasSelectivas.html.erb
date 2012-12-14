@@ -1,0 +1,142 @@
+<section id="fondo">
+	<h3>Condiciones</h3>
+	<div class="row">
+		<div id="textos">
+			<div class="row">
+				<div class="six columns">
+					<div class="row"><%= image_tag("arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+					<div class="row">
+						<div class="button-bevel green"></div>
+						<div class="overlay">contenido</div>
+					</div>
+					<div class="row"><%= image_tag("arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+					<div class="row"><a class="button-bevel cyan">Acciones</a></div>
+					<div class="row"><%= image_tag("desactivatestate.png", :mouseover => "activatestate.png",:class=>"arrowsmall") %></div>
+					<div class="row"><%= image_tag("arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+				</div>
+				
+				<div class="six columns">
+					<div class="codigo">
+						<p>
+							<span class="reservada">SI</span><span class="operadores"> &lt expresion logica> </span><span class="reservada">entonces</span>
+							<br />
+							<span class="variables">	Sentencias</span>
+							<br />
+							<span class="reservada">Fin_si</span>	
+						</p>
+					</div>						
+				</div>
+					
+			</div>
+		</div>
+	</div>
+	<div id="botones">
+		<%= link_to image_tag("leccion4/izquierda.png", alt: "Izquierda" ), "#/3" %>
+		<%= link_to image_tag("leccion4/abajo.png", alt: "bajo" ), "#/5" %>	
+	</div>
+
+</section>
+
+<section id="fondo">
+	<h3>Alternativa Doble</h3>
+	<div class="row">
+		<div id="textos">
+			<p>
+				La estructura anterior es muy limitada y normalmente se necesitará una estructura que permitirá elegir entre dos opciones o 
+				alternativas posibles, en función del cumplimiento o no de una determinada condición
+			</p>
+		</div>
+	</div>
+	
+	<div class="row"><%= image_tag("arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+	<div class="row">
+		<div class="four columns"><%= image_tag("arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+		<div class="four columns"><a class="button-bevel green"></a></div>
+		<div class="four columns"><%= image_tag("arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+	</div>
+	<div class="row">
+		<div class="four columns"><a class="button-bevel cyan">Acción 1</a></div>
+		<div class="four columns"><a class="button-bevel cyan">Acción 2</a></div>
+		<div class="four columns"><a class="button-bevel cyan">Acción 3</a></div>
+	</div>
+	<div class="row">
+		<div class="four columns"><%= image_tag("arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+		<div class="four columns"><%= image_tag("arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+		<div class="four columns"><%= image_tag("arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+	</div>
+	<div class="row"><%= image_tag("desactivatestate.png", :mouseover => "activatestate.png",:class=>"arrowsmall") %></div>
+	<div class="row"><%= image_tag("arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>	
+	
+</section>
+
+<section id="fondo">
+	<h3>Ejemplo 1</h3>
+	<div id="textos">
+		<div class="row" id="ejemplos">
+			<div class="six columns">
+				<br/>
+				<div class="row">
+					<div class="eleven columns">
+						<div class="pseudocodigos">
+							<br />
+							<table>
+								<tbody>
+									<tr>
+										<td class="gutter">
+											<div class="line number1 alt2">1</div>
+											<div class="line number2">2</div>
+											<div class="line number3">3</div>
+											<div class="line number4">4</div>
+											<div class="line number5">5</div>
+											<div class="line number6">6</div>
+											<div class="line number7">7</div>
+										</td>
+										<td class="code">
+											<div class="line number1">
+												<code class="keyword">si</code>
+												<code class="operador">&lt</code>
+												<code class="condicion">condicion</code>
+												<code class="operador">></code>
+												<code class="keyword">entonces</code>
+											</div>
+											<div class="line number2">
+												<code class="acciones">Acción 1</code>
+											</div>
+											<div class="line number3">
+												<code class="keyword">Si_no</code>
+											</div>
+											<div class="line number4">
+												<code class="acciones">Acción 2</code>
+											</div>
+											<div class="line number5">
+												<code class="keyword">Si_no</code>
+											</div>
+											<div class="line number6">
+												<code class="acciones">Acción N</code>
+											</div>
+											<div class="line number7">
+												<code class="keyword">Fin_si</code>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+					
+			<div class="six columns">
+				<br />
+				<div class="ejemplos">
+					
+				</div>
+			</div>
+		</div>		
+	</div>
+	<div id="botones">
+		<%= link_to image_tag("leccion4/izquierda.png", alt: "Izquierda" ), "#/3" %>
+		<%= link_to image_tag("leccion4/abajo.png", alt: "bajo" ), "#/5" %>	
+	</div>	
+</section>

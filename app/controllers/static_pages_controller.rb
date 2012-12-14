@@ -20,7 +20,19 @@ class StaticPagesController < ApplicationController
     end
   end
   def lecciones
+    @id=Array.new
+    gon.id=@id
+    @sentencia=Array.new
+    gon.sentencia=@sentencia
+    @sentencias=Leccion4::DetalleEjercicios.all.to_a.shuffle
     
+    @sentencias.each do |p|
+      gon.id << p.IdModulo
+      gon.sentencia << p.Linea
+    end
+    @ejercicio=Leccion4::DetalleEjercicios.all.to_a.shuffle
+    gon.lineas_ejercicios=Leccion4::DetalleEjercicios.all
+    gon.problema= Leccion4::LeccionHelper::Enuciados_Ejercicios 
   end
  
   

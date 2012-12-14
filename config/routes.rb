@@ -32,6 +32,7 @@ ProyectoSodmi::Application.routes.draw do
  
    
   mount Foundation::Icons::Rails::Engine => '/fi'
+  mount Leccion4::Engine => "/leccion4", :as => "leccion4_engine"
   
 
   # The priority is based upon order of creation:

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leccion4</title>
+  <%= stylesheet_link_tag    "leccion4/application", :media => "all" %>
+  <%= javascript_include_tag "leccion4/application" %>
+  <%= include_gon %>
+  <!--  Place in <head> to set the viewport width to device width for mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

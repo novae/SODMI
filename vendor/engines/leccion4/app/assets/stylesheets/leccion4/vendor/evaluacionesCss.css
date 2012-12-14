@@ -1,0 +1,24 @@
+ .div_scroll{
+   -webkit-border-radius: 5px;
+    border-radius: 5px;
+   min-height:280px;
+   max-height:280px;
+   overflow: auto;
+   margin-right:0;
+   padding-left: 12px;
+   
+}
+
+.barra_separadora {
+    background-color: #B0BF39;
+    border: 3px solid #FFFFFF;
+    border-radius: 10px 0 0 0;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 27px;
+    padding: 2px;
+}

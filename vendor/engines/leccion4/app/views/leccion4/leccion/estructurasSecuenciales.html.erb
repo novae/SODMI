@@ -1,0 +1,260 @@
+<section id="fondo">
+	<h3>Estructuras Secuenciales</h3>	
+	<div id="textos">
+		<div class="row">
+			<div class="twelve columns">
+			<p>
+				Una estructura secuencial es aquella en la que una acción (instrucción) sigue a otra en secuencia. Las tareas se suceden de tal modo
+				que la salida de una es la entrada de la siguiente y así sucesivamente hasta el final del proceso, le estructura de control secuencial 
+				consta de:
+			</p>
+			</div>	
+		</div>
+		<div class="row">
+			<div class="three columns">
+				<ul class="listas">
+					<li>Entradas.</li>
+					<li>Acciones.</li>
+					<li>Salidas.</li>
+				</ul>
+			</div>
+			<div class="four columns">
+				    <div class="row"><a class="button-bevel orange" id="ac1"> Acción 1 </a></div>
+				    <div class="row"><%= image_tag("leccion4/arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+					<div class="row"><a class="button-bevel orange" id="ac2"> Acción 2 </a></div>
+					<div class="row"><%= image_tag("leccion4/arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+					<div class="row"><a class="button-bevel orange" id="ac2"> Acción 3 </a></div>
+					<div class="row"><%= image_tag("leccion4/arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+					<br />
+			</div>	
+		</div>
+	</div>
+	<div id="botones">
+		<%= link_to image_tag("leccion4/izquierda.png", alt: "Izquierda" ), "#/1" %>
+		<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/3" %>	
+	</div>
+</section>
+
+<section id="fondo">
+	<h3>Ejemplo 1</h3>
+	<div id="textos">
+		<br />
+		<div class="row">
+			<div class="five columns">
+				<div class="row"><%= image_tag("leccion4/arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+				<div class="row"><a class="button-bevel magenta"> leer x <br /> leer y</a></div>
+				<div class="row"><%= image_tag("leccion4/arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+				<div class="row"><a class="button-bevel cyan">res = x - y </a></div>
+				<div class="row"><%= image_tag("leccion4/arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+				<div class="row"><a class="button-bevel magenta">imprime(res)</a></div>
+				<div class="row"><%= image_tag("leccion4/arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+				<br/>
+			</div>
+			<div class="seven columns">
+				<div class="codigo">
+				<p> 
+					<span class="reservada">metodo</span> <span class="clases">secuencial</span><span class="parentesis"> ( )</span>
+					<br />
+					<span class="reservada">variable</span><span class="variables"> x, y, res</span><span class="tipos"> tipo entero</span>
+					<br />
+					<span class="reservada">leer </span><span class="parentesis">(<span class="cadenas"> x </span>)</span>
+					<br />
+					<span class="reservada">leer </span><span class="parentesis">(<span class="cadenas"> y </span>)</span>
+					<br />
+					<span class="variables">res</span><span class="operadores"> = </span><span class="variables">x<span class="operadores"> - </span>y</span>
+					<br />
+					<span class="reservada">imprime </span><span class="parentesis">(<span class="parentesis"><span class="cadenas">"resta: "</span><span class="operadores">+</span><span class="variables">res</span>)</span></span>
+					<br />
+					<span class="reservada">termina metodo</span>
+				<p>
+				</div>	
+				
+			</div>
+		</div>
+	</div>
+	<div id="botones">
+		<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/1" %>
+		<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/3" %>
+	</div>	
+</section>
+
+
+
+<section id="fondo">
+	<h3>Ejemplo 2</h3>
+	<div id="textos">
+		<br />
+		<div class="row">
+			<div class="five columns">
+				<div class="row"><%= image_tag("arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+				<div class="row"><a class="button-bevel magenta"> leer x <br /> leer y</a></div>
+				<div class="row"><%= image_tag("arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>
+				<div class="row"><a class="button-bevel cyan">res = x - y <br /> sum = x + y<br /> mul = x + y <br /> div = x + y</a></div>
+				<div class="row"><%= image_tag("arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>	
+				<div class="row"><a class="button-bevel magenta">imprime(res) <br /> imprime(sum) <br /> imprime(mul) <br/> imprime(div)</a></div>
+				<div class="row"><%= image_tag("arrowejerdown.png", :mouseover => "arrowejeractive.png",:class=>"arrowsmall") %></div>	
+				<br/>
+			</div>
+			<div class="seven columns">
+				<div class="codigo">
+				<p> 
+					<span class="reservada">metodo</span> <span class="clases">opciones</span><span class="parentesis"> ( )</span>
+					<br />
+					<span class="reservada">variable</span><span class="variables"> x, y, sum, res, div, mul</span><span class="tipos"> tipo entero</span>
+					<br />
+					<span class="reservada">lee </span><span class="parentesis">(<span class="cadenas"> x </span>)</span>
+					<br />
+					<span class="reservada">lee </span><span class="parentesis">(<span class="cadenas"> y </span>)</span>
+					<br />
+					<span class="variables">res</span><span class="operadores"> = </span><span class="variables">x<span class="operadores"> - </span>y</span>
+					<br />
+					<span class="variables">sum</span><span class="operadores"> = </span><span class="variables">x<span class="operadores"> + </span>y</span>
+					<br />
+					<span class="variables">mul</span><span class="operadores"> = </span><span class="variables">x<span class="operadores"> * </span>y</span>
+					<br />
+					<span class="variables">div</span><span class="operadores"> = </span><span class="variables">x<span class="operadores"> / </span>y</span>
+					<br />
+					<span class="reservada">imprime </span><span class="parentesis">(<span class="parentesis"><span class="cadenas">"resta: "</span><span class="operadores">+</span><span class="variables">res</span>)</span></span>
+					<br />
+					<span class="reservada">imprime </span><span class="parentesis">(<span class="parentesis"><span class="cadenas">"suma: "</span><span class="operadores">+</span><span class="variables">sum</span>)</span></span>
+					<br />
+					<span class="reservada">imprime </span><span class="parentesis">(<span class="parentesis"><span class="cadenas">"multiplicacion: "</span><span class="operadores">+</span><span class="variables">mul</span>)</span></span>
+					<br />
+					<span class="reservada">imprime </span><span class="parentesis">(<span class="parentesis"><span class="cadenas">"division: "</span><span class="operadores">+</span><span class="variables">div</span>)</span></span>
+					<br />
+					<span class="reservada">termina metodo</span>
+				<p>
+				</div>	
+				
+			</div>
+		</div>
+	</div>
+	<div id="botones">
+		<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/1" %>
+		<%= link_to image_tag("leccion4/abajo.png", alt: "abajo" ), "#/3" %>
+	</div>	
+</section>
+
+<section id="fondo">
+	<br />
+	<div class="row">
+			<div class="textosTab">
+				<br />
+				<dl class="tabs contained three-up">
+					<dd class="active "><a href="#select1">Ejercicio 1</a></dd>
+					<dd><a href="#select2">Ejercicio 2</a></dd>
+					<dd><a href="#select3">Ejercicio 3</a></dd>
+				</dl>
+				<div class="twelve columns">
+					
+					<ul class="tabs-content">
+						<li class="active" id="select1Tab">
+							<br/>
+							<div class="row">
+							<div class="five columns" id="lista">
+		  						<ul id="sortable" class="selectable">
+									<%@sentencias.each do |p|%>
+						  				<li id="<%=p.id%>" class="ui-state-default">
+				  		  					<span class="ui-icon ui-icon-arrowthick-2-n-s"></span><%=p.Linea%>
+				  		  				</li>
+        							<%end%>	
+				  				</ul>
+							</div>
+							
+							<div class="six columns">
+								<div class="row">
+											<div class="twelve columns">
+												<ul class="breadcrumbs">
+						  							<li><a id="link-instrucciones">Instrucciones</a></li>
+						  							<li><a id="link-ejer1">Ejercicio 1.1</a></li>
+						  						</ul>
+											</div>
+										</div>
+								<div class="row">
+										<form>
+												<br />
+							  					<label class="left inline">Sentencia:</label>
+							  					<br />
+							    				<input type="text" placeholder="e.g. caso 8:" class="eight" id="sentencia"/>
+							     				<a id="listo" class="small success button">Listo!</a>
+							     				<br />
+							  				</form> 
+								</div>
+							</div>
+						</li>
+								
+						<li id="select2Tab">
+							<div class="row">
+								<div class="twelve columns">
+									<div id="wrapper">
+										<p>Ingresa lineas de codigo correspondientes: 
+											<input id="tag1" value="" />
+										</p>
+									</div>​	
+								</div>
+							</div>​
+						</li>
+						
+						<li id="select3Tab">
+							<div class="row">
+								<div class="eight columns" id="preguntas">
+									<br />
+									<div class="row">
+										<div class="ten columns">
+											
+											<div class="class_box_shadow">
+												<h5>Escribe la sentencia condicional correcta para "¿es número par?"</h5>
+									      		<p>&lt Condicion ></p>
+
+											<div class="sh_bottom"></div>
+											</div>
+											
+											
+								    		<div class="class_box_shadow">
+												<h5>Escribe la sentencia condicional correcta para "¿es numero impar y mayor a 5?"</h5>
+									      		<p>&lt Condicion ></p>
+												<div class="sh_bottom"></div>
+											</div>
+									      										    	
+								    	</div>
+								    </div>
+								    
+								    
+
+								    
+								</div>
+								<div class="four columns" id="respuestas">
+									<div class="row">
+										<div class="eleven columns">
+											<div id="draggable" class="button-bevel cyan">
+											    <p>si num % 2 = 0 entonces</p>
+											</div>
+											
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</li>
+					</ul><!--content-->
+					
+				</div><!--row-->
+			</div><!--Textos Tab-->
+		
+		
+			<div id="myModal" class="reveal-modal">
+  				<div class="row">
+					<br />
+					<div id="contenidos" class="twelve columns"></div>	<!--controles-->
+				</div>
+  				<a class="close-reveal-modal">&#215;</a>
+			</div>
+		
+		<div id="botones">
+			<%= link_to image_tag("leccion4/arriba.png", alt: "arriba" ), "#/1" %>
+			<%= link_to image_tag("leccion4/derecha.png", alt: "derecha" ), "#/3" %>
+		</div>
+	</div>
+</section>	
+
+

@@ -12,7 +12,8 @@ gem 'bcrypt-ruby', '3.0.1'
 group :development, :test do
   gem 'rspec-rails', '2.8.0'
   gem 'annotate', '~> 2.4.1.beta'
-
+#Gemas de las Lecciones
+gem 'leccion4', :path =>"vendor/engines/leccion4"
  
 end
 
