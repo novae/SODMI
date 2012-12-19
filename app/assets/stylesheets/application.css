@@ -23,6 +23,10 @@
 .min-largo{
 	min-height:580px;
 }
+
+.min-ancho{
+	min-width: 730px;
+}
 .sombra-titulo{
   text-shadow: -1px 2px 4px #000000;
     filter: dropshadow(color=#000000, offx=-1, offy=1);
